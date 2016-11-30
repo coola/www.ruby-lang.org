@@ -11,13 +11,9 @@ describing new techniques, or speculating on Ruby’s future.
 
 ### Mining for Ruby Blogs
 
-Some **planets** (online specialized feed aggregators) have been running
-for years now. A few of them providing convenient content:
-
-* [Ruby Corner][4]
-* [Planet Ruby][5]
-* [PlanetRubyOnRails.org][6]
-* [PlanetRubyOnRails.com][7]
+* [**RubyFlow**][rubyflow], “the Ruby and Rails community linklog”,
+  is a Ruby news site with links to libraries, blog posts, tutorials,
+  and other Ruby resources.
 
 ### Blogs of Note
 
@@ -49,10 +45,7 @@ some brilliant code out there, be sure to let them know!
 
 
 
-[4]: http://rubycorner.com
-[5]: http://planetruby.0x42.net/
-[6]: http://www.planetrubyonrails.org/
-[7]: http://www.planetrubyonrails.com/
+[rubyflow]: http://www.rubyflow.com/
 [8]: http://oreillynet.com/ruby/
 [9]: http://weblog.rubyonrails.org/
 [10]: http://www.rubyinside.com/

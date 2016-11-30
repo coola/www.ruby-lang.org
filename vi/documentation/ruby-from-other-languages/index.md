@@ -18,16 +18,11 @@ mà bạn đã quen thuộc.
 
 ## Mong đợi gì: từ *ngôn ngữ X* đến Ruby
 
-* [Đến với Ruby từ C và
-  C++](/vi/documentation/ruby-from-other-languages/to-ruby-from-c-and-cpp/)
-* [Đến với Ruby từ
-  Java](/vi/documentation/ruby-from-other-languages/to-ruby-from-java/)
-* [Đến với Ruby từ
-  Perl](/vi/documentation/ruby-from-other-languages/to-ruby-from-perl/)
-* [Đến với Ruby từ
-  PHP](/vi/documentation/ruby-from-other-languages/to-ruby-from-php/)
-* [Đến với Ruby từ
-  Python](/vi/documentation/ruby-from-other-languages/to-ruby-from-python/)
+* [Đến với Ruby từ C và C++](to-ruby-from-c-and-cpp/)
+* [Đến với Ruby từ Java](to-ruby-from-java/)
+* [Đến với Ruby từ Perl](to-ruby-from-perl/)
+* [Đến với Ruby từ PHP](to-ruby-from-php/)
+* [Đến với Ruby từ Python](to-ruby-from-python/)
 
 ## Một số vấn đề và tính năng quan trọng của ngôn ngữ
 
@@ -76,7 +71,7 @@ cho việc gì.
 Symbol có thể được mô tả như là định danh. Symbol là thông tin về **ai**
 đó, chứ không phải về **cái gì** đó. Xem `irb` để thấy sự khác biệt:
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):001:0> :george.object_id == :george.object_id
 => true
 irb(main):002:0> "george".object_id == "george".object_id
@@ -169,9 +164,9 @@ dưới đây (ví dụ cũng được áp dụng với các ngôn ngữ khác):
 {% highlight python %}
 # trong Python
 if 0:
-  print "0 is true"
+  print("0 is true")
 else:
-  print "0 is false"
+  print("0 is false")
 {% endhighlight %}
 
 Sẽ trả về kết quả “0 is false”. tương tự với Ruby:
@@ -233,47 +228,42 @@ tiếp nhận khi gọi phương thức private.
 
 `protected` là một truy cập cần được xem xét. Một phương thức protected có thể
 được gọi từ một lớp con của lớp thể hiện (lớp cha), nhưng cũng có thề được gọi
-bởi lớp thể hiện khác như là một lớp tiếp nhận của nó. Ví dụ, từ [Ruby FAQ][1]\:
+bởi lớp thể hiện khác như là một lớp tiếp nhận của nó.
+Ví dụ, từ [Ruby Language FAQ][faq]:
 
 {% highlight ruby %}
-$ irb
-irb(main):001:0> class Test
-irb(main):002:1>   # mặc định là public
-irb(main):003:1*   def func
-irb(main):004:2>     99
-irb(main):005:2>   end
-irb(main):006:1>
-irb(main):007:1*   def ==(other)
-irb(main):008:2>     func == other.func
-irb(main):009:2>   end
-irb(main):010:1> end
-=> nil
-irb(main):011:0>
-irb(main):012:0* t1 = Test.new
-=> #<Test:0x34ab50>
-irb(main):013:0> t2 = Test.new
-=> #<Test:0x342784>
-irb(main):014:0> t1 == t2
-=> true
-irb(main):015:0> # bây giờ chuyển `func` thành protected, và nó
-irb(main):016:0* # vẫn hoạt động vì protected cho phép tham chiếu
-irb(main):017:0* class Test
-irb(main):018:1>   protected :func
-irb(main):019:1> end
-=> Test
-irb(main):020:0> t1 == t2
-=> true
-irb(main):021:0> # bây giờ chuyển `func` thành private
-irb(main):022:0* class Test
-irb(main):023:1>   private :func
-irb(main):024:1> end
-=> Test
-irb(main):025:0> t1 == t2
-NoMethodError: private method `func' called for #<Test:0x342784>
-        from (irb):8:in `=='
-        from (irb):25
-        from :0
-irb(main):026:0>
+class Test
+  # mặc định là public
+  def identifier
+    99
+  end
+
+  def ==(other)
+    identifier == other.identifier
+  end
+end
+
+t1 = Test.new  # => #<Test:0x34ab50>
+t2 = Test.new  # => #<Test:0x342784>
+t1 == t2       # => true
+
+# bây giờ chuyển `identifier' thành protected, và nó
+# vẫn hoạt động vì protected cho phép tham chiếu
+
+class Test
+  protected :identifier
+end
+
+t1 == t2  # => true
+
+# bây giờ chuyển `identifier' thành private
+
+class Test
+  private :identifier
+end
+
+t1 == t2
+# NoMethodError: private method `identifier' called for #<Test:0x342784>
 {% endhighlight %}
 
 ### Các lớp đều mở
@@ -420,7 +410,7 @@ Các toán tử dưới đây **không** có cú pháp. Nó không phải là c�
 phương thức, và không thể tái định nghĩa:
 
 {% highlight ruby %}
-=, .., ..., !, not, &&, and, ||, or, !=, !~, ::
+=, .., ..., not, &&, and, ||, or, ::
 {% endhighlight %}
 
 Thêm vào đó, `+=`, `*=` v.v. chỉ là cách viết tắt cho `var = var + other_var`,
@@ -433,4 +423,4 @@ Khi bạn đã sẵn sàng để nâng cao kiến thức về Ruby, xem phần
 
 
 
-[1]: http://faq.rubygarden.org/entry/show/57?controller_prefix=faq%2F
+[faq]: http://ruby-doc.org/docs/ruby-doc-bundle/FAQ/FAQ.html

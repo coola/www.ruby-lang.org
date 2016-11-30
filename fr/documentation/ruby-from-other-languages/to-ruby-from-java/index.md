@@ -44,7 +44,7 @@ Contrairement à Java, en Ruby…
 * pas de *cast*. Appelez simplement les méthodes. Vos tests unitaires
   devraient vous dire très vite, avant d’exécuter le code, si une
   exception devrait survenir suite à une erreur ;
-* `foo = Foo.new("hi")` au lieu de `Foo foo = new Foo("hi)`
+* `foo = Foo.new("hi")` au lieu de `Foo foo = new Foo("hi")`
 * le constructeur s’appelle toujours `initialize`, et non pas le nom de
   la classe concernée ;
 * l’héritage multiple et les interfaces sont géréés par le mécanisme des
@@ -61,5 +61,5 @@ Contrairement à Java, en Ruby…
 
 [1]: http://wxruby.rubyforge.org/wiki/wiki.pl
 [2]: http://www.fxruby.org/
-[3]: http://ruby-gnome2.sourceforge.jp/
+[3]: https://ruby-gnome2.osdn.jp/
 [4]: https://github.com/ryanmelt/qtbindings/

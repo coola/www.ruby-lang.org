@@ -71,7 +71,7 @@ trovare istruzioni con [il mirror su GitHub][7], sia per quelli con
 
 Rubyforge mantiene un [issue tracker][10] per notificare patch e
 segnalazioni di errori a Matz e al resto del gruppo. Questi rapporti
-vengono anche notificati alla [Ruby-Core mailing list](/it/community/mailing-lists/)
+vengono anche notificati alla [Ruby-Core mailing list][mailing-lists]
 per discussione, e quindi puoi essere sicuro che la tua richiesta non sarà ignorata.
 Puoi anche inviare le tue patch alla mailing list. In ogni caso, non
 esitare a prendere parte alla discussione che ne seguirà.
@@ -101,9 +101,8 @@ In sintesi, i passi per costruire un patch sono:
 
         $ svn diff > ruby-changes.patch
 
-4.  Crea un ticket nel [issue tracker][10] o
-    manda via mail la tua patch [Ruby-Core mailing
-    list](/it/community/mailing-lists/) con una entry sul
+4.  Crea un ticket nel [issue tracker][10] o manda via mail la tua patch
+    [Ruby-Core mailing list][mailing-lists] con una entry sul
     ChangeLog che descrive la patch.
 
 5.  Se non ci sono obiezioni alla patch, i committer daranno
@@ -113,8 +112,8 @@ In sintesi, i passi per costruire un patch sono:
 notificate come un [unified diff][12]. Per ulteriori informazioni sulla
 procedura di merge dei patch , vedi [the diffutils reference][13].
 
-La discussione sullo sviluppo di Ruby converge sulla [Ruby-Core mailing
-list](/it/community/mailing-lists/). Quindi, se hai curiosità
+La discussione sullo sviluppo di Ruby converge sulla
+[Ruby-Core mailing list][mailing-lists]. Quindi, se hai curiosità
 di sapere se il tuo patch è utile oppure se vuoi innescare una
 discussione sul futuro di Ruby, non esitare ad entrare nella mischia.
 Tuttavia, tieni presente che: discussioni fuori soggetto non sono
@@ -146,7 +145,7 @@ Subversion:
 * I “bulleted points” del tuo ChangeLog devono essere anche copiati nel
   messaggio di commit di Subversion commit message. Questo messaggio
   sarà automaticamente inviato alla lista Ruby-CVS dopo il commit.
-* lo stile K&amp;R per le dichiarazioni di funzioni è usato nel codice
+* lo stile ANSI per le dichiarazioni di funzioni è usato nel codice
   source di Ruby e nei suoi package di estensione.
 * Per favore, non usare lo stile di commento per C++ (`//`); coloro che
   mantengono Ruby preferiscono invece lo stile di commento multilinea
@@ -156,15 +155,16 @@ Guarda anche le informazioni su [Ruby’s issue tracker][10].
 
 
 
+[mailing-lists]: /it/community/mailing-lists/
 [1]: http://subversion.apache.org/
 [2]: http://svn.ruby-lang.org/cgi-bin/viewvc.cgi/
 [3]: http://subversion.apache.org/faq.html
 [4]: http://svnbook.org
 [5]: http://www.pragmaticprogrammer.com/titles/svn/
 [6]: http://git-scm.com/
-[7]: http://github.com/ruby/ruby
-[8]: http://wiki.github.com/shyouhei/ruby/committerhowto
-[9]: http://wiki.github.com/shyouhei/ruby/noncommitterhowto
+[7]: https://github.com/ruby/ruby
+[8]: https://github.com/shyouhei/ruby/wiki/committerhowto
+[9]: https://github.com/shyouhei/ruby/wiki/noncommitterhowto
 [10]: https://bugs.ruby-lang.org/
 [11]: http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-core/25139
 [12]: http://www.gnu.org/software/diffutils/manual/html_node/Unified-Format.html

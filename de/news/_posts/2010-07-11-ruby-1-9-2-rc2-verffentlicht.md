@@ -19,14 +19,14 @@ Ruby 1.9.2 wird größtenteils mit 1.9.1 kompatibel sein, abgesehen von
 den folgenden Änderungen:
 
 * Diverse neue Methoden
-* Neues <tt>Socket</tt>-API (IPv6-fähig)
+* Neues `Socket`-API (IPv6-fähig)
 * Neue Zeichenkodierungen
-* Eine <tt>Random</tt>-Klasse, die viele verschiedene
+* Eine `Random`-Klasse, die viele verschiedene
   Zufallszahlengeneratoren unterstützt
-* <tt>Time</tt> wurde neu implementiert. Es gibt kein Jahr-2038-Problem
+* `Time` wurde neu implementiert. Es gibt kein Jahr-2038-Problem
   mehr.
 * Einige Verbesserungen bei Regulären Ausdrücken
-* <tt>$:</tt> enthält das aktuelle Verzeichnis (\".\") nicht mehr
+* `$:` enthält das aktuelle Verzeichnis (\".\") nicht mehr
 * dl ist neu implementiert worden; es setzt nun auf libffi auf.
 * Eine neue Library namens \"psych\" wrappt libyaml. Du kannst diese
   Library anstatt von syck verwenden.
@@ -87,6 +87,6 @@ RubySpec. Probiert das neue Ruby aus und meldet Probleme mit Ruby 1.9.2
 [1]: http://svn.ruby-lang.org/repos/ruby/tags/v1_9_2_rc2/NEWS
 [2]: http://svn.ruby-lang.org/repos/ruby/tags/v1_9_2_rc2/ChangeLog
 [3]: https://bugs.ruby-lang.org/projects/show/ruby-19/
-[4]: ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-rc2.tar.bz2
-[5]: ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-rc2.tar.gz
-[6]: ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-rc2.zip
+[4]: https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-rc2.tar.bz2
+[5]: https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-rc2.tar.gz
+[6]: https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-rc2.zip

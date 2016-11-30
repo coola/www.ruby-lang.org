@@ -19,16 +19,11 @@ anderer Sprachen, die du bereits kennst.
 
 ## <span style="font-size:0.9em;;">Von *Sprache X* zu Ruby: Was erwartet mich?</span>
 
-* [Von C und C++ zu
-  Ruby](/de/documentation/ruby-from-other-languages/to-ruby-from-c-and-cpp/)
-* [Von Java zu
-  Ruby](/de/documentation/ruby-from-other-languages/to-ruby-from-java/)
-* [Von Perl zu
-  Ruby](/de/documentation/ruby-from-other-languages/to-ruby-from-perl/)
-* [Von PHP zu
-  Ruby](/de/documentation/ruby-from-other-languages/to-ruby-from-php/)
-* [Von Python zu
-  Ruby](/de/documentation/ruby-from-other-languages/to-ruby-from-python/)
+* [Von C und C++ zu Ruby](to-ruby-from-c-and-cpp/)
+* [Von Java zu Ruby](to-ruby-from-java/)
+* [Von Perl zu Ruby](to-ruby-from-perl/)
+* [Von PHP zu Ruby](to-ruby-from-php/)
+* [Von Python zu Ruby](to-ruby-from-python/)
 
 ## Wichtige Features und ein paar Fallen
 
@@ -80,7 +75,7 @@ Symbole sind am einfachsten als Identitäten (IDs) zu verstehen. Bei
 einem Symbol ist wichtig, *wer* es ist, nicht *was* es ist. Starte `irb`
 und du siehst den Unterschied:
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):001:0> :george.object_id == :george.object_id
 => true
 irb(main):002:0> "george".object_id == "george".object_id
@@ -185,9 +180,9 @@ Python-Code an (das Beispiel funktioniert auch in anderen Sprachen):
 {% highlight python %}
 # in Python
 if 0:
-  print "0 ist true"
+  print("0 ist true")
 else:
-  print "0 ist false"
+  print("0 ist false")
 {% endhighlight %}
 
 Hier wird “0 ist false” ausgeben. Dasselbe in Ruby:
@@ -257,47 +252,41 @@ Empfänger in der Klasse und abgeleiteten Klassen aufgerufen werden (wie
 bei *private*), aber zusätzlich auch mit einer anderen Instanz dieser
 Klasse als Empfänger.
 
-Ein Beispiel aus den [Ruby FAQ][1]\:
+Ein Beispiel aus den [Ruby Language FAQ][faq]:
 
 {% highlight ruby %}
-$ irb
-irb(main):001:0> class Test
-irb(main):002:1>   # normalerweise "public"
-irb(main):003:1*   def func
-irb(main):004:2>     99
-irb(main):005:2>   end
-irb(main):006:1>
-irb(main):007:1*   def ==(other)
-irb(main):008:2>     func == other.func
-irb(main):009:2>   end
-irb(main):010:1> end
-=> nil
-irb(main):011:0>
-irb(main):012:0* t1 = Test.new
-=> #<Test:0x34ab50>
-irb(main):013:0> t2 = Test.new
-=> #<Test:0x342784>
-irb(main):014:0> t1 == t2
-=> true
-irb(main):015:0> # func ist jetzt "protected". Das funktioniert,
-irb(main):016:0* # weil other eine Instanz derselben Klasse ist.
-irb(main):017:0* class Test
-irb(main):018:1>   protected :func
-irb(main):019:1> end
-=> Test
-irb(main):020:0> t1 == t2
-=> true
-irb(main):021:0> # Jetzt ist func "private" => Boom.
-irb(main):022:0* class Test
-irb(main):023:1>   private :func
-irb(main):024:1> end
-=> Test
-irb(main):025:0> t1 == t2
-NoMethodError: private method `func' called for #<Test:0x342784>
-        from (irb):8:in `=='
-        from (irb):25
-        from :0
-irb(main):026:0>
+class Test
+  # standardmäßig "public"
+  def identifier
+    99
+  end
+
+  def ==(other)
+    identifier == other.identifier
+  end
+end
+
+t1 = Test.new  # => #<Test:0x34ab50>
+t2 = Test.new  # => #<Test:0x342784>
+t1 == t2       # => true
+
+# `identifier' ist jetzt "protected"; das funktioniert noch,
+# weil `other' eine Instanz derselben Klasse ist
+
+class Test
+  protected :identifier
+end
+
+t1 == t2  # => true
+
+# nun ist `identifier' "private"
+
+class Test
+  private :identifier
+end
+
+t1 == t2
+# NoMethodError: private method `identifier' called for #<Test:0x342784>
 {% endhighlight %}
 
 ### Offene Klassen
@@ -451,7 +440,7 @@ Die folgenden Operatoren sind *kein* syntaktischer Zucker. Sie sind
 keine Methoden, und können nicht umdefiniert werden:
 
 {% highlight ruby %}
-=, .., ..., !, not, &&, and, ||, or, !=, !~, ::
+=, .., ..., not, &&, and, ||, or, ::
 {% endhighlight %}
 
 Zudem sind `+=`, `*=`, usw. nur Abkürzungen für `foo = foo + bar`,
@@ -464,4 +453,4 @@ Wenn du bereit für noch mehr Ruby-Wissen bist, dann schau dir die
 
 
 
-[1]: http://www.rubycentral.com/faq/rubyfaq-7.html
+[faq]: http://ruby-doc.org/docs/ruby-doc-bundle/FAQ/FAQ.html

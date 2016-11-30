@@ -93,31 +93,31 @@ en cuenta si se va a usar esta versión.
 Se puede obtener una copia de esta nueva versión desde las siguientes
 fuentes de descarga.
 
-* [&lt;URL:ftp://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p0.tar.bz2&gt;][1]
+* [&lt;URL:https://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p0.tar.bz2&gt;][1]
 
       SIZE:
       10814890 bytes
       MD5:
       895c1c581f8d28e8b3bb02472b2ccf6a
-      SHA256: 
+      SHA256:
       c680d392ccc4901c32067576f5b474ee186def2fcd3fcbfa485739168093295f
 
-* [&lt;URL:ftp://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p0.tar.gz&gt;][2]
+* [&lt;URL:https://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p0.tar.gz&gt;][2]
 
       SIZE:
       13608925 bytes
       MD5:
       50d307c4dc9297ae59952527be4e755d
-      SHA256: 
+      SHA256:
       aff85ba5ceb70303cb7fb616f5db8b95ec47a8820116198d1c866cc4fff151ed
 
-* [&lt;URL:ftp://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p0.zip&gt;][3]
+* [&lt;URL:https://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p0.zip&gt;][3]
 
       SIZE:
       15037340 bytes
       MD5:
       db5af5d6034646ad194cbdf6e50f49ee
-      SHA256: 
+      SHA256:
       0d0af6a9c8788537efd8d7d2358ce9468e6e2b7703dacba9ebd064d8b7da5f99
 
 Me despido de vosotros transmitiendo las gracias que da el equipo de
@@ -127,7 +127,7 @@ contiene estos [agradecimientos][4].
 
 
 
-[1]: ftp://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p0.tar.bz2
-[2]: ftp://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p0.tar.gz
-[3]: ftp://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p0.zip
+[1]: https://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p0.tar.bz2
+[2]: https://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p0.tar.gz
+[3]: https://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p0.zip
 [4]: https://bugs.ruby-lang.org/projects/ruby/wiki/200SpecialThanks

@@ -12,9 +12,7 @@ Ruby ha quattro liste di discussione principali in Inglese:
 
 Ruby-Talk
 : Questa è la lista di discussione più popolare e tratta di argomenti
-  generali su Ruby. Ruby-Talk ha anche un mirror nel newsgroup
-  [comp.lang.ruby](news:comp.lang.ruby) e [Ruby-Forum.com][1].
-  ([Riassunti settimanali][2], [FAQ][3], [Archivi][4]).
+  generali su Ruby. ([FAQ][3], [Archivi][4]).
 
 Ruby-Core
 : Questa lista tratta argomenti che riguardano nucleo (“core”) e
@@ -26,7 +24,7 @@ Ruby-Doc
   documentazione e tool per Ruby. ([Archivi a Gmane][6])
 
 Ruby-CVS
-: Questa lista annuncia tutti i commit al repository CVS di Ruby.
+: Questa lista annuncia tutti i commit al repository Subversion di Ruby.
 
 ## Iscriviti o annulla la tua iscrizione
 
@@ -38,8 +36,6 @@ manuale](/en/community/mailing-lists/manual-instructions/) (in inglese).
 
 
 
-[1]: http://ruby-forum.com
-[2]: http://www.rubyweeklynews.org/
 [3]: http://rubyhacker.com/clrFAQ.html
 [4]: http://blade.nagaokaut.ac.jp/ruby/ruby-talk/index.shtml
 [5]: http://blade.nagaokaut.ac.jp/ruby/ruby-core/index.shtml

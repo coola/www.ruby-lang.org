@@ -7,7 +7,7 @@ date: 2013-11-22 22:00:00 +0000
 lang: id
 ---
 
-Kami sangat senang untuk mengumumkan rilis dari Ruby 2.1.0-preview2. 
+Kami sangat senang untuk mengumumkan rilis dari Ruby 2.1.0-preview2.
 Silakan uji fitur baru di Ruby 2.1 sebelum rilis akhir!
 
 ## Perubahan penting dari preview 1
@@ -21,19 +21,19 @@ Silakan uji fitur baru di Ruby 2.1 sebelum rilis akhir!
 
 ## Unduh
 
-* [http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0-preview2.tar.bz2](http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0-preview2.tar.bz2)
+* [https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0-preview2.tar.bz2](https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0-preview2.tar.bz2)
 
       SIZE:   11432454 bytes
       MD5:    9d566a9b2d2e7e35ad6125e2a14ce672
       SHA256: 780fddf0e3c8a219057d578e83367ecfac5e945054b9f132b3b93ded4802d1ce
 
-* [http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0-preview2.tar.gz](http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0-preview2.tar.gz)
+* [https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0-preview2.tar.gz](https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0-preview2.tar.gz)
 
       SIZE:   14416029 bytes
       MD5:    ba2b95d174e156b417a4d580a452eaf5
       SHA256: a9b1dbc16090ddff8f6c6adbc1fd0473bcae8c69143cecabe65d55f95f6dbbfb
 
-* [http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0-preview2.zip](http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0-preview2.zip)
+* [https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0-preview2.zip](https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0-preview2.zip)
 
       SIZE:   16110720 bytes
       MD5:    2ad1aa3d89ae32607cf14fc73b192de1
@@ -60,15 +60,15 @@ Lihat rincian perubahan: [NEWS di repository Ruby (WIP)](https://github.com/ruby
 
 Presentasi ko1 di toruby: [All about Ruby 2.1](http://www.atdot.net/~ko1/activities/toruby05-ko1.pdf)
 
-Konstantin Haase (@konstantinhaase) menulis sebuah ringkasan yang bagus dalam 
+Konstantin Haase (@konstantinhaase) menulis sebuah ringkasan yang bagus dalam
 artikel di blognya: [What's new in Ruby 2.1?](http://rkh.im/ruby-2.1).
 
 ## Komentar Rilis
 
 Isu - isu yang diketahui:
 
-[http://bugs.ruby-lang.org/projects/ruby-trunk/issues?query_id=102](http://bugs.ruby-lang.org/projects/ruby-trunk/issues?query_id=102)
+[https://bugs.ruby-lang.org/projects/ruby-trunk/issues?query_id=102](https://bugs.ruby-lang.org/projects/ruby-trunk/issues?query_id=102)
 
 Lihat juga jadwal rilis dan informasi lainya:
 
-[http://bugs.ruby-lang.org/projects/ruby-trunk/wiki/ReleaseEngineering210](http://bugs.ruby-lang.org/projects/ruby-trunk/wiki/ReleaseEngineering210)
+[https://bugs.ruby-lang.org/projects/ruby-trunk/wiki/ReleaseEngineering210](https://bugs.ruby-lang.org/projects/ruby-trunk/wiki/ReleaseEngineering210)

@@ -19,16 +19,11 @@ with.
 
 ## What to Expect: *Language X* to Ruby
 
-* [To Ruby From C and
-  C++](/en/documentation/ruby-from-other-languages/to-ruby-from-c-and-cpp/)
-* [To Ruby From
-  Java](/en/documentation/ruby-from-other-languages/to-ruby-from-java/)
-* [To Ruby From
-  Perl](/en/documentation/ruby-from-other-languages/to-ruby-from-perl/)
-* [To Ruby From
-  PHP](/en/documentation/ruby-from-other-languages/to-ruby-from-php/)
-* [To Ruby From
-  Python](/en/documentation/ruby-from-other-languages/to-ruby-from-python/)
+* [To Ruby From C and C++](to-ruby-from-c-and-cpp/)
+* [To Ruby From Java](to-ruby-from-java/)
+* [To Ruby From Perl](to-ruby-from-perl/)
+* [To Ruby From PHP](to-ruby-from-php/)
+* [To Ruby From Python](to-ruby-from-python/)
 
 ## Important Language Features And Some Gotchas
 
@@ -56,7 +51,7 @@ For more info on `each` (and its friends `collect`, `find`, `inject`,
 ### Everything has a value
 
 There’s no difference between an expression and a statement. Everything
-has a value, even if that value is **nil**. This is possible:
+has a value, even if that value is `nil`. This is possible:
 
 {% highlight ruby %}
 x = 10
@@ -77,7 +72,7 @@ they can be used for.
 Symbols can best be described as identities. A symbol is all about
 **who** it is, not **what** it is. Fire up `irb` and see the difference:
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):001:0> :george.object_id == :george.object_id
 => true
 irb(main):002:0> "george".object_id == "george".object_id
@@ -160,17 +155,17 @@ deliver(via: "Pony Express", from: "B", to: "A")
 
 ### The universal truth
 
-In Ruby, everything except **nil** and **false** is considered true. In
+In Ruby, everything except `nil` and `false` is considered true. In
 C, Python and many other languages, 0 and possibly other values, such as
-empty lists, are consided false. Take a look at the following Python
+empty lists, are considered false. Take a look at the following Python
 code (the example applies to other languages, too):
 
 {% highlight python %}
 # in Python
 if 0:
-  print "0 is true"
+  print("0 is true")
 else:
-  print "0 is false"
+  print("0 is false")
 {% endhighlight %}
 
 This will print “0 is false”. The equivalent Ruby:
@@ -224,57 +219,52 @@ altered.
 In Java, `public` means a method is accessible by anyone. `protected`
 means the class’s instances, instances of descendant classes, and
 instances of classes in the same package can access it, but not anyone
-else, and `private` means nobody besides the classes instances can
+else, and `private` means nobody besides the class’s instances can
 access the method.
 
 Ruby differs slightly. `public` is, naturally, public. `private` means
 the method(s) are accessible only when they can be called without an
-explicit receiver. Only **self** is allowed to be the receiver of a
+explicit receiver. Only `self` is allowed to be the receiver of a
 private method call.
 
 `protected` is the one to be on the lookout for. A protected method can be
 called from a class or descendant class instances, but also with another
-instance as its receiver. Example, adapted from the [Ruby FAQ][1]\:
+instance as its receiver.
+Here is an example (adapted from [The Ruby Language FAQ][faq]):
 
 {% highlight ruby %}
-$ irb
-irb(main):001:0> class Test
-irb(main):002:1>   # public by default
-irb(main):003:1*   def func
-irb(main):004:2>     99
-irb(main):005:2>   end
-irb(main):006:1>
-irb(main):007:1*   def ==(other)
-irb(main):008:2>     func == other.func
-irb(main):009:2>   end
-irb(main):010:1> end
-=> nil
-irb(main):011:0>
-irb(main):012:0* t1 = Test.new
-=> #<Test:0x34ab50>
-irb(main):013:0> t2 = Test.new
-=> #<Test:0x342784>
-irb(main):014:0> t1 == t2
-=> true
-irb(main):015:0> # now make `func` protected, still works
-irb(main):016:0* # because protected allows the other reference
-irb(main):017:0* class Test
-irb(main):018:1>   protected :func
-irb(main):019:1> end
-=> Test
-irb(main):020:0> t1 == t2
-=> true
-irb(main):021:0> # now make `func` private
-irb(main):022:0* class Test
-irb(main):023:1>   private :func
-irb(main):024:1> end
-=> Test
-irb(main):025:0> t1 == t2
-NoMethodError: private method `func' called for #<Test:0x342784>
-        from (irb):8:in `=='
-        from (irb):25
-        from :0
-irb(main):026:0>
+class Test
+  # public by default
+  def identifier
+    99
+  end
+
+  def ==(other)
+    identifier == other.identifier
+  end
+end
+
+t1 = Test.new  # => #<Test:0x34ab50>
+t2 = Test.new  # => #<Test:0x342784>
+t1 == t2       # => true
+
+# now make `identifier' protected; it still works
+# because protected allows `other' as receiver
+
+class Test
+  protected :identifier
+end
+
+t1 == t2  # => true
+
+# now make `identifier' private
+
+class Test
+  private :identifier
+end
+
+t1 == t2
+# NoMethodError: private method `identifier' called for #<Test:0x342784>
 {% endhighlight %}
 
 ### Classes are open
@@ -301,9 +291,9 @@ Time.mktime(2006, 01, 01) + 14.hours # => Sun Jan 01 14:00:00
 
 In Ruby, methods are allowed to end with question marks or exclamation marks.
 By convention, methods that answer questions end in question marks
-(e.g. `Array#empty?`, which returns **true** if the receiver is empty).
+(e.g. `Array#empty?`, which returns `true` if the receiver is empty).
 Potentially “dangerous” methods by convention end with exclamation marks
-(e.g. methods that modify **self** or the arguments, `exit!`, etc.).
+(e.g. methods that modify `self` or the arguments, `exit!`, etc.).
 Not all methods that change their arguments end with exclamation marks, though.
 `Array#replace` replaces the contents of an array with the contents
 of another array. It doesn’t make much sense to have a method like that
@@ -400,7 +390,7 @@ method(:puts).call "puts is an object!"
 ### Operators are syntactic sugar
 
 Most operators in Ruby are just syntactic sugar (with some precedence
-rules) for method calls. You can, for example, override Fixnums +
+rules) for method calls. You can, for example, override Fixnum’s `+`
 method:
 
 {% highlight ruby %}
@@ -420,10 +410,10 @@ To define the unary + and - (think +1 and -2), you must define the `+@` and
 though. They are not methods, and cannot be redefined:
 
 {% highlight ruby %}
-=, .., ..., !, not, &&, and, ||, or, !=, !~, ::
+=, .., ..., not, &&, and, ||, or, ::
 {% endhighlight %}
 
-In addition, `+=`, `*=` etc. are just abbrevations for `var = var + other_var`,
+In addition, `+=`, `*=` etc. are just abbreviations for `var = var + other_var`,
 `var = var * other_var`, etc. and therefore cannot be redefined.
 
 ## Finding Out More
@@ -433,4 +423,4 @@ When you are ready for more Ruby knowledge, see our
 
 
 
-[1]: http://faq.rubygarden.org/entry/show/57?controller_prefix=faq%2F
+[faq]: http://ruby-doc.org/docs/ruby-doc-bundle/FAQ/FAQ.html

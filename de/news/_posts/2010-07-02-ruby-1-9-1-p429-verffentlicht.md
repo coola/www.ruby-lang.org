@@ -13,7 +13,7 @@ beliebigen Code auszuführen, geschlossen wurden.
 #### Sicherheitslücke
 
 Es gab eine Sicherheitslücke, die zu einem Buffer-Overflow führte, wenn
-man <tt>ARGF.inplace\_mode</tt> auf Windows gefährliche Werte zuwies.
+man `ARGF.inplace_mode` auf Windows gefährliche Werte zuwies.
 Sie erlaubte einem Angreifer, beliebigen Code auszuführen. Die
 betroffenen Versionen sind:
 
@@ -76,6 +76,6 @@ Die Sicherheitslücke wurde von Masaya TARUI gefunden und gemeldet.
 
 
 
-[1]: ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.1-p429.tar.bz2
-[2]: ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.1-p429.tar.gz
-[3]: ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.1-p429.zip
+[1]: https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.1-p429.tar.bz2
+[2]: https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.1-p429.tar.gz
+[3]: https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.1-p429.zip

@@ -31,11 +31,10 @@ Apri la shell interattiva di Ruby (IRB).
 * Se stai usando **Mac OS X** apri il `Terminal`, scrivi `irb` e premi
   invio.
 * Se stai usando **Linux**, apri una shell, scrivi `irb` e premi invio.
-* Se stai usando **Windows**, seleziona `fxri` dalla sezione Ruby del
-  menu di avvio.
-^
+* Se stai usando **Windows**, seleziona `Interactive Ruby` dalla
+  sezione Ruby del menu di avvio.
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):001:0>
 {% endhighlight %}
 
@@ -43,7 +42,7 @@ Perfetto, ora è aperta… e adesso?
 
 Prova a scrivere `"Ciao Mondo"`
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):001:0> "Ciao Mondo"
 => "Ciao Mondo"
 {% endhighlight %}
@@ -56,7 +55,7 @@ di IRB di dirci che è stato ritornato un valore dall’ultima espressione.
 Se vogliamo stampare a schermo “Ciao Mondo” dobbiamo aggiungere qualcosa
 in più:
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):002:0> puts "Ciao Mondo"
 Ciao Mondo
 => nil
@@ -70,7 +69,7 @@ momento che `puts` ritorna sempre nil, ovvero assolutamente nulla.
 
 IRB si può usare come una calcolatrice:
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):003:0> 3+2
 => 5
 {% endhighlight %}
@@ -81,14 +80,14 @@ premere **freccia su** e vedere se l’ultima espressione viene
 visualizzata, nel cui caso è solamente sufficiente sostituire `+` con
 `*`.
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):004:0> 3*2
 => 6
 {% endhighlight %}
 
 Ora proviamo a calcolare il quadrato di tre:
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):005:0> 3**2
 => 9
 {% endhighlight %}
@@ -96,7 +95,7 @@ irb(main):005:0> 3**2
 In Ruby `**` rappresenta l’operatore per calcolare le potenze. Mentre
 per calcolare una radice quadrata si fa così:
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):006:0> Math.sqrt(9)
 => 3.0
 {% endhighlight %}
@@ -123,7 +122,7 @@ quadrata di un numero non è un intero, bensì un numero a virgola mobile.
 E se vogliamo salvare il risultato di questo calcolo? Semplice, basta
 assegnarlo ad una variabile:
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):007:0> a = 3 ** 2
 => 9
 irb(main):008:0> b = 4 ** 2

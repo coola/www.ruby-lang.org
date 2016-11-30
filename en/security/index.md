@@ -9,9 +9,22 @@ Here you will find information about security issues of Ruby.
 
 ## Reporting Security Vulnerabilities
 
-Security vulnerabilities should be reported via an email to
-security@ruby-lang.org ([the PGP public key](/security.asc)), which is a
-private mailing list. Reported problems will be published after fixes.
+Security vulnerabilities in the Ruby programming language should be
+reported through our
+[bounty program page at HackerOne](https://hackerone.com/ruby).
+Please ensure you read the specific details around the scope of
+our program before reporting an issue. Any valid reported problems
+will be published after fixes.
+
+If you have found an issue affecting one of our websites, please
+report it [via GitHub](https://github.com/ruby/www.ruby-lang.org/issues/new).
+
+If you have found an issue that affects a specific Ruby gem, follow the
+[instructions on RubyGems.org](http://guides.rubygems.org/security/#reporting-security-vulnerabilities).
+
+If you need to get in touch with the security team directly outside
+of HackerOne, you can send email to security@ruby-lang.org
+([the PGP public key](/security.asc)), which is a private mailing list.
 
 The members of the mailing list are people who provide Ruby
 (Ruby committers and authors of other Ruby implementations,
@@ -99,7 +112,7 @@ More known issues:
 [5]: /en/news/2012/10/12/poisoned-NUL-byte-vulnerability/
 [6]: /en/news/2012/10/12/cve-2012-4464-cve-2012-4466/
 [7]: /en/news/2012/04/20/ruby-1-9-3-p194-is-released/
-[8]: /en/news/2012/02/16/security-fix-for-ruby-openssl-module-allow-0n-splitting-as-a-prevention-for-the-tls-beast-attack-/
+[8]: /en/news/2012/02/16/security-fix-for-ruby-openssl-module/
 [9]: /en/news/2011/12/28/denial-of-service-attack-was-found-for-rubys-hash-algorithm-cve-2011-4815/
 [10]: /en/news/2011/02/18/exception-methods-can-bypass-safe/
 [11]: /en/news/2011/02/18/fileutils-is-vulnerable-to-symlink-race-attacks/

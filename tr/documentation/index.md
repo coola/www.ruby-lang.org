@@ -22,7 +22,7 @@ referanslar ve diğer belgeleri bulacaksınız.
   öğretiyor.
 
 [Hackety Hack][3]
-: <q cite="http://hackety-hack.com/">Küçük programcının başlangıç
+: <q cite="http://www.hackety.com/">Küçük programcının başlangıç
   kiti</q>. Shoes GUI Toolkit kullanarak Ruby programlamayı öğrenmek
   için eğlenceli ve koly bir yol.
 
@@ -88,11 +88,6 @@ referanslar ve diğer belgeleri bulacaksınız.
 : Yine RDoc ile üretilmiş bu referans belgesi, standart kütüphaneyi
   kapsayacak niteliktedir.
 
-[Ruby C API Referansı][18]
-: Ruby’nin temelinde yatan C kodu hakkında bir belgeleme çalışması. Eğer
-  C kodları yazmak ve Ruby’nin geliştirilmesine katkıda bulunmak
-  isterseniz, bu belge size yardımcı olabilir.
-
 [RubyDoc.info][19]
 : Ruby gem’leri için dökümanlar ve GitHub Ruby projeleri için tek kaynak
   site.
@@ -116,7 +111,7 @@ listeleri](/en/community/mailing-lists/) iyi bir başlangıç olacaktır.
 
 [1]: http://tryruby.org/
 [2]: http://rubykoans.com/
-[3]: http://hackety-hack.com/
+[3]: http://www.hackety.com/
 [4]: http://mislav.uniqpath.com/poignant-guide/
 [5]: http://pine.fm/LearnToProgram/
 [6]: http://rubylearning.com/
@@ -129,9 +124,8 @@ listeleri](/en/community/mailing-lists/) iyi bir başlangıç olacaktır.
 [13]: http://www.belgeler.org/uygulamalar/ruby/ruby-ug.html
 [14]: http://en.wikibooks.org/wiki/Ruby_programming_language
 [15]: http://www.ruby-doc.org/core
-[16]: http://rdoc.sourceforge.net
+[16]: http://docs.seattlerb.org/rdoc/
 [17]: http://www.ruby-doc.org/stdlib
-[18]: http://www.ruby-doc.org/doxygen/current/
 [19]: http://www.rubydoc.info/
 [20]: http://rubydocs.org/
 [21]: http://www.rubydox.net/

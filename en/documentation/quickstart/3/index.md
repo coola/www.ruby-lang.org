@@ -19,25 +19,23 @@ header: |
 
 Now let’s create a greeter object and use it:
 
-{% highlight ruby %}
-irb(main):035:0> g = Greeter.new("Pat")
+{% highlight irb %}
+irb(main):035:0> greeter = Greeter.new("Pat")
 => #<Greeter:0x16cac @name="Pat">
-irb(main):036:0> g.say_hi
+irb(main):036:0> greeter.say_hi
 Hi Pat!
 => nil
-irb(main):037:0> g.say_bye
+irb(main):037:0> greeter.say_bye
 Bye Pat, come back soon.
 => nil
 {% endhighlight %}
 
-Once the `g` object is created, it remembers that the name is Pat. Hmm,
+Once the `greeter` object is created, it remembers that the name is Pat. Hmm,
 what if we want to get at the name directly?
 
-{% highlight ruby %}
-irb(main):038:0> g.@name
-SyntaxError: compile error
-(irb):52: syntax error
-        from (irb):52
+{% highlight irb %}
+irb(main):038:0> greeter.@name
+SyntaxError: (irb):38: syntax error, unexpected tIVAR, expecting '('
 {% endhighlight %}
 
 Nope, can’t do it.
@@ -51,18 +49,20 @@ approach of keeping data sort-of hidden away.
 
 So what methods do exist for Greeter objects?
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):039:0> Greeter.instance_methods
-=> ["method", "send", "object_id", "singleton_methods",
-    "__send__", "equal?", "taint", "frozen?",
-    "instance_variable_get", "kind_of?", "to_a",
-    "instance_eval", "type", "protected_methods", "extend",
-    "eql?", "display", "instance_variable_set", "hash",
-    "is_a?", "to_s", "class", "tainted?", "private_methods",
-    "untaint", "say_hi", "id", "inspect", "==", "===",
-    "clone", "public_methods", "respond_to?", "freeze",
-    "say_bye", "__id__", "=~", "methods", "nil?", "dup",
-    "instance_variables", "instance_of?"]
+=> [:say_hi, :say_bye, :instance_of?, :public_send,
+    :instance_variable_get, :instance_variable_set,
+    :instance_variable_defined?, :remove_instance_variable,
+    :private_methods, :kind_of?, :instance_variables, :tap,
+    :is_a?, :extend, :define_singleton_method, :to_enum,
+    :enum_for, :<=>, :===, :=~, :!~, :eql?, :respond_to?,
+    :freeze, :inspect, :display, :send, :object_id, :to_s,
+    :method, :public_method, :singleton_method, :nil?, :hash,
+    :class, :singleton_class, :clone, :dup, :itself, :taint,
+    :tainted?, :untaint, :untrust, :trust, :untrusted?, :methods,
+    :protected_methods, :frozen?, :public_methods, :singleton_methods,
+    :!, :==, :!=, :__send__, :equal?, :instance_eval, :instance_exec, :__id__]
 {% endhighlight %}
 
 Whoa. That’s a lot of methods. We only defined two methods. What’s going
@@ -72,20 +72,20 @@ just list methods defined for Greeter we can tell it to not include
 ancestors by passing it the parameter `false`, meaning we don’t want
 methods defined by ancestors.
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):040:0> Greeter.instance_methods(false)
-=> ["say_bye", "say_hi"]
+=> [:say_hi, :say_bye]
 {% endhighlight %}
 
 Ah, that’s more like it. So let’s see which methods our greeter object
 responds to:
 
-{% highlight ruby %}
-irb(main):041:0> g.respond_to?("name")
+{% highlight irb %}
+irb(main):041:0> greeter.respond_to?("name")
 => false
-irb(main):042:0> g.respond_to?("say_hi")
+irb(main):042:0> greeter.respond_to?("say_hi")
 => true
-irb(main):043:0> g.respond_to?("to_s")
+irb(main):043:0> greeter.respond_to?("to_s")
 => true
 {% endhighlight %}
 
@@ -98,7 +98,7 @@ doesn’t know `name`.
 But what if you want to be able to view or change the name? Ruby
 provides an easy way of providing access to an object’s variables.
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):044:0> class Greeter
 irb(main):045:1>   attr_accessor :name
 irb(main):046:1> end
@@ -110,23 +110,23 @@ be present in any new objects you create and even available in existing
 objects of that class. So, let’s create a new object and play with its
 `@name` property.
 
-{% highlight ruby %}
-irb(main):047:0> g = Greeter.new("Andy")
+{% highlight irb %}
+irb(main):047:0> greeter = Greeter.new("Andy")
 => #<Greeter:0x3c9b0 @name="Andy">
-irb(main):048:0> g.respond_to?("name")
+irb(main):048:0> greeter.respond_to?("name")
 => true
-irb(main):049:0> g.respond_to?("name=")
+irb(main):049:0> greeter.respond_to?("name=")
 => true
-irb(main):050:0> g.say_hi
+irb(main):050:0> greeter.say_hi
 Hi Andy!
 => nil
-irb(main):051:0> g.name="Betty"
+irb(main):051:0> greeter.name="Betty"
 => "Betty"
-irb(main):052:0> g
+irb(main):052:0> greeter
 => #<Greeter:0x3c9b0 @name="Betty">
-irb(main):053:0> g.name
+irb(main):053:0> greeter.name
 => "Betty"
-irb(main):054:0> g.say_hi
+irb(main):054:0> greeter.say_hi
 Hi Betty!
 => nil
 {% endhighlight %}
@@ -181,7 +181,6 @@ class MegaGreeter
       puts "Goodbye #{@names}.  Come back soon!"
     end
   end
-
 end
 
 
@@ -197,7 +196,7 @@ if __FILE__ == $0
 
   # Change the name to an array of names
   mg.names = ["Albert", "Brenda", "Charles",
-    "Dave", "Engelbert"]
+              "Dave", "Engelbert"]
   mg.say_hi
   mg.say_bye
 

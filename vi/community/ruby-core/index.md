@@ -16,7 +16,7 @@ Các chủ đề liên quan đến sự phát triển Ruby được đề cập 
 * [Dùng Subversion để theo dõi sự phát triển của Ruby](#following-ruby)
 * [Làm việc với Git](#git-ruby)
 * [Cải tiến Ruby theo từng bản vá lỗi](#patching-ruby)
-* và [Quy tắc cho các nhà phát triển Ruby-core](#coding-standards)
+* [Quy tắc cho các nhà phát triển Ruby-core](#coding-standards)
 
 ### Dùng Subversion để theo dõi sự phát triển của Ruby
 {: #following-ruby}
@@ -29,8 +29,9 @@ $ svn co http://svn.ruby-lang.org/repos/ruby/trunk ruby
 {% endhighlight %}
 
 Thư mục `ruby` sẽ chứa toàn bộ mã nguồn của phiên bản mới nhất (theo dạng
-cây).  Các bản vá lỗi áp dụng cho từng phần được backported ổn định cho 2
-nhánh 2.0.0 và 1.9.3 (xem bên dưới).
+cây).  Các bản vá lỗi áp dụng cho từng phần được backported ổn định cho
+nhánh {{ site.svn.stable.version }}, {{ site.svn.previous.version }},
+{{ site.svn.old.version }} (xem bên dưới).
 
 Nếu bạn muốn theo dõi các bản vá lỗi cho Ruby 2.0.0, bạn cần nhập
 `ruby_2_0_0` khi checkout:
@@ -54,9 +55,10 @@ gốc, Thường thì 2 phiên bản có nhiều điểm giống nhau, ngoại t
 Nếu thích, bạn có thể duyệt qua [kho lưu trữ của Ruby trên Subversion thông
 qua web][2].
 
-Để biết thêm thông tin về Subversion, vui lòng xem [những câu hỏi thường gặp
-của Subversion][3] và [sách về Subversion][4]. Ngoài ra, bạn có thể tìm quyển
-[quản lý phiên bản với Subversion][5] là một quyển sách rất hữu ích.
+Để biết thêm thông tin về Subversion, vui lòng xem
+[những câu hỏi thường gặp của Subversion][3] và [sách về Subversion][4].
+Ngoài ra, bạn có thể tìm quyển [quản lý phiên bản với Subversion][5]
+là một quyển sách rất hữu ích.
 
 ### Làm việc với Git
 {: #git-ruby}
@@ -70,8 +72,8 @@ và [tất cả những người khác][9].
 
 Nhóm phát triển Ruby Core luôn theo dõi [các vấn đề phát sinh (issue
 tracker)][10] để gửi các bản vá lỗi và các báo cáo bug cho Matz và các cộng sự
-của ông. Các bản báo cáo này cũng được gửi vào [Hộp thư chung của
-Ruby-Core](/en/community/mailing-lists/) để thảo luận, do đó đừng lo về việc
+của ông. Các bản báo cáo này cũng được gửi vào
+[Hộp thư chung của Ruby-Core][mailing-lists] để thảo luận, do đó đừng lo về việc
 yêu cầu của bạn sẽ không được chú ý.  Bạn cũng có thề gửi các bản vá lỗi vào
 thẳng hộp thư chung.  Bằng cách này hay cách khác thì bạn cũng được khuyến
 khích tham gia vào các cuộc thảo luận.
@@ -100,7 +102,7 @@ Dưới đây là một số bước để tạo được một bản vá lỗi:
         $ svn diff > ruby-changes.patch
 
 4.  Tạo một ticket trong [issue tracker][10] hoặc gửi bản vá của bạn đến
-    [hộp thư chung của Ruby-Core](/en/community/mailing-lists/) với ChangeLog
+    [hộp thư chung của Ruby-Core][mailing-lists] với ChangeLog
     mô tả nội dung về bản vá đó.
 
 5.  Nếu bản vá không phát sinh thêm lỗi nào thì những người được phép commit
@@ -110,7 +112,7 @@ Dưới đây là một số bước để tạo được một bản vá lỗi:
 Để biết các bản vá được merged như thế nào, xem thêm [the diffutils reference][13].
 
 Các cuộc thảo luận về phát triển Ruby tập trung ở
-[hộp thư chung của Ruby-Core](/en/community/mailing-lists/).
+[hộp thư chung của Ruby-Core][mailing-lists].
 Do đó, nếu bạn muốn biết bản vá của mình có đáng giá hay không hoặc bạn chỉ
 muốn thảo luận về tương lai của Ruby, đừng ngại cùng thảo luận.  Tất cả các
 cuộc thảo luận không liên quan đến Ruby đều không được chấp nhận, các cuộc
@@ -144,15 +146,16 @@ Xem thêm thông tin về [Ruby’s issue tracker][10].
 
 
 
+[mailing-lists]: /vi/community/mailing-lists/
 [1]: http://subversion.apache.org/
 [2]: http://svn.ruby-lang.org/cgi-bin/viewvc.cgi/
 [3]: http://subversion.apache.org/faq.html
 [4]: http://svnbook.org
 [5]: http://www.pragmaticprogrammer.com/titles/svn/
 [6]: http://git-scm.com/
-[7]: http://github.com/ruby/ruby
-[8]: http://wiki.github.com/shyouhei/ruby/committerhowto
-[9]: http://wiki.github.com/shyouhei/ruby/noncommitterhowto
+[7]: https://github.com/ruby/ruby
+[8]: https://github.com/shyouhei/ruby/wiki/committerhowto
+[9]: https://github.com/shyouhei/ruby/wiki/noncommitterhowto
 [10]: https://bugs.ruby-lang.org/
 [11]: http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-core/25139
 [12]: http://www.gnu.org/software/diffutils/manual/html_node/Unified-Format.html

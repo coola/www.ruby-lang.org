@@ -25,7 +25,7 @@ Znajdziesz tutaj odnośniki do podręczników, tutoriali i materiałów
   w twojej przeglądarce!
 
 [Hackety Hack][4]
-: <q cite="http://hackety-hack.com/">Zestaw startowy młodego kodera</q>.
+: <q cite="http://www.hackety.com/">Zestaw startowy młodego kodera</q>.
   Zabawny i prosty sposób na naukę programowania (poprzez Rubiego) przy
   użyciu Shoes GUI Toolkit.
 
@@ -149,7 +149,7 @@ Jeśli szukasz pomocy w języku polskim, zajrzyj na [forum][pl-2].
 [1]: http://tryruby.org/
 [2]: http://rubykoans.com/
 [3]: http://rubymonk.com/
-[4]: http://hackety-hack.com/
+[4]: http://www.hackety.com/
 [5]: http://mislav.uniqpath.com/poignant-guide/
 [6]: http://rubylearning.com/
 [7]: http://www.techotopia.com/index.php/Ruby_Essentials
@@ -159,7 +159,7 @@ Jeśli szukasz pomocy w języku polskim, zajrzyj na [forum][pl-2].
 [11]: http://www.rubyist.net/~slagell/ruby/
 [12]: http://en.wikibooks.org/wiki/Ruby_programming_language
 [13]: http://www.ruby-doc.org/core
-[14]: http://rdoc.sourceforge.net
+[14]: http://docs.seattlerb.org/rdoc/
 [15]: http://www.ruby-doc.org/stdlib
 [16]: http://www.rubydoc.info/
 [17]: http://rubydocs.org/
@@ -167,7 +167,7 @@ Jeśli szukasz pomocy w języku polskim, zajrzyj na [forum][pl-2].
 [19]: http://www.aptana.com/
 [20]: http://www.gnu.org/software/emacs/
 [21]: http://www.emacswiki.org/emacs/RubyMode
-[22]: http://cx4a.org/software/rsense/
+[22]: http://rsense.github.io/
 [23]: http://www.geany.org/
 [24]: http://projects.gnome.org/gedit/screenshots.html
 [25]: http://www.vim.org/

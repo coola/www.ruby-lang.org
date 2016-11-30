@@ -1,15 +1,15 @@
 ---
-layout: nil
+layout: null
 ---
 
 {% highlight ruby %}
-# Halo Dunia yang
-# terkenal di Ruby.
-# Anda tidak perlu:
+# Program Halo Dunia
+# yang populer itu mudah
+# di Ruby. Anda tidak perlu:
 #
-# * metode "main"
-# * newline escapes
-# * semicolons (titik koma)
+# * Sebuah metode "main"
+# * Baris baru
+# * Titik koma
 #
 # Ini kodenya:
 

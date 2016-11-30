@@ -1,5 +1,5 @@
 ---
-layout: nil
+layout: null
 ---
 
 {% highlight ruby %}
@@ -7,7 +7,7 @@ layout: nil
 # 루비로 짜면 간단합니다
 # 불 필요한 것들:
 #
-# * "main" 메서드
+# * "main" 메소드
 # * 줄 바꿈
 # * 세미콜론
 #

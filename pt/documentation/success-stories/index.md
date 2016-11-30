@@ -5,74 +5,81 @@ lang: pt
 ---
 
 Ruby é utilizado por muitas pessoas de forma profissional ou como hobby.
-Aqui poderá encontrar uma amostra da utilização da linguagem Ruby em
-diversos projectos.
+Aqui você encontrará uma pequena amostra do uso de Ruby no mundo real.
 {: .summary}
 
 #### Simulações
 
-* [NASA Langley Research Center][1] utiliza Ruby para realizar
-  simulações. [Saber mais…][2]
+* [NASA Langley Research Center][1] usa Ruby para realizar simulações.
 
-* Um grupo de pesquisa na [Motorola][3] usou Ruby escrever um simulador,
-  tanto para gerar casos de cenário como para processar esses mesmos
-  dados.
+* Um grupo de pesquisa na [Motorola][2] usa Ruby para fazer scripts para
+  um simulador, tanto para gerar cenários como para processar esses mesmos
+  dados depois.
 
-#### Negocio
+#### Modelagem 3D
+
+* O [Google SketchUp][3] é uma aplicação de modelagem 3D que utiliza o Ruby
+  para sua macro-API de scripting.
+
+#### Negócios
 
 * [Toronto Rehab][4] usa um programa baseado no RubyWebDialogs para
-  gerir e acompanhar chamadas telefónicas e apoio online para as equipas
-  de Help Desk e operações… \[original\] track on-call and on-site
-  support for the IT help desk and IT operations teams.
+  gerir e acompanhar o suporte via telefone e pessoal das equipes de
+  help desk de TI e operações de TI.
 
 #### Robótica
 
-* No projecto [MORPHA][5] , Ruby foi usado para implementar a componente
-  reactiva do robot de serviço Siemens.
+* No projeto [MORPHA][5] , Ruby foi usado para implementar a parte do
+  controle reativo do robô de serviços da Siemens.
 
 #### Redes
 
-* [Open Domain Server][6] usa Ruby de forma a permitir ás pessoas que
-  usam clientes de DNS Dinâmicos a actualização em tempo real das
-  configurações IP para que possam ser mapeadas em domínios estáticos.
+* O [Open Domain Server][6] usa Ruby de forma a permitir que as pessoas
+  usem clientes de DNS Dinâmicos para a atualização em tempo real das
+  configurações de IP para que possam ser mapeadas em domínios estáticos.
 
-#### Telefónica
+#### Telefonia
 
-* Ruby está a ser utilizado na [Lucent][7] num producto com tecnologia
-  3G sem fios.
+* Ruby está sendo utilizado na [Lucent][7] num produto de telefonia
+  3G wireless.
 
 #### Administração de Sistemas
 
-* Ruby foi usado para escrever a componente de recolha de dados da
-  [Level 3 Communications][8] , um sistema de Planeamento e Capacidade
-  Unix (Unix Capacity and Planning system) que recolhe estatísticas de
-  performance de cerca de 1700 servidores Unix (Solaris e Linux)
-  espalhados pelo mundo.
+* Ruby foi usado para escrever o componente de coleta de dados do
+  sistema de Capacidade unix e Planejamento da [Level 3 Communications][8],
+  que recolhe estatísticas de performance de cerca de 1700 servidores Unix
+  (Solaris e Linux) espalhados pelo mundo.
 
 #### Aplicações Web
 
-* [Basecamp][9], uma aplicação de gestão de projectos online
-  desenvolvida pela [37signals][10] está programada inteiramente em
+* [Basecamp][9], uma aplicação de gestão de projetos online
+  desenvolvida pela [37signals][10] é programada inteiramente em
   Ruby.
 
-* [43 Things][11] permite a qualquer pessoa criar e manter uma lista de
-  objectivos e partilha-la com o mundo. Foi desenvolvido inteiramente em
-  Ruby.
-
-* [A List Apart][12], uma revista para pessoas interessadas na criação
+* [A List Apart][11], uma revista para pessoas interessadas na criação
   de websites que existe desde 1997, foi recentemente renovada e usa uma
-  aplicação própria criada em Ruby on Rails.
+  aplicação personalizada construída em Ruby on Rails.
 
-* [Blue Sequence][13], uma sofisticada aplicação de importância crítica
+* [Blue Sequence][12], uma sofisticada aplicação de importância crítica
   que faz parte do processo de producção “sequence-in-time” da Toyota
   Motors, foi recentemente selecionada como finalista para o concurso da
   British Computer (BCS) Information Management Awards.
 
+#### Segurança
+
+* O [Metasploit Framework][metasploit], um projeto open source da comunidade
+  gerenciado pela [Rapid7][rapid7], é uma plataforma gratuita de teste de
+  penetração que permite que profissionais de TI avaliem a segurança
+  de suas redes e aplicações. O projeto Metasploit consiste de mais de
+  700.000 linhas de código e foi baixado mais de um milhão de vezes
+  em 2010.
+  As versões comerciais desenvolvidas pela Rapid7 também são baseadas em Ruby.
+
 
 
 [1]: http://www.larc.nasa.gov/
-[2]: http://www-106.ibm.com/developerworks/linux/library/l-oslab/
-[3]: http://www.motorola.com
+[2]: http://www.motorola.com
+[3]: http://www.sketchup.com/
 [4]: http://www.torontorehab.com
 [5]: http://www.morpha.de/php_e/index.php3
 [6]: http://ods.org/
@@ -80,6 +87,7 @@ diversos projectos.
 [8]: http://www.level3.com/
 [9]: http://www.basecamphq.com
 [10]: http://www.37signals.com
-[11]: http://www.43things.com
-[12]: http://www.alistapart.com
-[13]: http://www.bluefountain.com/supply-chain-management/
+[11]: http://www.alistapart.com
+[12]: http://www.bluefountain.com/supply-chain-management/
+[metasploit]: http://www.metasploit.com
+[rapid7]: http://www.rapid7.com

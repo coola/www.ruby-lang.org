@@ -4,7 +4,7 @@ title: "Documentation"
 lang: fr
 ---
 
-Vous trouverez ici des manuels, tutoriaux et références pour apprendre
+Vous trouverez ici des manuels, tutoriels et références pour apprendre
 Ruby. Une bonne partie de ces ressources est en langue anglaise. Sachez
 qu’il existe une association française pour la promotion du langage
 Ruby, [Ruby France][1], qui propose des tutoriels en français ; il
@@ -13,12 +13,27 @@ l’anglais est recommandée car il s’agit *de facto* de la langue
 dominante en informatique. Bon courage !
 {: .summary}
 
+### Installer Ruby
+
+À moins que vous ne vouliez essayer Ruby dans un navigateur (voir les liens
+plus bas) vous avez besoin d'avoir Ruby installé sur votre ordinateur.
+Vous pouvez vérifier si Ruby est déjà disponible en ouvrant une invite de
+commande et en tapant
+
+{% highlight sh %}
+ruby -v
+{% endhighlight %}
+
+Ceci devrait afficher des informations sur la version de ruby qui est installée.
+Dans le cas contraire, référez-vous à la [page d’installation](installation/)
+pour les nombreuses façons d'obtenir Ruby.
+
 ### Débuter avec Ruby
 
 #### Ressources en français
 
 [Ruby en vingt minutes](/fr/documentation/quickstart/)
-: Ce tutorial simple d’accès, **en français**, couvre les fondamentaux
+: Ce tutoriel simple d’accès, **en français**, couvre les fondamentaux
   de Ruby. Ne devrait pas prendre plus de vingt minutes de votre temps !
 
 [Passer d’un autre langage à Ruby](/fr/documentation/ruby-from-other-languages/)
@@ -59,7 +74,7 @@ dominante en informatique. Bon courage !
   traduction française est [disponible en PDF][7]
 
 [Hackety Hack][8]
-: <q cite="http://hackety-hack.com/">The little coder’s starter kit</q>.
+: <q cite="http://www.hackety.com/">The little coder’s starter kit</q>.
   Il s’agit d’un logiciel à vocation éducative, qui vous apprendra à
   programmer en utilisant Ruby et le toolkit Shoes pour réaliser des
   interfaces graphiques.
@@ -103,10 +118,9 @@ dominante en informatique. Bon courage !
 : Également extraite du code source par RDoc, cette seconde référence
   documente la bibliothèque standard.
 
-[*Ruby C API Reference*][19]
-: La documentation de l’implémentation C de ruby. Très utile si vous
-  comptez écrire des extensions C ou contribuer au développement de
-  Ruby.
+[*Ruby C API Reference*][extensions]
+: La documentation de l’API C de Ruby.
+  Très utile si vous comptez écrire des extensions C.
 
 [rubydoc.info][20]
 : Documentation auto-générée pour un grand nombre de bibliothèques Ruby.
@@ -137,7 +151,7 @@ la [liste de diffusion](/en/community/mailing-lists/) est un bon endroit
 [5]: http://mislav.uniqpath.com/poignant-guide/
 [6]: http://pine.fm/LearnToProgram/
 [7]: http://www.ruby-doc.org/docs/ApprendreProgrammer/Apprendre_%E0_Programmer.pdf
-[8]: http://hackety-hack.com/
+[8]: http://www.hackety.com/
 [9]: http://rubylearning.com/
 [10]: http://www.techotopia.com/index.php/Ruby_Essentials
 [11]: http://www.meshplex.org/wiki/Ruby/Ruby_on_Rails_programming_tutorials
@@ -146,9 +160,9 @@ la [liste de diffusion](/en/community/mailing-lists/) est un bon endroit
 [14]: http://www.rubyist.net/~slagell/ruby/
 [15]: http://en.wikibooks.org/wiki/Ruby_programming_language
 [16]: http://www.ruby-doc.org/core
-[17]: http://rdoc.sourceforge.net
+[17]: http://docs.seattlerb.org/rdoc/
 [18]: http://www.ruby-doc.org/stdlib
-[19]: http://www.ruby-doc.org/doxygen/current/
+[extensions]: https://docs.ruby-lang.org/en/trunk/extension_rdoc.html
 [20]: http://rubydoc.info/
 [21]: http://rubydocs.org/
 [22]: http://www.rubydox.net/

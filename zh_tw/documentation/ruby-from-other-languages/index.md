@@ -12,16 +12,11 @@ lang: zh_tw
 
 ## 重點整理: 從 *程式語言 X* 到 Ruby
 
-* [從 C 和 C++ 到
-  Ruby](/zh_tw/documentation/ruby-from-other-languages/to-ruby-from-c-and-cpp/)
-* [從 Java 到
-  Ruby](/zh_tw/documentation/ruby-from-other-languages/to-ruby-from-java/)
-* [從 Perl 到
-  Ruby](/zh_tw/documentation/ruby-from-other-languages/to-ruby-from-perl/)
-* [從 PHP 到
-  Ruby](/zh_tw/documentation/ruby-from-other-languages/to-ruby-from-php/)
-* [從 Python 到
-  Ruby](/zh_tw/documentation/ruby-from-other-languages/to-ruby-from-python/)
+* [從 C 和 C++ 到 Ruby](to-ruby-from-c-and-cpp/)
+* [從 Java 到 Ruby](to-ruby-from-java/)
+* [從 Perl 到 Ruby](to-ruby-from-perl/)
+* [從 PHP 到 Ruby](to-ruby-from-php/)
+* [從 Python 到 Ruby](to-ruby-from-python/)
 
 ## 重要的語言特色及一些訣竅
 
@@ -64,7 +59,7 @@ z # => true
 
 Symbols 就如同一個識別符號。一個 symbol 就代表它是”誰”了，而不是代表它是”什麼”。打開 `irb` 來看一看它們的區別：
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):001:0> :george.object_id == :george.object_id
 => true
 irb(main):002:0> "george".object_id == "george".object_id
@@ -140,9 +135,9 @@ deliver(via: "Pony Express", from: "B", to: "A")
 {% highlight python %}
 # in Python
 if 0:
-  print "0 is true"
+  print("0 is true")
 else:
-  print "0 is false"
+  print("0 is false")
 {% endhighlight %}
 
 這會輸出 “0 is false”。而在 Ruby 裡:
@@ -195,47 +190,41 @@ package 類別的實例可以呼叫，而 `private` 表示除了這個類別的�
 在 Ruby 中，`public` 還是一樣是公開的意思，其他則有一點差異。`private`
 表示只有不指定接受者(receiver)時才可以呼叫，也就是只有 **self** 可以當成 private 方法的接受者。
 
-`protected` 也有點不同。一個 protected 方法除了可以被一個類別或衍生類別的實例呼叫，也可以讓另一個相同類別的實例來當做接受者。 來看看 [Ruby FAQ][1] 的例子：
+`protected` 也有點不同。一個 protected 方法除了可以被一個類別或衍生類別的實例呼叫，也可以讓另一個相同類別的實例來當做接受者。 來看看 [Ruby Language FAQ][faq] 的例子：
 
 {% highlight ruby %}
-$ irb
-irb(main):001:0> class Test
-irb(main):002:1>   # 預設是 public 的
-irb(main):003:1*   def func
-irb(main):004:2>     99
-irb(main):005:2>   end
-irb(main):006:1>
-irb(main):007:1*   def ==(other)
-irb(main):008:2>     func == other.func
-irb(main):009:2>   end
-irb(main):010:1> end
-=> nil
-irb(main):011:0>
-irb(main):012:0* t1 = Test.new
-=> #<Test:0x34ab50>
-irb(main):013:0> t2 = Test.new
-=> #<Test:0x342784>
-irb(main):014:0> t1 == t2
-=> true
-irb(main):015:0> # 來讓 `func` 變成 protected，一樣沒問題
-irb(main):016:0* # 因為 protected 允許其他相同類別的實例呼叫
-irb(main):017:0* class Test
-irb(main):018:1>   protected :func
-irb(main):019:1> end
-=> Test
-irb(main):020:0> t1 == t2
-=> true
-irb(main):021:0> # 來讓 `func` 變成 private
-irb(main):022:0* class Test
-irb(main):023:1>   private :func
-irb(main):024:1> end
-=> Test
-irb(main):025:0> t1 == t2
-NoMethodError: private method `func' called for #<Test:0x342784>
-        from (irb):8:in `=='
-        from (irb):25
-        from :0
-irb(main):026:0>
+class Test
+  # 預設是 public 的
+  def identifier
+    99
+  end
+
+  def ==(other)
+    identifier == other.identifier
+  end
+end
+
+t1 = Test.new  # => #<Test:0x34ab50>
+t2 = Test.new  # => #<Test:0x342784>
+t1 == t2       # => true
+
+# 來讓 `identifier' 變成 protected，一樣沒問題
+# 因為 protected 允許其他相同類別的實例呼叫
+
+class Test
+  protected :identifier
+end
+
+t1 == t2  # => true
+
+# 來讓 `identifier' 變成 private
+
+class Test
+  private :identifier
+end
+
+t1 == t2
+# NoMethodError: private method `identifier' called for #<Test:0x342784>
 {% endhighlight %}
 
 ### 類別是開放的
@@ -369,7 +358,7 @@ end
 以下的操作符則**不是**語法包裝。它們不是方法，不能被覆寫定義：
 
 {% highlight ruby %}
-=, .., ..., !, not, &&, and, ||, or, !=, !~, ::
+=, .., ..., not, &&, and, ||, or, ::
 {% endhighlight %}
 
 此外 `+=`, `*=` 等只是 `var = var + other_var` 跟 `var = var * other_var`
@@ -381,4 +370,4 @@ end
 
 
 
-[1]: http://faq.rubygarden.org/entry/show/57?controller_prefix=faq%2F
+[faq]: http://ruby-doc.org/docs/ruby-doc-bundle/FAQ/FAQ.html

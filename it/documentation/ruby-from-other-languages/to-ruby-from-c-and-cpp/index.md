@@ -63,7 +63,7 @@ Come in C++, in Ruby…
 * `public`, `private` e `protected` si comportano in modo simile
 * La sintassi per l’ereditarietà è sempre costituita da un solo
   carattere, ma è `<` invece di `:`.
-* &amp;Eegrave; possibile raggruppare il tuo codice in moduli, usati in
+* È possibile raggruppare il tuo codice in moduli, usati in
   modo simile ai namespace.
 * Le eccezioni lavorano nello stesso modo, ma i nomi delle parole chiave
   sono diversi.
@@ -83,7 +83,8 @@ A differenza di C, in Ruby…
   essere compilato in qualsiasi tipo di codice macchina o simili.
 * Tutte le variabili sono allocate nella heap. Inoltre, non è necessario
   distruggerle a mano—il *garbage collector* lo fa automaticamente.
-* Gli argomenti dei metodi sono passati come reference, non come valori.
+* Gli argomenti dei metodi sono passati per valore, dove il valore è sempre
+  una reference.
 * Bisogna scrivere `require 'xxx'` invece di `#include <xxx>` o
   `#include "xxx"`.
 * Non si può ricorrere all’assembly

@@ -42,8 +42,7 @@ propos de Ruby affichent complet.
 
 ![Graph courtesy of
 Gmane.](http://gmane.org/plot-rate.php?group=gmane.comp.lang.ruby.general&amp;width=320&amp;height=160&amp;title=Ruby-Talk+Activity
-"Graph courtesy of Gmane."){: style="padding-left:8px;"}
-{: style="float:right"}
+"Graph courtesy of Gmane."){: style="padding-left:8px; float:right;"}
 
 Ruby-Talk, la toute première [liste de
 diffusion](/fr/community/mailing-lists/) recevant les discussions à
@@ -144,7 +143,7 @@ premier lieu par un simple tableau. Bien d’autres méthodes en Ruby
 laissent au programmeur l’opportunité d’écrire leurs propres blocs, afin
 de d’adapter le fonctionnement d’une méthode au contexte du script.
 
-### Le mécanisme de *mixin* 
+### Le mécanisme de *mixin*
 
 À la différence de bien d’autres langages orientés objet, Ruby ne donne
 accès qu’à l’héritage unique, et ce, **volontairement**. En effet, Ruby
@@ -202,8 +201,8 @@ parmi lesquelles on peut citer…
 * la possibilité de charger une bibliothèque d’extension à la volée, si
   le système d’exploitation le permet ;
 * une très grande portabilité : développé majoritairement sous
-  GNU/Linux, Ruby fonctionne aussi sur une grande part des UNIX, Mac OS
-  X, Windows 95/98/Me/NT/2000/XP, DOS, BeOS, OS/2, etc.
+  GNU/Linux, Ruby fonctionne aussi sur une grande part des UNIX, Mac OS X,
+  Windows, DOS, BeOS, OS/2, etc.
 
 ### Références
 

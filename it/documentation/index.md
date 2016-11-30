@@ -25,7 +25,7 @@ potrà venire comodo quando vorrai programmare in Ruby.
 : Impara il lessico Ruby risolvendo problemi nel tuo browser!
 
 [Hackety Hack][4]
-: <q cite="http://hackety-hack.com/">Lo starter kit del piccolo
+: <q cite="http://www.hackety.com/">Lo starter kit del piccolo
   programmatore</q>. Un modo facile e divertente per imparare a
   programmare (attraverso Ruby) usando il toolkit GUI *Shoes*.
 
@@ -53,7 +53,7 @@ potrà venire comodo quando vorrai programmare in Ruby.
 : Ruby Essentials è un libro gratuito online, pensato per essere una
   concisa guida facile da seguire per imparare Ruby. \[in inglese\]
 
-[Learn to Program][39]
+[Imparare a Programmare][39]
 : Un meraviglioso mini-tutorial scritto da Chris Pine e tradotto in
   italiano da Duccio Armenise. Adatto a neofiti del mondo della
   programmazione. Se non sai come programmare, inizia qui. È disponibile
@@ -115,10 +115,10 @@ Questa è una lista dei tool più comunemente usati dagli sviluppatori Ruby:
 
 * Tool con supporto Linux e multipiattaforma:
   * [Aptana Studio][19]
-  * [Emacs][20] with [Ruby mode][21] and [Rsense][22]
+  * [Emacs][20] con [Ruby mode][21] e [Rsense][22]
   * [Geany][23]
   * [gedit][24]
-  * [Vim][25] with [vim-ruby][26] plugin and [Rsense][22]
+  * [Vim][25] con [vim-ruby][26] plugin e [Rsense][22]
   * [RubyMine][27]
   * [SciTe][28]
   * [NetBeans][36]
@@ -146,7 +146,7 @@ iniziare.
 [1]: http://tryruby.org/
 [2]: http://rubykoans.com/
 [3]: http://rubymonk.com/
-[4]: http://hackety-hack.com/
+[4]: http://www.hackety.com/
 [5]: http://mislav.uniqpath.com/poignant-guide/
 [6]: http://rubylearning.com/
 [7]: http://www.techotopia.com/index.php/Ruby_Essentials
@@ -156,7 +156,7 @@ iniziare.
 [11]: http://www.rubyist.net/~slagell/ruby/
 [12]: http://en.wikibooks.org/wiki/Ruby_programming_language
 [13]: http://www.ruby-doc.org/core
-[14]: http://rdoc.sourceforge.net
+[14]: http://docs.seattlerb.org/rdoc/
 [15]: http://www.ruby-doc.org/stdlib
 [16]: http://www.rubydoc.info/
 [17]: http://rubydocs.org/
@@ -164,7 +164,7 @@ iniziare.
 [19]: http://www.aptana.com/
 [20]: http://www.gnu.org/software/emacs/
 [21]: http://www.emacswiki.org/emacs/RubyMode
-[22]: http://cx4a.org/software/rsense/
+[22]: http://rsense.github.io/
 [23]: http://www.geany.org/
 [24]: http://projects.gnome.org/gedit/screenshots.html
 [25]: http://www.vim.org/
@@ -181,5 +181,5 @@ iniziare.
 [36]: https://netbeans.org/
 [37]: http://www.sublimetext.com/
 [38]: http://ruby.learncodethehardway.org/
-[39]: http://corsorubyonrails.com/imparare-a-programmare/
+[39]: http://nemboweb.com/corsi/imparare-a-programmare/
 [40]: http://kapeli.com/dash

@@ -16,16 +16,11 @@ bildiklerinizle karşılaştırır.
 
 ## Neler Değişiyor: *X Dilinden* Ruby’ye
 
-* [C ve C++ dan
-  Ruby’ye](/tr/documentation/ruby-from-other-languages/to-ruby-from-c-and-cpp/)
-* [Java’dan
-  Ruby’ye](/tr/documentation/ruby-from-other-languages/to-ruby-from-java/)
-* [Perl’den
-  Ruby’ye](/tr/documentation/ruby-from-other-languages/to-ruby-from-perl/)
-* [PHP’den
-  Ruby’ye](/tr/documentation/ruby-from-other-languages/to-ruby-from-php/)
-* [Python’dan
-  Ruby’ye](/tr/documentation/ruby-from-other-languages/to-ruby-from-python/)
+* [C ve C++ dan Ruby’ye](to-ruby-from-c-and-cpp/)
+* [Java’dan Ruby’ye](to-ruby-from-java/)
+* [Perl’den Ruby’ye](to-ruby-from-perl/)
+* [PHP’den Ruby’ye](to-ruby-from-php/)
+* [Python’dan Ruby’ye](to-ruby-from-python/)
 
 ## Önemli Dil Özellikleri ve Bazı İpuçları
 
@@ -77,7 +72,7 @@ Semboller en iyi kimlikler olarak açıklanabilir. Bir sembolle ilgili
 sorulacak olan **ne** olduğu değil **kim** olduğudur. Konsalda `irb`
 girin ve farkı görelim:
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):001:0> :george.object_id == :george.object_id
 => true
 irb(main):002:0> "george".object_id == "george".object_id
@@ -162,9 +157,9 @@ yanlış kabul edilir. Aşağıdaki Python koduna bakın (diğer dillere de
 {% highlight python %}
 # Python'da
 if 0:
-  print "0 is true"
+  print("0 is true")
 else:
-  print "0 is false"
+  print("0 is false")
 {% endhighlight %}
 
 Bunu çıktısı “0 is false” olacaktır. Ruby karşılığı ise:
@@ -219,47 +214,41 @@ Ruby biraz farklılık gösterir. `public` doğal olarak herkese açık
 demektir. `private` ise metodun belirlenmiş alıcısı varsa
 erişilebileceğini belirtir ve bu alıcı sadece **self** olabilir.
 
-`protected` incelenmesi gereken birşey. Bir protected metod sınıfın yada türetilmiş sınıfın oluşumlarından çağrılabilir, ayrıca diğer oluşum üzerinden çağrılabilir. Örnek, [Ruby FAQ][1] alınmıştır:
+`protected` incelenmesi gereken birşey. Bir protected metod sınıfın yada türetilmiş sınıfın oluşumlarından çağrılabilir, ayrıca diğer oluşum üzerinden çağrılabilir. Örnek, [Ruby Language FAQ][faq] alınmıştır:
 
 {% highlight ruby %}
-$ irb
-irb(main):001:0> class Test
-irb(main):002:1>   # default olarak public
-irb(main):003:1*   def func
-irb(main):004:2>     99
-irb(main):005:2>   end
-irb(main):006:1>
-irb(main):007:1*   def ==(diger)
-irb(main):008:2>     func == diger.func
-irb(main):009:2>   end
-irb(main):010:1> end
-=> nil
-irb(main):011:0>
-irb(main):012:0* t1 = Test.new
-=> #<Test:0x34ab50>
-irb(main):013:0> t2 = Test.new
-=> #<Test:0x342784>
-irb(main):014:0> t1 == t2
-=> true
-irb(main):015:0> # şimdi `func` u protected yapalım, hala çalışıyor
-irb(main):016:0* # çünkü protexted diğerine referansa izin veriyor
-irb(main):017:0* class Test
-irb(main):018:1>   protected :func
-irb(main):019:1> end
-=> Test
-irb(main):020:0> t1 == t2
-=> true
-irb(main):021:0> # şimdi `func` u private yapalım
-irb(main):022:0* class Test
-irb(main):023:1>   private :func
-irb(main):024:1> end
-=> Test
-irb(main):025:0> t1 == t2
-NoMethodError: private method `func' called for #<Test:0x342784>
-        from (irb):8:in `=='
-        from (irb):25
-        from :0
-irb(main):026:0>
+class Test
+  # default olarak public
+  def identifier
+    99
+  end
+
+  def ==(other)
+    identifier == other.identifier
+  end
+end
+
+t1 = Test.new  # => #<Test:0x34ab50>
+t2 = Test.new  # => #<Test:0x342784>
+t1 == t2       # => true
+
+# şimdi `identifier' u protected yapalım, hala çalışıyor
+# çünkü protexted diğerine referansa izin veriyor
+
+class Test
+  protected :identifier
+end
+
+t1 == t2  # => true
+
+# şimdi `identifier' u private yapalım
+
+class Test
+  private :identifier
+end
+
+t1 == t2
+# NoMethodError: private method `identifier' called for #<Test:0x342784>
 {% endhighlight %}
 
 ### Sınıflar Açıktır
@@ -407,7 +396,7 @@ Aşağıdaki operatörler bu şekilde değerlendirilmezler. Bunlar metod
 değildir ve tekrar tanımlanamazlar:
 
 {% highlight ruby %}
-=, .., ..., !, not, &&, and, ||, or, !=, !~, ::
+=, .., ..., not, &&, and, ||, or, ::
 {% endhighlight %}
 
 Ek olarak, `+=`, `*=` vb. şunların kısaltmasıdır : `var = var + other_var`,
@@ -420,4 +409,4 @@ bölümüne bakınız.
 
 
 
-[1]: http://faq.rubygarden.org/entry/show/57?controller_prefix=faq%2F
+[faq]: http://ruby-doc.org/docs/ruby-doc-bundle/FAQ/FAQ.html

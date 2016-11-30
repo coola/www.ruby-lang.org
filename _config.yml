@@ -1,21 +1,22 @@
 markdown: kramdown
 permalink: pretty
-pygments: true
+highlighter: rouge
 
 timezone: UTC
 
 kramdown:
   auto_ids: false
+  syntax_highlighter_opts:
+    disable: true
 
 exclude:
-  - config
   - config.ru
   - Gemfile
   - Gemfile.lock
   - Procfile
   - Rakefile
   - README.md
-  - redirect.conf_
+  - unicorn.rb
   - vendor
 
 url: https://www.ruby-lang.org
@@ -25,45 +26,73 @@ license:
 
 downloads:
   stable:
-    version: 2.1.2
-    url:
-      bz2: http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.2.tar.bz2
-      gz: http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.2.tar.gz
-      zip: http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.2.zip
-    md5:
-      bz2: ed9b8565bdeccb401d628ec8d54a0774
-      gz: a5b5c83565f8bd954ee522bd287d2ca1
-      zip: 7c303050d1e28e18398aed0fd59d334c
-  previous:
-    version: 2.0.0-p481
-    url:
-      bz2: http://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p481.tar.bz2
-      gz: http://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p481.tar.gz
-      zip: http://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p481.zip
-    md5:
-      bz2: ea406a8d415a1a5d8365596d4288f3da
-      gz: 3913e0ad6cc572b7358e4c6a8c4b2551
-      zip: 1cdf06d1a58f3103e9ed7e072d680b19
-  previous19:
-    version: 1.9.3-p547
-    url:
-      bz2: http://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p547.tar.bz2
-      gz: http://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p547.tar.gz
-      zip: http://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p547.zip
-    md5:
-      bz2: 5363d399be7f827c77bf8ae5d1a69b38
-      gz: 7531f9b1b35b16f3eb3d7bea786babfd
-      zip: 40ce2040860b18a330efe70b5ef072ba
+    - version: 2.3.3
+      url:
+        bz2: https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.3.tar.bz2
+        gz: https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.3.tar.gz
+        xz: https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.3.tar.xz
+        zip: https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.3.zip
+      sha256:
+        bz2: 882e6146ed26c6e78c02342835f5d46b86de95f0dc4e16543294bc656594cc5b
+        gz: 241408c8c555b258846368830a06146e4849a1d58dcaf6b14a3b6a73058115b7
+        xz: 1a4fa8c2885734ba37b97ffdb4a19b8fba0e8982606db02d936e65bac07419dc
+        zip: cbffda17fdb1bbd86dd36de093524b0a9b5c92e007fd60acac1c9804b429886e
+    - version: 2.2.6
+      url:
+        bz2: https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.6.tar.bz2
+        gz: https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.6.tar.gz
+        xz: https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.6.tar.xz
+        zip: https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.6.zip
+      sha256:
+        bz2: e845ba41ea3525aafaa4094212f1eadc57392732232b67b4394a7e0f046dddf7
+        gz: de8e192791cb157d610c48a9a9ff6e7f19d67ce86052feae62b82e3682cc675f
+        xz: 9414ecc0d09cf71c9a24e8dc82fcc87919ac7359fb08db2791d6c32bfd157339
+        zip: 71bafc98c0b6f7b70cd79473952060e9b9fc36c8d57ee21c6b775451a16e6f9a
+  security_maintenance:
+    - version: 2.1.10
+      url:
+        bz2: https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.10.tar.bz2
+        gz: https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.10.tar.gz
+        xz: https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.10.tar.xz
+        zip: https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.10.zip
+      sha256:
+        bz2: a74675578a9a801ac25eb7152bef3023432d6267f875b198eb9cd6944a5bf4f1
+        gz: fb2e454d7a5e5a39eb54db0ec666f53eeb6edc593d1d2b970ae4d150b831dd20
+        xz: 5be9f8d5d29d252cd7f969ab7550e31bbb001feb4a83532301c0dd3b5006e148
+        zip: 21cf83156ec782d17827fb9c8a945626dfd68cf0d9eb5ca7a78b12eb91c6f1fb
+  eol:
+    - version: 2.0.0-p648
+      url:
+        bz2: https://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p648.tar.bz2
+        gz: https://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p648.tar.gz
+        xz: https://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p648.tar.xz
+        zip: https://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p648.zip
+      sha256:
+        bz2: 087ad4dec748cfe665c856dbfbabdee5520268e94bb81a1d8565d76c3cc62166
+        gz: 8690bd6b4949c333b3919755c4e48885dbfed6fd055fe9ef89930bde0d2376f8
+        xz: 22fe97739110ba9171b13fc4dcd1a92e767f16769de3593ee41ef1283d218402
+        zip: 6d1fb8b285c80bfc1838880626d04f128561a649161c80d1748423c731d548bd
   stable_snapshot:
     url:
-      bz2: https://ftp.ruby-lang.org/pub/ruby/stable-snapshot.tar.bz2
-      gz: https://ftp.ruby-lang.org/pub/ruby/stable-snapshot.tar.gz
-      zip: https://ftp.ruby-lang.org/pub/ruby/stable-snapshot.zip
+      bz2: https://cache.ruby-lang.org/pub/ruby/stable-snapshot.tar.bz2
+      gz: https://cache.ruby-lang.org/pub/ruby/stable-snapshot.tar.gz
+      zip: https://cache.ruby-lang.org/pub/ruby/stable-snapshot.zip
   nightly_snapshot:
     url:
-      bz2: https://ftp.ruby-lang.org/pub/ruby/snapshot.tar.bz2
-      gz: https://ftp.ruby-lang.org/pub/ruby/snapshot.tar.gz
-      zip: https://ftp.ruby-lang.org/pub/ruby/snapshot.zip
+      bz2: https://cache.ruby-lang.org/pub/ruby/snapshot.tar.bz2
+      gz: https://cache.ruby-lang.org/pub/ruby/snapshot.tar.gz
+      zip: https://cache.ruby-lang.org/pub/ruby/snapshot.zip
+
+svn:
+  stable:
+    version: 2.3
+    branch:  ruby_2_3
+  previous:
+    version: 2.2
+    branch:  ruby_2_2
+  old:
+    version: 2.1
+    branch:  ruby_2_1
 
 locales:
   sitelinks:
@@ -74,7 +103,7 @@ locales:
         url: /bg/documentation
       - text: Библиотеки
         url: /bg/libraries
-      - text: Общество
+      - text: Общност
         url: /bg/community
       - text: Новини
         url: /bg/news
@@ -143,11 +172,11 @@ locales:
       - text: À propos de Ruby
         url:  /fr/about
     id:
-      - text: Download
+      - text: Unduh
         url: /id/downloads
       - text: Dokumentasi
         url: /id/documentation
-      - text: Library
+      - text: Pustaka
         url: /id/libraries
       - text: Komunitas
         url: /id/community
@@ -230,8 +259,8 @@ locales:
         url: /pt/community
       - text: Notícias
         url: /pt/news
-#     - text:
-#       url: /pt/security
+      - text: Segurança
+        url: /pt/security
       - text: Sobre Ruby
         url: /pt/about
     ru:
@@ -361,9 +390,9 @@ locales:
     pl: "Najlepszy Przyjaciel Programisty"
     pt: "O melhor amigo do programador"
     ru: "лучший друг программиста"
-    tr: "A Programmer's Best Friend"
+    tr: "BİR PROGRAMCININ EN İYİ ARKADAŞI"
     vi: "Người bạn tri kỉ của lập trình viên"
-    zh_cn: "程序员最要好的朋友"
+    zh_cn: "程序员最好的朋友"
     zh_tw: "程式設計師的摯友"
 
   ruby:
@@ -409,9 +438,9 @@ locales:
 #   ja:
     ko: "작성자: AUTHOR (%Y-%m-%d)"
     pl: "Zamieszczone przez AUTHOR %Y-%m-%d"
-    pt: "Escrito por AUTHOR em %Y-%m-%d"
+    pt: "Escrito por AUTHOR em %d/%m/%Y"
     ru: "Опубликовал AUTHOR %Y-%m-%d"
-    tr: "AUTHOR tarafından %Y-%m-%d tarihinde gönderildi"
+    tr: "AUTHOR tarafından %d.%m.%Y tarihinde gönderildi"
     vi: "Đăng bởi AUTHOR vào %-d %b %Y"
     zh_cn: "由 AUTHOR 发表于 %Y-%m-%d"
     zh_tw: "由 AUTHOR 發表於 %Y-%m-%d"
@@ -476,8 +505,8 @@ locales:
       description: Najnowsze wiadomości z ruby-lang.org.
       lang_code: pl
     pt:
-      title: Noticias de Ruby por RSS
-      description: As notícias mais recentes do ruby-lang.org em Português.
+      title: Notícias sobre Ruby
+      description: As notícias mais recentes do ruby-lang.org em português.
       lang_code: pt-PT
     ru:
       title: Новости Ruby
@@ -485,7 +514,7 @@ locales:
       lang_code: ru-RU
     tr:
       title: Ruby Son Haberler
-      description: Ruby Son Haberler
+      description: ruby-lang.org'dan en son haberler.
       lang_code: tr
     vi:
       title: Tin tức Ruby
@@ -505,12 +534,12 @@ locales:
       other_news: Други новини
       more_news: Още новини...
       continue: Прочетете още...
-      back_to_year: "Back to %Y Archives"
+      back_to_year: "Обратно към архив %Y"
       recent_news: Последни новини
-      yearly_archive_title: "%Y Archives"
-      monthly_archive_title: "%B %Y Archives"
+      yearly_archive_title: "Архив %Y"
+      monthly_archive_title: "Архив %B %Y"
       yearly_archives: Архив по година
-      monthly_archives: Archives by Month
+      monthly_archives: Архив по месец
       yearly_archive_link: "%Y"
       monthly_archive_link: "%B %Y"
     de:
@@ -566,7 +595,7 @@ locales:
       more_news: Arsip Sebelumnya...
       continue: Baca Selengkapnya...
       back_to_year: "Kembali ke Arsip Tahun %Y"
-      recent_news: Berita
+      recent_news: Berita Baru
       yearly_archive_title: "Arsip Tahun %Y"
       monthly_archive_title: "Arsip %B %Y"
       yearly_archives: Arsip Tahunan
@@ -625,12 +654,12 @@ locales:
       other_news: Outras Notícias
       more_news: Mais Notícias...
       continue: Continuar a Leitura...
-      back_to_year: "Back to %Y Archives"
+      back_to_year: "Voltar aos arquivos de %Y"
       recent_news: Notícias Recentes
       yearly_archive_title: "Arquivos de %Y"
-      monthly_archive_title: "%B %Y Archives"
+      monthly_archive_title: "Arquivos de %B %Y"
       yearly_archives: Arquivos por Ano
-      monthly_archives: Archives by Month
+      monthly_archives: Arquivos por Mês
       yearly_archive_link: "Arquivos de %Y"
       monthly_archive_link: "%B %Y"
     ru:
@@ -649,13 +678,13 @@ locales:
       other_news: Diğer Haberler
       more_news: Dahası...
       continue: Devamını Okuyun...
-      back_to_year: "Back to %Y Archives"
+      back_to_year: "%Y arşivlerine geri dönün."
       recent_news: Son Haberler
-      yearly_archive_title: "%Y Archives"
-      monthly_archive_title: "%B %Y Archives"
-      yearly_archives: Archives by Year
-      monthly_archives: Archives by Month
-      yearly_archive_link: "%Y Archives"
+      yearly_archive_title: "%Y Arşivleri"
+      monthly_archive_title: "%B %Y Arşivleri"
+      yearly_archives: Yıllara göre Arşivler
+      monthly_archives: Aylara göre Arşivler
+      yearly_archive_link: "%Y Arşivleri"
       monthly_archive_link: "%B %Y"
     vi:
       other_news: Tin khác
@@ -697,8 +726,8 @@ locales:
   sidebar:
     try_ruby: &try_ruby
       url: http://tryruby.org/
-    books: &books
-      url: http://www.amazon.com/s/ref=sr_nr_n_5?ie=UTF8&amp;rs=1000&amp;keywords=Ruby&amp;rh=i%3Aaps%2Ck%3ARuby%2Ci%3Astripbooks%2Cn%3A1000%2Cn%3A5
+    rubybib: &rubybib
+      url: http://rubybib.org/
 
     bg:
       get_started:
@@ -717,9 +746,8 @@ locales:
         documentation:
           text: Документация
           url: /bg/documentation/
-        books:
-          text: Книги
-          <<: *books
+        # books:
+        #   text: Книги
         libraries:
           text: Библиотеки
           url: /bg/libraries/
@@ -775,9 +803,8 @@ locales:
         documentation:
           text: Dokumentation
           url: /de/documentation/
-        books:
-          text: Bücher
-          <<: *books
+        # books:
+        #   text: Bücher
         libraries:
           text: Bibliotheken
           url: /de/libraries/
@@ -833,9 +860,11 @@ locales:
         documentation:
           text: Documentation
           url: /en/documentation/
-        books:
-          text: Books
-          <<: *books
+        # books:
+        #   text: Books
+        rubybib:
+          text: Academic Research
+          <<: *rubybib
         libraries:
           text: Libraries
           url: /en/libraries/
@@ -891,9 +920,8 @@ locales:
         documentation:
           text: Documentación
           url: /es/documentation/
-        books:
-          text: Libros
-          url: http://www.ruby-doc.org/bookstore
+        # books:
+        #   text: Libros
         libraries:
           text: Bibliotecas
           url: /es/libraries/
@@ -906,7 +934,7 @@ locales:
           text: Listas de correo
           url: /es/community/mailing-lists/
           description: |
-            Habla sobre Ruby con desarrolladores al rededor del mundo.
+            Habla sobre Ruby con desarrolladores alrededor del mundo.
         user_groups:
           text: Grupos de usuarios
           url: /es/community/user-groups/
@@ -949,9 +977,8 @@ locales:
         documentation:
           text: Documentation
           url: /fr/documentation/
-        books:
-          text: Livres
-          <<: *books
+        # books:
+        #   text: Livres
         libraries:
           text: Bibliothèques
           url: /fr/libraries/
@@ -1007,11 +1034,10 @@ locales:
         documentation:
           text: Dokumentasi
           url: /id/documentation/
-        books:
-          text: Buku-buku
-          url: http://www.ruby-doc.org/bookstore
+        # books:
+        #   text: Buku-buku
         libraries:
-          text: Library
+          text: Pustaka
           url: /id/libraries/
         success_stories:
           text: Kisah Sukses
@@ -1040,11 +1066,11 @@ locales:
           url: /id/community/ruby-core/
           description: |
             Silakan berkontribusi untuk versi Ruby terbaru.
-#       issue_tracking:
-#         text: Issue Tracking
-#         url: https://bugs.ruby-lang.org/
-#         description: |
-#           Report or help solve issues in Ruby.
+        issue_tracking:
+          text: Laporkan Masalah
+          url: https://bugs.ruby-lang.org/
+          description: |
+            Lapor atau bantu memecahkan masalah yang ada di Ruby.
       syndicate:
         text: Sindikasi Web
         recent_news:
@@ -1067,9 +1093,8 @@ locales:
         documentation:
           text: Documentazione
           url: /it/documentation/
-        books:
-          text: Libri
-          url: http://www.ruby-doc.org/bookstore
+        # books:
+        #   text: Libri
         libraries:
           text: Librerie
           url: /it/libraries/
@@ -1110,25 +1135,27 @@ locales:
           text: Ultime Notizie (RSS)
           url: /it/feeds/news.rss
     ja:
-#     get_started:
-#       text: <strong>Get Started</strong>, it's easy!
-#       try_ruby:
-#         text: Try Ruby! (in your browser)
-#         <<: *try_ruby
-#       quickstart:
-#         text: Ruby in Twenty Minutes
-#         url: /ja/documentation/quickstart/
-#       ruby_from_other_languages:
-#         text: Ruby from Other Languages
-#         url: /ja/documentation/ruby-from-other-languages/
+      get_started:
+        text: <strong>はじめよう!</strong>
+        try_ruby:
+          text: 試してみる! (ブラウザから)
+          <<: *try_ruby
+        quickstart:
+          text: 20分ではじめるRuby
+          url: /ja/documentation/quickstart/
+        ruby_from_other_languages:
+          text: 他言語からのRuby入門
+          url: /ja/documentation/ruby-from-other-languages/
       explore:
-        text: <strong>探求しよう!</strong>
+        text: <strong>探求しよう</strong>
         documentation:
           text: ドキュメント
           url: /ja/documentation/
-#       books:
-#         text: Books
-#         <<: *books
+        # books:
+        #   text: Books
+        rubybib:
+          text: 学術研究(英語)
+          <<: *rubybib
         libraries:
           text: ライブラリ
           url: /ja/libraries/
@@ -1184,9 +1211,8 @@ locales:
         documentation:
           text: 문서
           url: /ko/documentation/
-        books:
-          text: 책
-          url: /ko/documentation/books/
+        # books:
+        #   text: 책
         libraries:
           text: 라이브러리
           url: /ko/libraries/
@@ -1242,9 +1268,8 @@ locales:
         documentation:
           text: Dokumentacja
           url: /pl/documentation/
-        books:
-          text: Książki
-          url: http://www.ruby-doc.org/bookstore
+        # books:
+        #   text: Książki
         libraries:
           text: Biblioteki
           url: /pl/libraries/
@@ -1298,13 +1323,12 @@ locales:
           text: Ruby a partir de outras linguagens
           url: /pt/documentation/ruby-from-other-languages/
       explore:
-        text: <strong>Explora</strong> um novo mundo…
+        text: <strong>Explore</strong> um novo mundo…
         documentation:
           text: Documentação
           url: /pt/documentation/
-        books:
-          text: Livros
-          url: http://www.ruby-doc.org/bookstore
+        # books:
+        #   text: Livros
         libraries:
           text: Bibliotecas
           url: /pt/libraries/
@@ -1313,36 +1337,36 @@ locales:
           url: /pt/documentation/success-stories/
       participate:
         text: |
-          <strong>Participa</strong> numa comunidade simpática e em crescimento.
+          <strong>Participe</strong> de uma comunidade simpática e em crescimento.
         mailing_lists:
-          text: Listas de Correio
+          text: Listas de E-mail
           url: /pt/community/mailing-lists/
           description: |
-            Fala sobre Ruby com programadores de todo o mundo.
+            Fale sobre Ruby com programadores de todo o mundo.
         user_groups:
-          text: Grupos de Utilizadores
+          text: Grupos de Usuários
           url: /pt/community/user-groups/
           description: |
-            Entra em contacto com colegas da tua área.
-#       weblogs:
-#         text: Weblogs
-#         url: /pt/community/weblogs/
-#         description: |
-#           Read about what’s happening right now in the Ruby community.
+            Entre em contato com colegas da sua área.
+        weblogs:
+          text: Weblogs
+          url: /pt/community/weblogs/
+          description: |
+            Leia sobre o que está acontecendo agora na comunidade Ruby.
         ruby_core:
           text: Ruby Core
           url: /pt/community/ruby-core/
           description: |
-            Ajuda a limar as arestas da última versão de Ruby.
-#       issue_tracking:
-#         text: Issue Tracking
-#         url: https://bugs.ruby-lang.org/
-#         description: |
-#           Report or help solve issues in Ruby.
+            Ajude a polir as arestas da última versão do Ruby.
+        issue_tracking:
+          text: Issue Tracking
+          url: https://bugs.ruby-lang.org/
+          description: |
+            Informe ou ajude a resolver problemas do Ruby.
       syndicate:
-        text: Feeds de noticias (RSS)
+        text: Feeds de notícias (RSS)
         recent_news:
-          text: Em Português
+          text: Em português
           url: /pt/feeds/news.rss
     ru:
       get_started:
@@ -1361,9 +1385,8 @@ locales:
         documentation:
           text: Документация
           url: /ru/documentation/
-        books:
-          text: Книги
-          <<: *books
+        # books:
+        #   text: Книги
         libraries:
           text: Библиотеки
           url: /ru/libraries/
@@ -1415,13 +1438,12 @@ locales:
           text: Diğer Dillerden Ruby'ye
           url: /tr/documentation/ruby-from-other-languages/
       explore:
-        text: <strong>Yeni Bir Dünya</strong> keşfedina…
+        text: <strong>Yeni Bir Dünya</strong> keşfedin…
         documentation:
           text: Belgeler
           url: /tr/documentation/
-        books:
-          text: Kitaplar
-          <<: *books
+        # books:
+        #   text: Kitaplar
         libraries:
           text: Kütüphaneler
           url: /tr/libraries/
@@ -1429,7 +1451,7 @@ locales:
           text: Başarı Hikayeleri
           url: /tr/documentation/success-stories/
       participate:
-        text: <strong>Arkadaşça</strong> ve büyüyen bir topluluğa kaltılın.
+        text: <strong>Arkadaşça</strong> ve büyüyen bir topluluğa katılın.
 #       mailing_lists:
 #         text: Mail Listeleri
 #         url: /tr/community/mailing-lists/
@@ -1477,9 +1499,8 @@ locales:
         documentation:
           text: Tài liệu
           url: /vi/documentation/
-        books:
-          text: Sách
-          <<: *books
+        # books:
+        #   text: Sách
         libraries:
           text: Thư viện
           url: /vi/libraries/
@@ -1535,9 +1556,8 @@ locales:
         documentation:
           text: 文件
           url: /zh_tw/documentation/
-        books:
-          text: 書籍
-          <<: *books
+        # books:
+        #   text: 書籍
         libraries:
           text: 函式庫
           url: /zh_tw/libraries/
@@ -1578,24 +1598,23 @@ locales:
           url: /zh_tw/feeds/news.rss
     zh_cn:
       get_started:
-        text: <strong>试用</strong>, 其实很简单!
+        text: <strong>试用</strong>，其实很简单！
         try_ruby:
-          text: 在浏览器上试用 Ruby (英文)
+          text: 在浏览器中试用 Ruby（英文）
           <<: *try_ruby
         quickstart:
-          text: 20分钟体验 Ruby
+          text: 20 分钟体验 Ruby
           url: /zh_cn/documentation/quickstart/
         ruby_from_other_languages:
-          text: 从其它语言到 Ruby
+          text: 从其它语言转到 Ruby
           url: /zh_cn/documentation/ruby-from-other-languages/
       explore:
-        text: <strong>探索</strong> 新的世界
+        text: <strong>探索</strong>新的世界
         documentation:
           text: 文档
           url: /zh_cn/documentation/
-#       books:
-#         text: Books
-#         <<: *books
+        # books:
+        #   text: Books
         libraries:
           text: 代码库
           url: /zh_cn/libraries/
@@ -1603,7 +1622,7 @@ locales:
           text: 成功案例
           url: /zh_cn/documentation/success-stories/
       participate:
-        text: <strong>加入</strong> 友善及日益壮大的社区
+        text: <strong>加入</strong>友善及日益壮大的社区
         mailing_lists:
           text: 邮件列表
           url: /zh_cn/community/mailing-lists/
@@ -1632,19 +1651,19 @@ locales:
       syndicate:
         text: 订阅
         recent_news:
-          text: 最新消息(RSS)
+          text: 最新消息（RSS）
           url: /zh_cn/feeds/news.rss
 
   subscription_form:
     bg:
-      list: Mailing List
-      first_name: First Name
-      last_name: Last Name
-      email: Email Address
-      action: Action
-      subscribe: Subscribe
-      unsubscribe: Unsubscribe
-      submit: Submit Form
+      list: Пощенски списък
+      first_name: Име
+      last_name: Фамилия
+      email: Email адрес
+      action: Действие
+      subscribe: Записване
+      unsubscribe: Отписване
+      submit: Изпрати
     de:
       list: Mailingliste
       first_name: Vorname
@@ -1727,13 +1746,13 @@ locales:
       unsubscribe: Unsubscribe
       submit: Submit Form
     pt:
-      list: Lista de Correio
+      list: Lista de E-mails
       first_name: Primeiro Nome
       last_name: Último Nome
-      email: Endereço Electrónico
-      action: Acção
-      subscribe: Subscribe
-      unsubscribe: Unsubscribe
+      email: E-mail
+      action: Ação
+      subscribe: Inscrever
+      unsubscribe: Desinscrever
       submit: Enviar Formulário
     ru:
       list: Почтовая рассылка
@@ -1770,7 +1789,7 @@ locales:
       action: 操作
       subscribe: 订阅
       unsubscribe: 退订
-      submit: 提交表格
+      submit: 提交表单
     zh_tw:
       list: 郵件論壇
       first_name: 名
@@ -1782,21 +1801,22 @@ locales:
       submit: 送出表格
 
   languages_heading:
+    bg: "Този сайт на други езици:"
     de: "Diese Website in anderen Sprachen:"
     en: "This site in other languages:"
     fr: "Autres langues disponibles :"
+    id: "Situs ini dalam bahasa lain:"
     it: "Questo sito in altre lingue:"
     pl: "Ta strona w innych językach:"
+    pt: "Este site em outros idiomas:"
     ru: "Этот сайт на других языках:"
+    tr: "Diğer dillerde bu site:"
+    zh_cn: "本站其他语言版本："
 
   credits:
     bg: |
-      Този сайт е генериран с Ruby и излползва <a href="http://www.jekyllrb.com/">Jekyll</a>.
-      Поддържа се от членове на Ruby обществото.
-      Ако имате желание да допринесете за развитието му, моля посетете
-      <a href="https://github.com/ruby/www.ruby-lang.org/">GitHub</a> или се свържете с
-      <a href="mailto:webmaster@ruby-lang.org">webmaster-a</a>
-      за въпроси или коментари.
+      <a href="/bg/about/website/">Този сайт</a>
+      се поддържа от членове на Ruby обществото.
     de: |
       <a href="/de/about/website/">Diese Website</a>
       wird mit Stolz von Mitgliedern der Ruby-Community gepflegt.
@@ -1806,7 +1826,7 @@ locales:
     es: |
       Este sitio web está desarrollado con Ruby y <a href="http://www.jekyllrb.com/">Jekyll</a>
       y es orgullosamente mantenido por miembros de la comunidad.
-      Si quieres contribuir, por favor hazlo en <a href="https://github.com/ruby/www.ruby-lang.org/">Github</a>
+      Si quieres contribuir, por favor hazlo en <a href="https://github.com/ruby/www.ruby-lang.org/">GitHub</a>
       o contacta a nuestro <a href="mailto:webmaster@ruby-lang.org">webmaster</a>
       si tienes preguntas o comentarios.
     fr: |
@@ -1816,11 +1836,8 @@ locales:
       ou contactez le <a href="mailto:webmaster@ruby-lang.org">webmaster</a>
       pour toute question ou tout commentaire.
     id: |
-      Situs ini dikembangkan menggunakan bahasa Ruby dan <a href="http://www.jekyllrb.com/">Jekyll</a>.
-      Dipersembahkan dengan bangga oleh anggota komunitas Ruby.
-      Silakan berkontribusi melalui <a href="https://github.com/ruby/www.ruby-lang.org/">GitHub</a>
-      atau hubungi <a href="mailto:webmaster@ruby-lang.org">webmaster</a> kami
-      untuk pertanyaan atau komentar mengenai situs ini.
+      <a href="/id/about/website/">Situs ini</a>
+      dengan bangga dirawat oleh anggota komunitas Ruby.
     it: |
       <a href="/it/about/website/">Questo sito web</a>
       è mantenuto con orgoglio dai membri della comunità Ruby.
@@ -1833,12 +1850,18 @@ locales:
       <a href="/pl/about/logo/">Logo Rubiego</a> jest Zastrzeżone &copy; 2006, Yukihiro Matsumoto; licencjonowane na warunkach <a href="http://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a>.<br><br>
       Serwis powstał w języku Ruby przy użyciu <a href="http://www.jekyllrb.com/">Jekyll</a>.
       Utrzymaniem serwisu zajmuje się społeczność Rubiego.
-      Projekt strony <a href="http://twitter.com/jz">Jason Zimdars</a>.
+      Projekt strony <a href="https://twitter.com/jasonzimdars">Jason Zimdars</a>.
       Proszę udziel nam wsparcia na <a href="https://github.com/ruby/www.ruby-lang.org/">GitHub</a>
       lub skontaktuj się z naszym <a href="mailto:webmaster@ruby-lang.org">webmasterem</a>
       jeśli masz jakieś pytania lub komentarze dotyczące tego serwisu.
+    pt: |
+      <a href="/pt/about/website/">Este website</a>
+      é mantido com orgulho por membros da comunidade Ruby.
     ru: |
       <a href="/ru/about/website/">Этот сайт</a> с гордостью поддерживается членами сообщества Ruby.
+    tr: |
+      <a href="/en/about/website/">Bu web sitesi</a>
+      Ruby topluluğunun üyeleri tarafından gururla sürdürülmektedir.
     vi: |
       Website này được tạo ra với Ruby sử dụng <a href="http://www.jekyllrb.com/">Jekyll</a>.
       Trang được bảo trì bởi các thành viên của cộng đồng Ruby.
@@ -1846,8 +1869,6 @@ locales:
       hay liên lạc với <a href="mailto:webmaster@ruby-lang.org">webmaster</a> (bằng tiếng Anh)
       nếu có câu hỏi hoặc ý kiến phản hồi về trang này.
     zh_cn: |
-      本网站使用 Ruby 工具 <a href="http://www.jekyllrb.com/">Jekyll</a> 制作，并有幸由来自 Ruby 社区的会员共同维护。
-      请贡献代码至 <a href="https://github.com/ruby/www.ruby-lang.org/">GitHub</a>。
-      如有任何疑问和意见，请联系我们的<a href="mailto:webmaster@ruby-lang.org">站点管理员</a>。
+      <a href="/zh_cn/about/website/">本站</a>由 Ruby 社区的成员共同维护。
     zh_tw: |
       <a href="/zh_tw/about/website/">本站</a>由 Ruby 社群成員共同維護。

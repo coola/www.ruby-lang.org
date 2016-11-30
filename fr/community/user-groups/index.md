@@ -74,8 +74,10 @@ d’un verre dans un lieu adapté aux présentations).
   Ruby France.
 
 [Lille][13]
-: Le Nord Europe Ruby User Group Francophone organise des apéros sur
-  Lille.
+: Le groupe Ruby Nord organise sur Lille (et la région Nord-Pas-de-Calais)
+  des apéros Ruby, des repas Ruby Burgers et des ateliers Rails Mentors.
+  Du fait de leur proximité, les groupes Ruby Nord et Ruby Belgium sont
+  très régulièrement amenés à échanger lors de rencontres conviviales.
 
 [Marseille][14]
 : Le Pastis Ruby Brigade est le groupe d’utilisateurs pour les rubyistes
@@ -96,10 +98,10 @@ d’un verre dans un lieu adapté aux présentations).
 
 ### Votre propre groupe
 
-Si votre ville n’est pas listé sur cette page, tout n’est pas perdu.
+Si votre ville n’est pas listée sur cette page, tout n’est pas perdu.
 Vous pouvez envoyer un mail à contact AT rubyfr DOT org. Nous nous
-efforçons de mettre en relation les utilisateurs de Ruby dans toutes les
-frances. Et ça peut également être l’occasion de lancer votre groupe
+efforçons de mettre en relation les utilisateurs de Ruby dans toute la
+France. Et ça peut également être l’occasion de lancer votre groupe
 d’utilisateurs avec l’appui de Ruby France. En plus, vous n’avez pas
 d’excuse, Camille Roux a écrit un billet de blog qui explique dans le
 détail [comment organiser un apéro Ruby][19].
@@ -118,7 +120,7 @@ détail [comment organiser un apéro Ruby][19].
 [10]: https://twitter.com/#!/yannski
 [11]: http://www.rennesonrails.com/
 [12]: http://groups.google.com/group/rubyfr-public/
-[13]: http://groups.google.com/group/ruby-nord
+[13]: http://ruby-nord.org/
 [14]: https://twitter.com/#!/PastisRB
 [15]: http://rivierarb.fr/
 [16]: http://www.facebook.com/AperoRubyMontpellier

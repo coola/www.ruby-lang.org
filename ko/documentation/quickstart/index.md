@@ -21,8 +21,8 @@ header: |
 
 이 문서는 20분 정도면 따라 해볼 수 있는 간단한 루비 튜토리얼입니다.
 이 튜토리얼을 따라 하기 위해서는 컴퓨터에 루비가 설치되어 있어야
-합니다. (아직 루비가 설치되어 있지 않다면, [이곳](/ko/downloads/)에서
-다운로드 받아 설치하시기 바랍니다.)
+합니다. (아직 루비가 설치되어 있지 않다면, 시작하기 전에
+[설치][installation]하시기 바랍니다.)
 
 ## 대화형 루비 셸(irb)
 
@@ -32,18 +32,19 @@ header: |
 
 irb(Interactive Ruby의 약자)를 시작하십시오.
 
-* **맥 OS X**를 사용한다면, 터미널 애플리케이션을 시작하여 `irb`라고 입력하고 엔터를 누릅니다.
+* **맥 OS X**를 사용한다면, 터미널 애플리케이션을 시작하여 `irb`라고
+  입력하고 엔터를 누릅니다.
 * **Linux**를 사용한다면, 셸을 시작하여 `irb`라고 입력하고 엔터를 누릅니다.
-* **Windows**를 사용한다면, 시작 메뉴의 루비 섹션에서 `fxri`를 시작합니다.
-^
+* **Windows**를 사용한다면, 시작 메뉴의 루비 섹션에서 `Interactive Ruby`를
+  시작합니다.
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):001:0>
 {% endhighlight %}
 
-이제 irb 프롬프트에 `“Hello World”`라고 입력해 봅니다.
+이제 irb 프롬프트에 `"Hello World"`라고 입력해 봅니다.
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):001:0> "Hello World"
 => "Hello World"
 {% endhighlight %}
@@ -55,7 +56,7 @@ irb(main):001:0> "Hello World"
 보여준 것뿐입니다. 만약 “Hello World”를 출력하고 싶다면, 다음과
 같이 해야 합니다.
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):002:0> puts "Hello World"
 Hello World
 => nil
@@ -63,14 +64,14 @@ Hello World
 
 `puts`는 루비에서 출력할 때 주로 사용하는 명령어입니다. 그럼
 `=> nil` 부분은 무슨 뜻일까요? 바로 우리가 입력한 루비 코드가
-반환한 값입니다. `puts` 명령어는 언제나 nil을 빈환합니다.
+반환한 값입니다. `puts` 명령어는 언제나 nil을 반환합니다.
 루비에서의 nil은 절대적으로 아무것도 없는(absolutely-positively-nothing) 값입니다.
 
 ## 무료 탁상용 계산기
 
 irb는 계산기로 쓰기에도 무척 유용합니다.
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):003:0> 3+2
 => 5
 {% endhighlight %}
@@ -80,21 +81,21 @@ irb(main):003:0> 3+2
 아마도 `3+2`가 나올 겁니다. 화살표 키로 커서를 움직여서 `+`를 `*`로
 바꾸어 보세요.
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):004:0> 3*2
 => 6
 {% endhighlight %}
 
 이번에는 3의 제곱을 계산해보죠.
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):005:0> 3**2
 => 9
 {% endhighlight %}
 
 루비에서 `**`는 "거듭제곱"을 뜻합니다. 제곱근은 어떻게 구할까요?
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):006:0> Math.sqrt(9)
 => 3.0
 {% endhighlight %}
@@ -109,19 +110,19 @@ irb(main):006:0> Math.sqrt(9)
 있는 여러 메소드를 하나의 이름으로 묶어두는 것이지요. `Math`에는
 `sin()`과 `tan()` 같은 메소드도 들어있답니다.
 
-다음은 점을 설명할 차례군요. 점은 무슨 역할을 할까요? 점은 메세지와
-메세지를 받는 대상을 구분하여 줍니다. 메세지가 무엇이냐구요? 위의
-예제의 경우 메세지는 `sqrt(9)`입니다. 이는 "제곱근"을 의미하는
-`sqrt` 메소드를 호출하며 `9`를 파라미터로 넘기라는 의미입니다.
+다음은 점을 설명할 차례군요. 점은 무슨 역할을 할까요? 점은 메시지와
+메시지를 받는 대상을 구분하여 줍니다. 메시지가 무엇이냐구요? 위의
+예제의 경우 메시지는 `sqrt(9)`입니다. 이는 "제곱근"을 의미하는
+`sqrt` 메소드를 호출하며 `9`를 매개 변수로 넘기라는 의미입니다.
 
-이 메소드 호출의 결과 값은 `3.0`입니다. 그냥 `3`이 아니라는걸
+이 메소드 호출의 결과 값은 `3.0`입니다. 그냥 `3`이 아니라는 걸
 눈치채셨는지요? 사실 대부분의 경우에 제곱근의 값은 정수가 아니므로
 `sqrt` 메소드는 언제나 실수를 반환합니다.
 
 계산의 결과 값을 저장해두고 싶다면 어떻게 해야 할까요? 변수에 할당해두면
 됩니다.
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):007:0> a = 3 ** 2
 => 9
 irb(main):008:0> b = 4 ** 2
@@ -133,3 +134,4 @@ irb(main):009:0> Math.sqrt(a+b)
 물론 계산기만으로도 유용하겠지만, 이제 다시 전통적인 `Hello World` 프로그램을
 만드는 초심자 튜토리얼으로 [돌아가 보겠습니다.](2/)
 
+[installation]: /ko/documentation/installation/

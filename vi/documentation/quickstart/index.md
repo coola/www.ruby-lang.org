@@ -20,8 +20,8 @@ header: |
 ## Giới thiệu
 
 Đây là một bài hướng dẫn nhỏ, chỉ cần không quá 20 phút để hoàn thành. Giả thiết
-là bạn đã cài sẵn Ruby. (Nếu bạn chưa cài đặt, [tải về](/vi/downloads/) và cài
-đặt nhé)
+là bạn đã cài sẵn Ruby. (Nếu bạn chưa có Ruby, hãy [cài đặt][installation]
+trước khi bắt đầu nhé.)
 
 ## Tương tác với Ruby
 
@@ -33,10 +33,10 @@ Mở IRB (hiểu là Tương tác với Ruby).
 
 * Nếu bạn sử dụng **Mac OS X**, mở `Terminal` và gõ `irb` rồi enter.
 * Nếu bạn sử dụng **Linux**, mở một shell và gõ `irb` rồi enter.
-* Nếu bạn sử dụng **Windows**, mở `fxri` từ phần Ruby trên Start Menu.
-^
+* Nếu bạn sử dụng **Windows**, mở `Interactive Ruby` từ phần Ruby trên
+  Start Menu.
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):001:0>
 {% endhighlight %}
 
@@ -44,7 +44,7 @@ Rồi, nó đã mở. Giờ ta phải làm gì?
 
 Gõ: `"Xin chào thế giới"`
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):001:0> "Xin chào thế giới"
 => "Xin chào thế giới"
 {% endhighlight %}
@@ -56,7 +56,7 @@ nhất thế giới ư? Không phải vậy. Dòng thứ 2 chỉ là cách mà I
 kết quả của phép toán cuối cùng nó nhận được. Nếu muốn in ra "Xin chào thế giới"
 ta cần viết nhiều hơn:
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):002:0> puts "Xin chào thế giới"
 Xin chào thế giới
 => nil
@@ -69,7 +69,7 @@ kết quả của phép toán. `puts` luôn trả về nil - giá trị rỗng.
 
 Rõ ràng, chúng ta có thể sử dụng IRB như một chiếc máy tính cơ bản:
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):003:0> 3+2
 => 5
 {% endhighlight %}
@@ -79,14 +79,14 @@ rất ngắn, tuy nhiên bạn có thể sẽ sửa lại những gì mình vừ
 **mũi tên lên** trên bàn phím và nó sẽ hiển thị dòng `3+2`. Nếu được, bạn có thể
 sử dụng phím mũi tên trái để di chuyển đến dấu `+` và thay nó bằng dấu `*`.
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):004:0> 3*2
 => 6
 {% endhighlight %}
 
 Tiếp theo, hãy thử tính 3 bình phương:
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):005:0> 3**2
 => 9
 {% endhighlight %}
@@ -94,7 +94,7 @@ irb(main):005:0> 3**2
 Trong Ruby, `**` nghĩa là "bình phương". Nhưng nếu bạn muốn tìm căn bậc hai thì
 sao?
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):006:0> Math.sqrt(9)
 => 3.0
 {% endhighlight %}
@@ -119,7 +119,7 @@ thức luôn trả về một số thực.
 
 Nếu muốn lưu lại một vài kết quả của phép toán này, hãy gán kết quả cho một biến.
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):007:0> a = 3 ** 2
 => 9
 irb(main):008:0> b = 4 ** 2
@@ -131,3 +131,5 @@ irb(main):009:0> Math.sqrt(a+b)
 Tuyệt vời như một chiếc máy tính, chúng ta đang vượt xa thông điệp `Xin chào
 thế giới` truyền thống mà ban đầu bài hướng dẫn giả sử...
 [Vậy chúng ta hãy quay lại nào](2/)
+
+[installation]: /vi/documentation/installation/

@@ -16,12 +16,9 @@ najważniejszych elementów języka i porównuje je do tego, co już znasz.
 
 ## Czego oczekiwać: *Język X* a Ruby
 
-* [Ruby a
-  Java](/pl/documentation/ruby-from-other-languages/to-ruby-from-java/)
-* [Ruby a
-  PHP](/pl/documentation/ruby-from-other-languages/to-ruby-from-php/)
-* [Ruby a
-  Python](/pl/documentation/ruby-from-other-languages/to-ruby-from-python/)
+* [Ruby a Java](to-ruby-from-java/)
+* [Ruby a PHP](to-ruby-from-php/)
+* [Ruby a Python](to-ruby-from-python/)
 
 ## Ważne elementy języka i niespodzianki
 
@@ -72,7 +69,7 @@ Symbole są podobną klasą obiektów, co liczby. Każde wystąpienie tej
 samej liczby w wyrażeniu zawsze odnosi się do tego samego obiektu.
 Spójrz na ten przykład:
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):001:0> :george.object_id == :george.object_id
 => true
 irb(main):002:0> "george".object_id == "george".object_id
@@ -166,9 +163,9 @@ poniższy kod w Pythonie:
 {% highlight python %}
 # w Pythonie
 if 0:
-  print "0 is true"
+  print("0 is true")
 else:
-  print "0 is false"
+  print("0 is false")
 {% endhighlight %}
 
 Ten kawałek kodu wypisze `0 is false` To samo w Rubim wygląda
@@ -228,47 +225,41 @@ dostęp publiczny. `private` oznacza, że dana metoda(y) jest dostępna
 tylko wtedy, jeśli można ją wywołać bez wyraźnego określenia odbiorcy.
 Jedynie **self** jest dozwolonym odbiorcą wywołań prywatnych metod.
 
-`protected` jest tym, na co trzeba zwrócić uwagę. Metoda chroniona może być wywołana przez instancje danej klasy lub klas pochodnych, ale również przez inną instancję danej klasy. Poniżej przykład za [Ruby FAQ][1]\:
+`protected` jest tym, na co trzeba zwrócić uwagę. Metoda chroniona może być wywołana przez instancje danej klasy lub klas pochodnych, ale również przez inną instancję danej klasy. Poniżej przykład za [Ruby Language FAQ][faq]:
 
 {% highlight ruby %}
-$ irb
-irb(main):001:0> class Test
-irb(main):002:1>   # domyślnie metoda publiczna
-irb(main):003:1*   def func
-irb(main):004:2>     99
-irb(main):005:2>   end
-irb(main):006:1>
-irb(main):007:1*   def ==(other)
-irb(main):008:2>     func == other.func
-irb(main):009:2>   end
-irb(main):010:1> end
-=> nil
-irb(main):011:0>
-irb(main):012:0* t1 = Test.new
-=> #<Test:0x34ab50>
-irb(main):013:0> t2 = Test.new
-=> #<Test:0x342784>
-irb(main):014:0> t1 == t2
-=> true
-irb(main):015:0> # uczyńmy teraz `func` metodą chronioną, wciąż działa
-irb(main):016:0* # ponieważ 'protected' umożliwia odniesienie do 'other'
-irb(main):017:0* class Test
-irb(main):018:1>   protected :func
-irb(main):019:1> end
-=> Test
-irb(main):020:0> t1 == t2
-=> true
-irb(main):021:0> # uczyńmy teraz 'func' metodą prywatną
-irb(main):022:0* class Test
-irb(main):023:1>   private :func
-irb(main):024:1> end
-=> Test
-irb(main):025:0> t1 == t2
-NoMethodError: private method `func' called for #<Test:0x342784>
-        from (irb):8:in `=='
-        from (irb):25
-        from :0
-irb(main):026:0>
+class Test
+  # domyślnie metoda publiczna
+  def identifier
+    99
+  end
+
+  def ==(other)
+    identifier == other.identifier
+  end
+end
+
+t1 = Test.new  # => #<Test:0x34ab50>
+t2 = Test.new  # => #<Test:0x342784>
+t1 == t2       # => true
+
+# uczyńmy teraz `identifier' metodą chronioną, wciąż działa
+# ponieważ 'protected' umożliwia odniesienie do `other'
+
+class Test
+  protected :identifier
+end
+
+t1 == t2  # => true
+
+# uczyńmy teraz `identifier' metodą prywatną
+
+class Test
+  private :identifier
+end
+
+t1 == t2
+# NoMethodError: private method `identifier' called for #<Test:0x342784>
 {% endhighlight %}
 
 ### Klasy są otwarte
@@ -419,7 +410,7 @@ odpowiednio metody `+@` i `-@`. Poniższe operatory jednak
 przedefiniować.
 
 {% highlight ruby %}
-=, .., ..., !, not, &&, and, ||, or, !=, !~, ::
+=, .., ..., not, &&, and, ||, or, ::
 {% endhighlight %}
 
 Dodatkowo, `+=`, `*=` etc. są po prostu skrótami dla `var = var + other_var`,
@@ -432,4 +423,4 @@ Więcej informacji na temat języka Ruby znajdziesz w
 
 
 
-[1]: http://www.rubycentral.com/faq/rubyfaq-7.html
+[faq]: http://ruby-doc.org/docs/ruby-doc-bundle/FAQ/FAQ.html

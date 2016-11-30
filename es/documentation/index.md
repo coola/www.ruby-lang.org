@@ -11,9 +11,9 @@ serán útiles a la hora de desarrollar con Ruby.
 ### Para iniciarse
 
 [¡Prueba Ruby!][1]
-: Un tutoríal interactivo para principiantes en la web. No es necesario
-  instalar Ruby para su utilización por lo que podrá iniciarse
-  rápidamente en este lenguaje. Esta basado en el trabajo del
+: Un tutorial interactivo para principiantes en la web. No es necesario
+  instalar Ruby para su utilización por lo que podrás iniciarte
+  rápidamente en este lenguaje. Está basado en el trabajo del
   desaparecido “Why the Lucky Stiff”.
 
 [Aprende a programar][2]
@@ -57,9 +57,9 @@ serán útiles a la hora de desarrollar con Ruby.
 : También extraída del código fuente mediante RDoc, esta referencia
   documenta la biblioteca estándar.
 
-[Referencia de la API C de Ruby][10]
-: Documentación del código C subyacente en Ruby. Perfecta si quieres
-  escribir extensiones en C para contribuír al desarrollo de Ruby.
+[Referencia de la API C de Ruby][extensions]
+: Documentación de la API C de Ruby.
+  Perfecto si quieres escribir extensiones en C.
 
 ### Otras lecturas
 
@@ -77,8 +77,8 @@ correo](/es/community/mailing-lists/) es un buen lugar para comenzar.
 [5]: http://mislav.uniqpath.com/poignant-guide/
 [6]: http://www.rubyist.net/~slagell/ruby/
 [7]: http://www.ruby-doc.org/core
-[8]: http://rdoc.sourceforge.net
+[8]: http://docs.seattlerb.org/rdoc/
 [9]: http://www.ruby-doc.org/stdlib
-[10]: http://www.ruby-doc.org/doxygen/current/
+[extensions]: https://docs.ruby-lang.org/en/trunk/extension_rdoc.html
 [11]: http://ruby-doc.org
 [12]: http://www.ruby-doc.org/bookstore

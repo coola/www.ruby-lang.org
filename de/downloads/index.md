@@ -5,7 +5,7 @@ lang: de
 ---
 
 Hier kannst Du die aktuellen Ruby-Distributionen herunterladen.
-Die stabile Version ist derzeit {{ site.downloads.stable.version }}.
+Die stabile Version ist derzeit {{ site.downloads.stable[0].version }}.
 Bitte nimm auch [Rubys Lizenz][license] zur Kenntnis.
 {: .summary}
 
@@ -17,9 +17,9 @@ Ruby zu installieren:
 * Auf Linux/UNIX kann man das Paketverwaltungssystem der jeweiligen
   Distribution oder Drittanbieter-Werkzeuge (rbenv und RVM) verwenden.
 * Auf OS X kann man Drittanbieter-Werkzeuge verwenden (rbenv und RVM).
-* Auf Windows kann man RubyInstaller oder pik verwenden.
+* Auf Windows kann man RubyInstaller verwenden.
 
-Siehe die [Installationsanleitung](/de/installation/) für Details zu
+Siehe die [Installationsanleitung][installation] für Details zu
 den verschiedenen Paketverwaltungssystemen und Drittanbieter-Werkzeugen.
 
 Natürlich kann Ruby auf allen wichtigen Plattformen auch aus dem
@@ -32,26 +32,30 @@ wenn Du Dich gut mit Deinem System auskennst und eventuell spezielle
 Einstellungen für Deine Umgebung benötigst. Es ist außerdem eine gute
 Lösung, falls es keine vorgefertigten Pakete für Dein System gibt.
 
-Siehe die [Installationsanleitung](/de/installation/) für Details.
+Siehe die [Installationsanleitung][installation] für Details.
 Falls es Schwierigkeiten beim Kompilieren geben sollte, solltest Du
 vielleicht zu einem der oben erwähnten Drittanbieter-Werkzeuge greifen.
 
-* **Stabile Version:**
-  [Ruby {{ site.downloads.stable.version }}][stable-gz]<br>
-  md5: {{ site.downloads.stable.md5.gz }}
+* **Stabile Versionen:**{% for release in site.downloads.stable %}
+  * [Ruby {{ release.version }}]({{ release.url.gz }})<br>
+    sha256: {{ release.sha256.gz }}{% endfor %}
 
-* **Stabile Vorgängerversion:**
-  [Ruby {{ site.downloads.previous.version }}][previous-gz]<br>
-  md5: {{ site.downloads.previous.md5.gz }}
+{% if site.downloads.security_maintenance %}
+* **In der Phase der Sicherheits-Maintenance (Unterstützung endet bald!):**{% for release in site.downloads.security_maintenance %}
+  * [Ruby {{ release.version }}]({{ release.url.gz }})<br>
+    sha256: {{ release.sha256.gz }}{% endfor %}
+{% endif %}
 
-* **Stabile Vorgängerversion (1.9):**
-  [Ruby {{ site.downloads.previous19.version }}][old-gz]<br>
-  md5: {{ site.downloads.previous19.md5.gz }}
+{% if site.downloads.eol %}
+* **Nicht mehr unterstützt (EOL):**{% for release in site.downloads.eol %}
+  * [Ruby {{ release.version }}]({{ release.url.gz }})<br>
+    sha256: {{ release.sha256.gz }}{% endfor %}
+{% endif %}
 
 * **Snapshots:**
-  * [Stable Snapshot][stable-snapshot-gz]:
+  * [Stable Snapshot]({{ site.downloads.stable_snapshot.url.gz }}):
     Hierbei handelt es sich um den neuesten Snapshot des stabilen Zweiges.
-  * [Nightly Snapshot][nightly-gz]:
+  * [Nightly Snapshot]({{ site.downloads.nightly_snapshot.url.gz }}):
     Hierbei handelt es sich um eine Kopie der SVN-Version von letzter Nacht.
     Es besteht durchaus die Gefahr, dass in dieser Version noch nicht
     korrigierte Fehler enthalten sind.
@@ -66,9 +70,5 @@ Bitte nutze einen Mirror in deiner Nähe.
 
 
 [license]: {{ site.license.url }}
-[stable-gz]:   {{ site.downloads.stable.url.gz }}
-[previous-gz]: {{ site.downloads.previous.url.gz }}
-[old-gz]:      {{ site.downloads.previous19.url.gz }}
-[stable-snapshot-gz]: {{ site.downloads.stable_snapshot.url.gz }}
-[nightly-gz]: {{ site.downloads.nightly_snapshot.url.gz }}
+[installation]: /de/documentation/installation/
 [mirrors]: /en/downloads/mirrors/

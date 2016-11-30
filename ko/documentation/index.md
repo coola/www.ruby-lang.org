@@ -11,6 +11,21 @@ lang: ko
 도움이 됩니다. 여기 언급되지 않은 좋은 문서가 있다면 알려주시기 바랍니다.
 {: .summary}
 
+### 루비 설치하기
+
+브라우저에서만 루비를 시험해 보려는 게 아니라면 (밑의 링크 참조)
+컴퓨터에 루비를 설치할 필요가 있습니다.
+루비가 이미 설치되어 있는지 확인하려면 터미널을 열고 다음 명령어를
+입력하세요.
+
+{% highlight sh %}
+ruby -v
+{% endhighlight %}
+
+이 명령은 설치된 루비에 대한 정보를 알려줄 것입니다.
+설치되어 있지 않다면, [설치 페이지](installation/)에 있는 많은 옵션을
+참조하세요.
+
 ### 초보자용 문서
 
 [Try Ruby!][1] (영문)
@@ -18,7 +33,7 @@ lang: ko
   브라우저만 있으면 루비를 배울 수 있습니다.
 
 [Ruby Koans][2] (영문)
-: Koans은 루비를 배우는 깨달음의 길로 여러분을 안내합니다. Koans의 목표는
+: Koans는 루비를 배우는 깨달음의 길로 여러분을 안내합니다. Koans의 목표는
   루비 언어, 문법, 구조, 일반적인 함수들과 라이브러리를 배우는 것입니다.
   Koans에서는 문화도 가르칩니다.
 
@@ -27,7 +42,7 @@ lang: ko
   수 있습니다.
 
 [Hackety Hack][4] (영문)
-: <q cite="http://hackety-hack.com/">꼬꼬마 코더의 스타터 킷</q>.
+: <q cite="http://www.hackety.com/">꼬꼬마 코더의 스타터 킷</q>.
   Shoes GUI 개발환경을 사용해 루비를 통해 쉽고 재미있게 프로그래밍을 배웁니다.
 
 [Why’s (Poignant) Guide to Ruby][5] (영문)
@@ -55,13 +70,13 @@ lang: ko
 : 아주 기초적인 내용부터 OOP에서 웹 개발까지 다루는 매우 좋은 설명이
   달린 예제들입니다.
 
-[Ruby For Impatient Nuby][40]
-: [서민구][41] 님이 작성하신 루비 초보자를 위한 튜토리얼입니다.
+[Ruby For Impatient Nuby][ko-1]
+: 서민구 님이 작성하신 루비 초보자를 위한 튜토리얼입니다.
 
-[루비 FAQ][42]
+[루비 FAQ][ko-2]
 : 황대산 님이 정리하신 FAQ입니다.
 
-[다른 언어로 부터의 루비](/en/documentation/ruby-from-other-languages/) (영문)
+[다른 언어로 부터의 루비](/ko/documentation/ruby-from-other-languages/)
 : 다른 언어를 하시다 루비로 오셨나요? C, C++, Java, Perl, PHP, Python에
   상관없이 이 글이면 충분합니다.
 
@@ -72,14 +87,14 @@ lang: ko
   1판이 무료로 온라인에 공개되어 있습니다.
 
 [Ruby User’s Guide][11] (영문)
-: Yukihiro Matsumoto (루비의 창시자)의 글을 영문으로 번역한 것입니다.
+: Yukihiro Matsumoto(루비의 창시자)의 글을 영문으로 번역한 것입니다.
   루비 언어를 여러 관점에서 전반적으로 설명합니다.
   이 버전은 고토 켄타로 님과 Mark Slagell 님이 작업 해주셨습니다.
 
 [The Ruby Programming Wikibook][12] (영문)
-: 초보자와 중급자를 위한 무료 온라인 메뉴얼과 전 언어 레퍼런스 입니다.
+: 초보자와 중급자를 위한 무료 온라인 매뉴얼과 전 언어 레퍼런스입니다.
 
-### 레퍼런스
+### 참조
 
 [루비 코어 레퍼런스][13] (영문)
 : [RDoc][14]을 이용해 소스에서 추출한 레퍼런스입니다. String, Array,
@@ -99,16 +114,20 @@ lang: ko
 [APIdock][18] (영문)
 : 유저의 댓글이 달린 루비, 레일즈, RSpec의 문서입니다.
 
+[주석 달린 Ruby, Rails, Gem 문서][40] (영문)
+: 모든 루비 버전과 모든 RubyGem의 모든 버전의 문서. 포괄적인 루비 레퍼런스
+  매뉴얼, 코드 검색, 소스 주석과 Q&A를 제공합니다.
+
 ### 편집기와 IDE
 
 루비를 코딩할 때 운영체제의 기본 편집기를 사용할 수 있습니다. 하지만,
-더욱 효율적인 코딩을 위해, 기본적으로 루비 지원(신텍스 하일라이팅,
-파일 브라우징 등등)을 하는 편집기나 고급 기능(자동완성, 리팩터링, 테스트
-지원 등등)의 통합 개발 환경도 생각해 볼 만 합니다.
+더욱 효율적인 코딩을 위해, 기본적으로 루비를 지원하는(신택스 하이라이팅,
+파일 브라우징 등등) 편집기나 고급 기능(자동완성, 리팩토링, 테스트
+지원 등등)이 있는 통합 개발 환경도 생각해 볼 만합니다.
 
-루비스트들이 주로 사용하는 도구들의 리스트입니다.
+루비스트들이 주로 사용하는 도구들의 목록입니다.
 
-* Linux, 크로스 플렛폼
+* Linux, 크로스 플랫폼
   * [Aptana Studio][19]
   * [Emacs][20], [Ruby mode][21], [Rsense][22]
   * [Geany][23]
@@ -127,20 +146,20 @@ lang: ko
 * Mac OS X
   * [TextMate][32]
   * [TextWrangler][33]
-  * [Dash][39] (문서 브라우져)
+  * [Dash][39] (문서 브라우저)
 
 ### 더 읽을거리
 
-[Ruby-Doc.org][34]은 루비에 관한 문서를 관리하는 사이트입니다. 주로 영문이기는
-하지만 잘 정리된 참조 매뉴얼은 도움이 됩니다.
-루비에 대한 [책](books)도 출판되어 있습니다. 원서들은[여기][35]에서 확인하세요.
-
-
+[Ruby-Doc.org][34]는 루비 영문 문서를 포괄적으로 관리하는 사이트입니다. 루비
+[책들][ko-5]도 출판되어 있습니다. 원서들은 [여기][35]에서 확인하세요. 루비에
+관한 질문이 있다면, [유저 그룹][ko-3]이나 [페이스북 그룹][ko-4]에서 하실 수 있고
+영어가 되신다면 [메일링 리스트](/ko/community/mailing-lists/)를 사용하실 수도
+있습니다.
 
 [1]: http://tryruby.org/
 [2]: http://rubykoans.com/
 [3]: http://rubymonk.com/
-[4]: http://hackety-hack.com/
+[4]: http://www.hackety.com/
 [5]: http://mislav.uniqpath.com/poignant-guide/
 [6]: http://rubylearning.com/
 [7]: http://www.techotopia.com/index.php/Ruby_Essentials
@@ -150,7 +169,7 @@ lang: ko
 [11]: http://www.rubyist.net/~slagell/ruby/
 [12]: http://en.wikibooks.org/wiki/Ruby_programming_language
 [13]: http://www.ruby-doc.org/core
-[14]: http://rdoc.sourceforge.net
+[14]: http://docs.seattlerb.org/rdoc/
 [15]: http://www.ruby-doc.org/stdlib
 [16]: http://www.rubydoc.info/
 [17]: http://rubydocs.org/
@@ -158,7 +177,7 @@ lang: ko
 [19]: http://www.aptana.com/
 [20]: http://www.gnu.org/software/emacs/
 [21]: http://www.emacswiki.org/emacs/RubyMode
-[22]: http://cx4a.org/software/rsense/
+[22]: http://rsense.github.io/
 [23]: http://www.geany.org/
 [24]: http://projects.gnome.org/gedit/screenshots.html
 [25]: http://www.vim.org/
@@ -176,6 +195,9 @@ lang: ko
 [37]: http://www.sublimetext.com/
 [38]: http://ruby.learncodethehardway.org/
 [39]: http://kapeli.com/dash
-[40]: http://docs.google.com/View?docid=ajb44wcvmjj8_2fg33f2
-[41]: http://mkseo.pe.kr/
-[42]: http://beyond.daesan.com/pages/ruby-faq
+[40]: https://www.omniref.com
+[ko-1]: http://docs.google.com/View?docid=ajb44wcvmjj8_2fg33f2
+[ko-2]: http://beyond.daesan.com/pages/ruby-faq
+[ko-3]: https://groups.google.com/forum/#!forum/rubykr
+[ko-4]: https://www.facebook.com/groups/rubykr/
+[ko-5]: http://ruby-korea.github.io/#book

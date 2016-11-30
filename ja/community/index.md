@@ -4,6 +4,13 @@ title: "コミュニティ"
 lang: ja
 ---
 
+プログラミング言語の周りに育まれるコミュニティは、その言語における最も重要な強みの一つです。
+Rubyには活気があり成長しているコミュニティがあります。
+Rubyコミュニティはどのようなスキルレベルの人々にとっても心地よい場です。
+{: .summary}
+
+Rubyコミュニティに興味があるのなら、ぜひ以下のコミュニティにアクセスしてみてください。
+
 ## 団体
 
 * [日本Rubyの会][1]
@@ -24,7 +31,7 @@ lang: ja
 
 ## IRC
 
-* IRCNetの[#ruby-ja](irc://irc.ircnet.ne.jp/%23ruby:*.jp?charset=iso-2022-jp)
+* IRCNetの[#ruby-ja](irc://irc.ircnet.ne.jp/%23ruby-ja?charset=iso-2022-jp)
   * Rubyの開発用兼、簡単な質疑応答用のチャンネルです。
   * ここでのログは公開する事ができます。
   * 従来の#ruby:\*.jpとは違い、日本サーバーに接続しなくとも参加できるので、海外からの参加敷居が低くなっています。
@@ -33,8 +40,7 @@ lang: ja
   * Rubyの開発用兼、簡単な質疑応答用のチャンネルです。
   * 最近は上述の#ruby-jaがよく利用されています。
 
-* freenodeの[#ruby](irc://freenode/%23ruby?charset=utf-8),
-  [#ruby-lang](irc://freenode/%23ruby-lang?charset=utf-8)
+* freenodeの[#ruby](irc://freenode/%23ruby?charset=utf-8)
   * Rubyの利用者の交流、質問のためのチャンネルです。(英語)
 
 * freenodeの[#ruby-core](irc://freenode/%23ruby-core?charset=utf-8)

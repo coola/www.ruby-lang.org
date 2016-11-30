@@ -8,7 +8,7 @@ lang: id
 
 [Insoshi][1] adalah sesuatu yang baru, open-source social networking
 platform yang dikembangkan dalam Ruby on Rails. Insoshi ini terdapat
-[pada Github][2], sehingga Anda dapat mengembangkan aplikasi social Web
+[pada GitHub][2], sehingga Anda dapat mengembangkan aplikasi social Web
 yang Anda miliki. Feature yang ada didalamnya activity feeds, profiles,
 photo sharing, comment walls, blogs, forums, user messaging, dan admin
 panel.
@@ -32,7 +32,7 @@ Platform][5]
 
 
 [1]: http://insoshi.com/
-[2]: http://github.com/insoshi/insoshi/tree/master
+[2]: https://github.com/insoshi/insoshi/tree/master
 [3]: http://www.amazon.com/dp/0321480791,sebuah
 [4]: http://lovdbyless.com/
 [5]: http://www.rubyinside.com/insoshi-open-source-rails-based-social-networking-platform-878.html

@@ -33,8 +33,7 @@ ilgili konferanslar gerçekleştirilmiştir.
 
 ![Graph courtesy of
 Gmane.](http://gmane.org/plot-rate.php?group=gmane.comp.lang.ruby.general&amp;width=320&amp;height=160&amp;title=Ruby-Talk+Activity
-"Graph courtesy of Gmane."){: style="padding-left:8px;"}
-{: style="float:right"}
+"Graph courtesy of Gmane."){: style="padding-left:8px; float:right;"}
 
 Ruby-Talk, en çok kullanılan Ruby [e-posta
 listesi](/en/community/mailing-lists/) günde ortalama 200 mesaj
@@ -183,8 +182,8 @@ bahsedilmiştir:
   bile çoklu iş parçacıkları kullanabilirsiniz!
 
 * Ruby yüksek taşınabilirliğe sahiptir. GNU/Linux üzerinde geliştirilmiş
-  olsa dahi, UNIX’in bir çok çeşidi, Mac OS X, Windows
-  95/98/Me/NT/2000/XP, DOS, BeOS, OS/2, vb. üzerinde çalışmaktadır.
+  olsa dahi, UNIX’in bir çok çeşidi, Mac OS X,
+  Windows, DOS, BeOS, OS/2, vb. üzerinde çalışmaktadır.
 
 ### Referanslar
 

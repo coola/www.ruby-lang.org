@@ -1,17 +1,17 @@
 ---
-layout: nil
+layout: null
 ---
 
 {% highlight ruby %}
-# Output "I love Ruby"
-say = "I love Ruby"
-puts say
+# Salida "Yo amo Ruby"
+expresion = "Yo amo Ruby"
+puts expresion
 
-# Output "I *LOVE* RUBY"
-say['love'] = "*love*"
-puts say.upcase
+# Salida "YO *AMO* RUBY"
+expresion['amo'] = "*amo*"
+puts expresion.upcase
 
-# Output "I *love* Ruby"
-# five times
-5.times { puts say }
+# Salida "Yo *amo* Ruby
+# cinco veces
+5.times { puts expresion }
 {% endhighlight %}

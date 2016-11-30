@@ -35,8 +35,7 @@ konferencyjnych wypełnionych po brzegi.
 
 ![Graph courtesy of
 Gmane.](http://gmane.org/plot-rate.php?group=gmane.comp.lang.ruby.general&amp;width=320&amp;height=160&amp;title=Ruby-Talk+Activity
-"Graph courtesy of Gmane."){: style="padding-left:8px;"}
-{: style="float:right"}
+"Graph courtesy of Gmane."){: style="padding-left:8px; float:right;"}
 
 Ruby-Talk, główna [lista mailingowa](/en/community/mailing-lists/) na
 tematy związane z Rubim, osiągnęła średnio ruch 200 wiadomości dziennie
@@ -187,8 +186,8 @@ Ruby posiada bogactwo innych właściwości, niektóre z nich to:
   czy sama platforma wspiera wątki, można ich używać nawet w MS-DOS!
 
 * Ruby jest bardzo przenośny: rozwijany głównie na platformie GNU/Linux,
-  ale może być używany na wielu typach UNIXów, Mac OS X, Windows
-  95/98/Me/NT/2000/XP/Vista/7/8, DOS, BeOS, OS/2, itd.
+  ale może być używany na wielu typach UNIXów, Mac OS X,
+  Windows, DOS, BeOS, OS/2, itd.
 
 ### Inne implementacje Rubiego
 
@@ -216,9 +215,6 @@ Tu jest lista:
   trwałością obiektów i rozproszonym wpsółdzielonym cachem”.
 * [Cardinal][cardinal] jest “kompilatorem Rubiego dla [Parrot][parrot] Virtual Machine”
   (Perl 6).
-
-Niektóre z tych implementacji, włączając w to MRI, podążają za wytycznymi
-[RubySpec][rubyspec], “pełna wykonywalna specyfikacja dla języka programowania Ruby”.
 
 ### Odnośniki
 
@@ -248,4 +244,3 @@ Niektóre z tych implementacji, włączając w to MRI, podążają za wytycznymi
 [maglev]: http://ruby.gemstone.com
 [cardinal]: https://github.com/parrot/cardinal
 [parrot]: http://parrot.org
-[rubyspec]: http://rubyspec.org

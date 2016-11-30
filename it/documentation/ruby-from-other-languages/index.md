@@ -20,16 +20,11 @@ ti è già familiare.
 
 ## Cosa c’è da aspettarsi: Da *Linguaggio X* a Ruby
 
-* [Da C/C++ a
-  Ruby](/it/documentation/ruby-from-other-languages/to-ruby-from-c-and-cpp/)
-* [Da Java a
-  Ruby](/it/documentation/ruby-from-other-languages/to-ruby-from-java/)
-* [Da Perl a
-  Ruby](/it/documentation/ruby-from-other-languages/to-ruby-from-perl/)
-* [Da PHP a
-  Ruby](/it/documentation/ruby-from-other-languages/to-ruby-from-php/)
-* [Da Python a
-  Ruby](/it/documentation/ruby-from-other-languages/to-ruby-from-python/)
+* [Da C/C++ a Ruby](to-ruby-from-c-and-cpp/)
+* [Da Java a Ruby](to-ruby-from-java/)
+* [Da Perl a Ruby](to-ruby-from-perl/)
+* [Da PHP a Ruby](to-ruby-from-php/)
+* [Da Python a Ruby](to-ruby-from-python/)
 
 ## Caratteristiche importanti e peculiarità
 
@@ -79,7 +74,7 @@ fatto, come degli identificatori usati per riferirsi ad altri oggetti.
 Per capire la differenza, prova a scrivere le espressioni seguenti in
 `irb`\:
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):001:0> :pippo.object_id == :pippo.object_id
 => true
 irb(main):002:0> "pippo".object_id == "pippo".object_id
@@ -175,9 +170,9 @@ applica anche ad altri linguaggi):
 {% highlight python %}
 # in Python
 if 0:
-  print "0 è true"
+  print("0 è true")
 else:
-  print "0 è false"
+  print("0 è false")
 {% endhighlight %}
 
 Questo stamperà “0 è false”, mentre l’equivalente in Ruby:
@@ -245,54 +240,48 @@ usato come ricevente per una chiamata ad un metodo pubblico.
 `protected` è il più inusuale dei tre. Un metodo protetto può essere chiamato
 da un’istanza della classe o delle sue derivate, ma anche con un’altra istanza
 come receiver. Per chiarificare meglio il concetto, consideriamo questo
-semplice esempio adattato dalle [Ruby FAQ][1]\:
+semplice esempio adattato dalle [Ruby Language FAQ][faq]:
 
 {% highlight ruby %}
-$ irb
-irb(main):001:0> class Test
-irb(main):002:1>   # public per default
-irb(main):003:1*   def func
-irb(main):004:2>     99
-irb(main):005:2>   end
-irb(main):006:1>
-irb(main):007:1*   def ==(other)
-irb(main):008:2>     func == other.func
-irb(main):009:2>   end
-irb(main):010:1> end
-=> nil
-irb(main):011:0>
-irb(main):012:0* t1 = Test.new
-=> #<Test:0x34ab50>
-irb(main):013:0> t2 = Test.new
-=> #<Test:0x342784>
-irb(main):014:0> t1 == t2
-=> true
-irb(main):015:0> # rendiamo `func` protetto, e viene sempre
-irb(main):016:0* # ritornato true, perchè t2 è pur sempre un'istanza di Test
-irb(main):017:0* class Test
-irb(main):018:1>   protected :func
-irb(main):019:1> end
-=> Test
-irb(main):020:0> t1 == t2
-=> true
-irb(main):021:0> # Ora rendiamo `func` privato
-irb(main):022:0* class Test
-irb(main):023:1>   private :func
-irb(main):024:1> end
-=> Test
-irb(main):025:0> t1 == t2
-NoMethodError: private method `func' called for #<Test:0x342784>
-        from (irb):8:in `=='
-        from (irb):25
-        from :0
-irb(main):026:0>
+class Test
+  # public per default
+  def identifier
+    99
+  end
+
+  def ==(other)
+    identifier == other.identifier
+  end
+end
+
+t1 = Test.new  # => #<Test:0x34ab50>
+t2 = Test.new  # => #<Test:0x342784>
+t1 == t2       # => true
+
+# rendiamo `identifier' protetto, e viene sempre
+# ritornato true, perchè t2 è pur sempre un'istanza di Test
+
+class Test
+  protected :identifier
+end
+
+t1 == t2  # => true
+
+# ora rendiamo `identifier' privato
+
+class Test
+  private :identifier
+end
+
+t1 == t2
+# NoMethodError: private method `identifier' called for #<Test:0x342784>
 {% endhighlight %}
 
 ### Classi aperte
 
 In Ruby, tutte le classi sono “aperte”. Questo vuol dire che puoi aggiungere
 metodi e variabili e cambiarle in qualsiasi momento, e questo vale anche per
-classi interne, come `Fixnum` or anche `Object`, il “genitore” di tutti gli
+classi interne, come `Fixnum` o anche `Object`, il “genitore” di tutti gli
 oggetti. Ruby on Rails, per esempio, definisce una serie di metodi per fare
 operazioni temporali con oggetti `Fixnum`\:
 
@@ -437,13 +426,13 @@ Non c’è nemmeno bisogno di usare `operator+`, come in C++.
 È possibile anche definire un modo di accedere a uno specifico
 elemento come in un array, definendo i metodi `[]` e `[]=`, mentre per
 definire metodi unari + e – (pensa a +1 e -2, ad esempio), bisogna
-definire, rispettivamente, i metodi `+@` and `-@`.
+definire, rispettivamente, i metodi `+@` e `-@`.
 
 I seguenti operatori però **non** sono zucchero sintattico: non sono
 metodi e non possono essere ridefiniti:
 
 {% highlight ruby %}
-=, .., ..., !, not, &&, and, ||, or, !=, !~, ::
+=, .., ..., not, &&, and, ||, or, ::
 {% endhighlight %}
 
 Inoltre, `+=`, `*=` ecc. sono solo abbreviazioni di
@@ -457,4 +446,4 @@ sezione [Documentazione](/it/documentation/).
 
 
 
-[1]: http://www.rubycentral.com/faq/rubyfaq-7.html
+[faq]: http://ruby-doc.org/docs/ruby-doc-bundle/FAQ/FAQ.html

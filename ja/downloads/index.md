@@ -5,9 +5,9 @@ lang: ja
 ---
 
 ここでは、Rubyインタプリタの代表的な入手方法を説明します。
-
-現在の安定版は {{ site.downloads.stable.version }}です。
+現在の安定版は {{ site.downloads.stable[0].version }}です。
 [Ruby’sライセンス][license]を必ずお読み下さい。
+{: .summary}
 
 ### Rubyのインストール方法
 
@@ -15,9 +15,9 @@ lang: ja
 
 * Linux/UNIX マシンでは、そのシステムのパッケージ管理ツールや、rbenv、RVMなどのサードパーティツールが使えます。
 * OS Xマシンでは、rbenv、RVMなどのサードパーティのパッケージ管理ツールが使えます。
-* Windowsマシンでは、RubyInstallerやpikといったツールが使えます。
+* Windowsマシンでは、RubyInstallerといったツールが使えます。
 
-各パッケージマネージャ及びサードパーティーツールの詳細は、[インストールガイド](/ja/installation/) ページを参照して下さい。
+各パッケージマネージャ及びサードパーティーツールの詳細は、[インストールガイド][installation] ページを参照して下さい。
 
 もちろん、メジャーなプラットフォームでソースからRubyをインストールすることも可能です。
 
@@ -26,24 +26,28 @@ lang: ja
 ソースコードからのインストールは、利用したいプラットフォームや環境に合った設定を使うことができる、いい方法です。
 また、利用したいプラットフォーム向けのパッケージが存在しない場合にも使えるいい方法でもあります。
 
-もしコンパイルで問題がある場合、[インストールガイド](/ja/installation/) ページで解説しているサードパーティーツールの利用が助けになるかもしれません。
+もしコンパイルで問題がある場合、[インストールガイド][installation] ページで解説しているサードパーティーツールの利用が助けになるかもしれません。
 
-* **最新の安定版:**
-  [Ruby {{ site.downloads.stable.version }}][stable-gz]<br>
-  md5: {{ site.downloads.stable.md5.gz }}
+* **安定版:**{% for release in site.downloads.stable %}
+  * [Ruby {{ release.version }}]({{ release.url.gz }})<br>
+    sha256: {{ release.sha256.gz }}{% endfor %}
 
-* **前世代の安定版:**
-  [Ruby {{ site.downloads.previous.version }}][previous-gz]<br>
-  md5: {{ site.downloads.previous.md5.gz }}
+{% if site.downloads.security_maintenance %}
+* **セキュリティ修正のみの安定版 (まもなく EOL):**{% for release in site.downloads.security_maintenance %}
+  * [Ruby {{ release.version }}]({{ release.url.gz }})<br>
+    sha256: {{ release.sha256.gz }}{% endfor %}
+{% endif %}
 
-* **古い安定版:**
-  [Ruby {{ site.downloads.previous19.version }}][old-gz]<br>
-  md5: {{ site.downloads.previous19.md5.gz }}
+{% if site.downloads.eol %}
+* **メンテナンス終了 (EOL):**{% for release in site.downloads.eol %}
+  * [Ruby {{ release.version }}]({{ release.url.gz }})<br>
+    sha256: {{ release.sha256.gz }}{% endfor %}
+{% endif %}
 
 * **スナップショット:**
-  * [安定版のスナップショット][stable-snapshot-gz]:
+  * [安定版のスナップショット]({{ site.downloads.stable_snapshot.url.gz }}):
     最も新しい現在の安定版ブランチのスナップショットのtarballです。
-  * [ナイトリースナップショット][nightly-gz]:
+  * [ナイトリースナップショット]({{ site.downloads.nightly_snapshot.url.gz }}):
     毎晩SVNに入っているものから作成しているtarballです。
     バグやその他の問題があるかもしれません。利用する場合は自己責任でお願いします！
 
@@ -66,12 +70,8 @@ Windows向けのバイナリが有志により配布されています。
 
 
 [license]: {{ site.license.url }}
-[stable-gz]:   {{ site.downloads.stable.url.gz }}
-[previous-gz]: {{ site.downloads.previous.url.gz }}
-[old-gz]:      {{ site.downloads.previous19.url.gz }}
-[stable-snapshot-gz]: {{ site.downloads.stable_snapshot.url.gz }}
-[nightly-gz]: {{ site.downloads.nightly_snapshot.url.gz }}
+[installation]: /ja/documentation/installation/
 [mirrors]: /en/downloads/mirrors/
 [active-script-ruby]: http://www.artonx.org/data/asr/
-[rubyinstaller]: http://rubyinstaller.org/
+[rubyinstaller]: https://rubyinstaller.org/
 [railsinstaller]: http://railsinstaller.org/

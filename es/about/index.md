@@ -13,9 +13,8 @@ ameno. ¿Por qué?
 
 Ruby es un lenguaje con un balance cuidado. Su creador, [Yukihiro “Matz”
 Matsumoto][matz], mezcló partes de sus lenguajes favoritos (Perl,
-Smalltalk, Eiffel, Ada, y Lisp) para formar un nuevo lenguaje que
-incorporara tanto la programación funcional como la programación
-imperativa.
+Smalltalk, Eiffel, Ada y Lisp) para formar un nuevo lenguaje que
+incorporara tanto la programación funcional como la imperativa.
 
 A menudo ha manifestado que está “tratando de hacer que Ruby sea
 natural, no simple”, de una forma que se asemeje a la vida real.
@@ -35,8 +34,7 @@ conferencias relacionadas a Ruby.
 
 ![Gráfica cortesía de
 Gmane.](http://gmane.org/plot-rate.php?group=gmane.comp.lang.ruby.general&amp;width=320&amp;height=160&amp;title=Actividad+en+Ruby-Talk
-"Gráfica cortesía de Gmane."){: style="padding-left:8px;"}
-{: style="float:right"}
+"Gráfica cortesía de Gmane."){: style="padding-left:8px; float:right;"}
 
 Ruby-Talk, la [lista de correo](/es/community/mailing-lists/) más
 importante sobre el lenguaje Ruby ha crecido hasta lograr un promedio de
@@ -192,8 +190,8 @@ encuentran las siguientes:
   no, ¡incluso en MS-DOS!
 
 * Ruby es fácilmente portable: se desarrolla mayoritariamente en
-  GNU/Linux, pero corre en varios tipos de UNIX, Mac OS X, Windows
-  95/98/Me/NT/2000/XP, DOS, BeOS, OS/2, etc.
+  GNU/Linux, pero corre en varios tipos de UNIX, Mac OS X,
+  Windows, DOS, BeOS, OS/2, etc.
 
 ### Referencias
 

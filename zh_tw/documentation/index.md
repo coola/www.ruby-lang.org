@@ -20,7 +20,7 @@ lang: zh_tw
 : 探索 Ruby 的慣用法、學習課程，解決問題，在瀏覽器內便可完成！
 
 [Hackety Hack][4]
-: <q cite="http://hackety-hack.com/">程式設計師的新手包</q>.
+: <q cite="http://www.hackety.com/">程式設計師的新手包</q>.
   一種使用叫做 Shoes 的 GUI 工具，來學習如何用 Ruby 寫程式，有趣又簡單。
 
 [Why’s (Poignant) Guide to Ruby][5]
@@ -50,9 +50,8 @@ lang: zh_tw
 [Programming Ruby][9]
 : 這是 Ruby 的第一本英文書，第一版開放線上免費閱讀 [Pragmatic Programmers' book][10] 。
 
-[Ruby 使用手冊-中文版][11]
-: 原日文版出自 Yukihiro Matsumoto (Ruby 發明人)，英文版為 Goto Kentaro 和 Mark Slagell
-  翻譯，[繁體中文版][ruby-user-guide-zh_tw]由 [Ruby Taiwan][rubytw] 翻譯。這是一個不錯的 Ruby 導覽。
+[Ruby 使用手冊][11]
+: 原日文版出自 Yukihiro Matsumoto (Ruby 發明人)，英文版為 Goto Kentaro 和 Mark Slagell 翻譯，[繁體中文版][ruby-user-guide-zh_tw]由 [Ruby Taiwan][rubytw] 翻譯。這是一個不錯的 Ruby 導覽。
 
 [The Ruby Programming Wikibook][12]
 : 給初學者到中等程度的線上手冊以及語言參考。
@@ -74,6 +73,9 @@ lang: zh_tw
 [APIdock][18]
 : Ruby、Rails 與 RSpec 的文件，具有使用者的評論。
 
+[Omniref: 有注釋的 Ruby、Rails、以及 Gem 文件][40]
+: 擁有所有 Ruby 與 RubyGem 的文件。易於理解的 Ruby 參考手冊，可以搜尋程式碼，注釋原始碼並進行問答的功能。
+
 ### 編輯器與整合開發環境
 
 您可以用操作系統內建的編輯器來撰寫 Ruby。為了更有效的寫程式，值得選個 Ruby 基本特性支援良好的編輯器（如：語法高亮、檔案瀏覽）或是有更進階功能的整合開發環境（如：程式碼補全、重構、支持測試等。）
@@ -90,16 +92,19 @@ lang: zh_tw
   * [SciTe][28]
   * [NetBeans][36]
   * [Sublime Text][37]
+  * [Atom][atom]
 
 * Windows 作業系統：
   * [Notepad++][29]
   * [E-TextEditor][30]
   * [Ruby In Steel][31]
+  * [Atom][atom]
 
 * Mac OS X 作業系統：
   * [TextMate][32]
   * [TextWrangler][33]
   * [Dash][39] （瀏覽文件用）
+  * [Atom][atom]
 
 ### 進階閱讀
 
@@ -110,7 +115,7 @@ lang: zh_tw
 [1]: http://tryruby.org/
 [2]: http://rubykoans.com/
 [3]: http://rubymonk.com/
-[4]: http://hackety-hack.com/
+[4]: http://www.hackety.com/
 [5]: http://mislav.uniqpath.com/poignant-guide/
 [6]: http://rubylearning.com/
 [7]: http://www.techotopia.com/index.php/Ruby_Essentials
@@ -120,7 +125,7 @@ lang: zh_tw
 [11]: http://www.rubyist.net/~slagell/ruby/
 [12]: http://en.wikibooks.org/wiki/Ruby_programming_language
 [13]: http://www.ruby-doc.org/core
-[14]: http://rdoc.sourceforge.net
+[14]: http://docs.seattlerb.org/rdoc/
 [15]: http://www.ruby-doc.org/stdlib
 [16]: http://www.rubydoc.info/
 [17]: http://rubydocs.org/
@@ -128,7 +133,7 @@ lang: zh_tw
 [19]: http://www.aptana.com/
 [20]: http://www.gnu.org/software/emacs/
 [21]: http://www.emacswiki.org/emacs/RubyMode
-[22]: http://cx4a.org/software/rsense/
+[22]: http://rsense.github.io/
 [23]: http://www.geany.org/
 [24]: http://projects.gnome.org/gedit/screenshots.html
 [25]: http://www.vim.org/
@@ -146,6 +151,8 @@ lang: zh_tw
 [37]: http://www.sublimetext.com/
 [38]: http://ruby.learncodethehardway.org/
 [39]: http://kapeli.com/dash
+[40]: https://www.omniref.com
+[atom]: https://atom.io/
 
 [rubytw]: http://ruby.tw
 [ruby-user-guide-zh_tw]: http://guides.ruby.tw/ruby/

@@ -12,10 +12,7 @@ Ruby posiada cztery angielskojęzyczne listy mailingowe i jedną polskojęzyczn�
 
 Ruby-Talk
 : Najpopularniejsza lista mailingowa, która zajmuje się ogólnymi
-  tematami związanymi z językiem Ruby. Ruby-Talk jest kopiowana na grupę
-  newsową [comp.lang.ruby](news:comp.lang.ruby) oraz forum
-  [Ruby-Forum.org][1]. ([Tygodniowe Podsumowania][2], [FAQ][3],
-  [Archiwa][4])
+  tematami związanymi z językiem Ruby. ([FAQ][3], [Archiwa][4])
 
 Ruby-Core
 : Lista zajmująca się tematami zwązanymi z rdzeniem języka oraz jego
@@ -26,7 +23,7 @@ Ruby-Doc
   Rubiego. ([Archiwa na Gmane][6])
 
 Ruby-CVS
-: Lista zgłaszająca wszystkie commit’y do repozytorium CVS Rubiego.
+: Lista zgłaszająca wszystkie commit’y do repozytorium Subversion Rubiego.
 
 [pl.comp.lang.ruby](news:pl.comp.lang.ruby)
 : Polska lista dyskusyjna na temat Rubiego.
@@ -44,8 +41,6 @@ way](/en/community/mailing-lists/manual-instructions/).
 
 
 
-[1]: http://ruby-forum.org
-[2]: http://www.rubyweeklynews.org/
 [3]: http://rubyhacker.com/clrFAQ.html
 [4]: http://blade.nagaokaut.ac.jp/ruby/ruby-talk/index.shtml
 [5]: http://blade.nagaokaut.ac.jp/ruby/ruby-core/index.shtml

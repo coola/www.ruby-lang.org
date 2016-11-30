@@ -51,34 +51,32 @@ lang: ru
 * Ruby был использован для написания центра сбора данных [Level 3
   Communications][8] о мощности и планировании системы, которая собирает
   статистику нагрузок с более чем 1700 Unix (Solaris и Linux) серверов,
-  раскиданых по всему миру.
+  раскиданных по всему миру.
 
 #### Веб-приложения
 
 * [Basecamp][9], веб-сервис для управления проектами, разработанный
   компанией [37signals][10], написан целиком на Ruby.
 
-* [43 Things][11] позволяет вам хранить список целей и делиться им со
-  всем миром. Написан целиком на Ruby.
-
-* [A List Apart][12], журнал для людей, которые создают веб-сайты,
+* [A List Apart][11], журнал для людей, которые создают веб-сайты,
   который работает с 1997 года. Недавно был обновлен и приложение было
   написано на Ruby on Rails.
 
-* [Blue Sequence][13], сложное критически-целевое приложение, которое
+* [Blue Sequence][12], сложное критически-целевое приложение, которое
   формирует часть собственного "последовательного-во-времени" процесса
   производства Toyota Motor Manufacturing, была недавно выбрана в
   качестве финалиста British Computer (BCS) Information Management Awards.
 
 #### Безопасность
 
-* [Metasploit Framework][14], проект с открытым исходным кодом,
-  поддерживаемый [Rapid7][15], это бесплатная платформа проникающего тестирования,
+* [Metasploit Framework][metasploit], проект с открытым исходным кодом,
+  поддерживаемый [Rapid7][rapid7], это бесплатная платформа проникающего
+  тестирования,
   которая помогает IT профессионалам проверить безопасность их сети и
   приложений. Metasploit Project содержит более 700 000 строк кода и был
-  скачан больше миллиона раз в 2010 году. Комерческая версия [Metasploit
-  Express][16] и [Metasploit Pro][17] разработаны Rapid7 и так же написаны
-  на Ruby.
+  скачан больше миллиона раз в 2010 году.
+  Коммерческая версия Metasploit Express и Metasploit Pro разработаны Rapid7
+  и так же написаны на Ruby.
 
 
 
@@ -92,10 +90,7 @@ lang: ru
 [8]: http://www.level3.com/
 [9]: http://www.basecamphq.com
 [10]: http://www.37signals.com
-[11]: http://www.43things.com
-[12]: http://www.alistapart.com
-[13]: http://www.bluefountain.com/supply-chain-management/
-[14]: http://www.metasploit.com
-[15]: http://www.rapid7.com
-[16]: http://www.rapid7.com/products/metasploit-express.jsp
-[17]: http://www.rapid7.com/products/metasploit-pro.jsp
+[11]: http://www.alistapart.com
+[12]: http://www.bluefountain.com/supply-chain-management/
+[metasploit]: http://www.metasploit.com
+[rapid7]: http://www.rapid7.com

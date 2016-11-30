@@ -1,13 +1,13 @@
 ---
-layout: nil
+layout: null
 ---
 
 {% highlight ruby %}
 # Ruby mengerti apa yang
 # Anda maksud, bahkan ketika
-# Anda ingin melakukan
-# matematika pada seluruh
-# Array
+# Anda ingin mencari
+# tahu sendiri pada
+# seluruh Array
 cities  = %w[ London
               Oslo
               Paris

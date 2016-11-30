@@ -1,17 +1,17 @@
 ---
-layout: nil
+layout: null
 ---
 
 {% highlight ruby %}
-# The famous Hello World
-# Program is trivial in
-# Ruby. Superfluous:
+# El famoso programa
+# Hola Mundo es trivial
+# en Ruby. Superfluo:
 #
-# * A "main" method
-# * Newline
-# * Semicolons
+# * Un método "main"
+# * Nueva linea
+# * Punto y coma
 #
-# Here is the Code:
+# Aqui esta el código:
 
-puts "Hello World!"
+puts "¡Hola Mundo!"
 {% endhighlight %}

@@ -12,12 +12,10 @@ du code ou à la documentation. Mais par où commencer ?
 
 Cette page couvre les sujets suivants :
 
-* [Utiliser Subversion pour suivre le développement de
-  Ruby](#following-ruby)
+* [Utiliser Subversion pour suivre le développement de Ruby](#following-ruby)
 * [How to Use Git With the Main Ruby Repository](#git-ruby)
 * [Améliorer Ruby, patch par patch](#patching-ruby)
-* [Règles et usages à l’attention des développeurs
-  principaux](#coding-standards)
+* [Règles et usages à l’attention des développeurs principaux](#coding-standards)
 
 ### Utiliser Subversion pour suivre le développement de Ruby
 {: #following-ruby}
@@ -98,10 +96,9 @@ Pour résumer, les grandes étapes pour proposer un patch sont :
 diff*][11]. Pour plus d’informations sur les patchs, leur devenir, voyez
 [*the diffutils reference*][12].
 
-Les discussions portant sur le développement de Ruby sont toutes
-regroupées sur la [liste de diffusion
-Ruby-Core](/en/community/mailing-lists/). Donc, si vous êtes
-curieux du devenir de votre patch, ou si vous voulez lancer une
+Les discussions portant sur le développement de Ruby sont toutes regroupées
+sur la [liste de diffusion Ruby-Core][mailing-lists]. Donc, si vous
+êtes curieux du devenir de votre patch, ou si vous voulez lancer une
 discussion sur le futur de Ruby, n’hésitez pas à venir y faire un tour.
 Prenez garde à ne pas lancer des hors-sujets, ils ne sont pas tolérés
 sur cette liste dont le niveau de bruit doit rester très bas. Les sujets
@@ -130,21 +127,22 @@ Les développeurs de Ruby devraient évidemment être à l’aise avec le code s
   mentionnés dans le résumé Subversion, car ce message est
   automatiquement transmis à la liste de diffusion Ruby-CVS après le
   *commit* ;
-* les déclarations de fonctions K&amp;R sont utilisées dans l’ensemble
+* les prototypes de fonctions sont utilisés dans l’ensemble
   du code source de Ruby et des extensions liées ;
 * pas de commentaire en style C++ (`//`), seul le commentaire multiligne
   est utilisé (`/* .. */`).
 
 
 
+[mailing-lists]: /fr/community/mailing-lists/
 [1]: http://svn.ruby-lang.org/cgi-bin/viewvc.cgi/
 [2]: http://subversion.apache.org/faq.html
 [3]: http://svnbook.org
 [4]: http://www.pragmaticprogrammer.com/titles/svn/
 [5]: http://git-scm.com/
-[6]: http://github.com/shyouhei/ruby
-[7]: http://wiki.github.com/shyouhei/ruby/committerhowto
-[8]: http://wiki.github.com/shyouhei/ruby/noncommitterhowto
+[6]: https://github.com/shyouhei/ruby
+[7]: https://github.com/shyouhei/ruby/wiki/committerhowto
+[8]: https://github.com/shyouhei/ruby/wiki/noncommitterhowto
 [9]: https://bugs.ruby-lang.org
 [10]: http://rubyforge.org/tracker/?func=add&amp;group_id=426&amp;atid=1700
 [11]: http://www.gnu.org/software/diffutils/manual/html_node/Unified-Format.html

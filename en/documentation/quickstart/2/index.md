@@ -20,18 +20,18 @@ header: |
 What if we want to say “Hello” a lot without getting our fingers all
 tired? We need to define a method!
 
-{% highlight ruby %}
-irb(main):010:0> def h
+{% highlight irb %}
+irb(main):010:0> def hi
 irb(main):011:1> puts "Hello World!"
 irb(main):012:1> end
-=> :h
+=> :hi
 {% endhighlight %}
 
-The code `def h` starts the definition of the method. It tells Ruby that
-we’re defining a method, that its name is `h`. The next line is the body
+The code `def hi` starts the definition of the method. It tells Ruby that
+we’re defining a method, that its name is `hi`. The next line is the body
 of the method, the same line we saw earlier: `puts "Hello World"`.
 Finally, the last line `end` tells Ruby we’re done defining the method.
-Ruby’s response `=> :h` tells us that it knows we’re done defining the
+Ruby’s response `=> :hi` tells us that it knows we’re done defining the
 method. This response could be `=> nil` for Ruby 2.0 and earlier versions.
 But, it's not important here, so let's go on.
 
@@ -39,11 +39,11 @@ But, it's not important here, so let's go on.
 
 Now let’s try running that method a few times:
 
-{% highlight ruby %}
-irb(main):013:0> h
+{% highlight irb %}
+irb(main):013:0> hi
 Hello World!
 => nil
-irb(main):014:0> h()
+irb(main):014:0> hi()
 Hello World!
 => nil
 {% endhighlight %}
@@ -54,14 +54,14 @@ that’s all you need. You can add empty parentheses if you’d like, but
 they’re not needed.
 
 What if we want to say hello to one person, and not the whole world?
-Just redefine `h` to take a name as a parameter.
+Just redefine `hi` to take a name as a parameter.
 
-{% highlight ruby %}
-irb(main):015:0> def h(name)
+{% highlight irb %}
+irb(main):015:0> def hi(name)
 irb(main):016:1> puts "Hello #{name}!"
 irb(main):017:1> end
-=> :h
-irb(main):018:0> h("Matz")
+=> :hi
+irb(main):018:0> hi("Matz")
 Hello Matz!
 => nil
 {% endhighlight %}
@@ -76,15 +76,15 @@ isn’t one already) and then substituted into the outer string at that
 point. You can also use this to make sure that someone’s name is
 properly capitalized:
 
-{% highlight ruby %}
-irb(main):019:0> def h(name = "World")
+{% highlight irb %}
+irb(main):019:0> def hi(name = "World")
 irb(main):020:1> puts "Hello #{name.capitalize}!"
 irb(main):021:1> end
-=> :h
-irb(main):022:0> h "chris"
+=> :hi
+irb(main):022:0> hi "chris"
 Hello Chris!
 => nil
-irb(main):023:0> h
+irb(main):023:0> hi
 Hello World!
 => nil
 {% endhighlight %}
@@ -101,7 +101,7 @@ What if we want a real greeter around, one that remembers your name and
 welcomes you and treats you always with respect. You might want to use
 an object for that. Let’s create a “Greeter” class.
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):024:0> class Greeter
 irb(main):025:1>   def initialize(name = "World")
 irb(main):026:2>     @name = name
@@ -113,7 +113,7 @@ irb(main):031:1>   def say_bye
 irb(main):032:2>     puts "Bye #{@name}, come back soon."
 irb(main):033:2>   end
 irb(main):034:1> end
-=> nil
+=> :say_bye
 {% endhighlight %}
 
 The new keyword here is `class`. This defines a new class called Greeter
@@ -121,6 +121,6 @@ and a bunch of methods for that class. Also notice `@name`. This is an
 instance variable, and is available to all the methods of the class. As
 you can see it’s used by `say_hi` and `say_bye`.
 
-So how do we get this Greeter class set in motion? [Create an
-object.](../3/)
+So how do we get this Greeter class set in motion?
+[Create an object.](../3/)
 

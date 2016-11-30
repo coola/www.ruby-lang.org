@@ -34,8 +34,7 @@ del mondo e conferenze a tema capaci di fare il tutto esaurito.
 
 ![Grafico per cortesia di
 Gmane.](http://gmane.org/plot-rate.php?group=gmane.comp.lang.ruby.general&amp;width=320&amp;height=160&amp;title=Ruby-Talk+Activity
-"Grafico per cortesia di Gmane."){: style="padding-left:8px;"}
-{: style="float:right"}
+"Grafico per cortesia di Gmane."){: style="padding-left:8px; float:right;"}
 
 Ruby-Talk, la prima [lista di discussione](/it/community/mailing-lists/)
 del linguaggio Ruby, ha raggiunto il traguardo di 200 nuovi messaggi
@@ -105,7 +104,7 @@ ridefiniti.
 I *blocchi* sono una delle molteplici ragioni della flessibilità di
 questo linguaggio. Un programmatore può collegare una *closure* ad ogni metodo,
 descrivendo come quel metodo dovrebbe agire. La *closure* viene chiamata
-*blocco* ed è diventata una delle funzionalità più popolari for i nuovi
+*blocco* ed è diventata una delle funzionalità più popolari per i nuovi
 arrivati a Ruby da altri linguaggi imperativi come PHP o Visual Basic.
 
 I blocchi sono stati ispirati dai linguaggi funzionali. Matz ha detto,
@@ -172,7 +171,7 @@ Ruby è in grado di offrire una marea di altre funzionalità, tra cui:
 * la gestione delle eccezioni, proprio come Java o Python, per rendere
   la gestione degli errori più semplice.
 
-* Ruby ha un vero Garbage collecttor mark-and-sweep per tutti gli oggetti.
+* Ruby ha un vero Garbage collector mark-and-sweep per tutti gli oggetti.
   Come dice Matz: “Molto meglio per la tua salute!”
 
 * Scrivere estensioni in linguaggio C per Ruby è più facile che
@@ -190,8 +189,8 @@ Ruby è in grado di offrire una marea di altre funzionalità, tra cui:
   il sistema operativo lo supporti o meno, anche in DOS!
 
 * Ruby è altamente portatile: è sviluppato principalmente su GNU/Linux,
-  ma funziona su molte varianti di UNIX, Mac OS X, Windows
-  95/98/Me/NT/2000/XP, DOS, BeOS, OS/2, ecc.
+  ma funziona su molte varianti di UNIX, Mac OS X,
+  Windows, DOS, BeOS, OS/2, ecc.
 
 ### Riferimenti
 

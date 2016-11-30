@@ -49,15 +49,15 @@ event dates, location, CFP (Call For Proposals) and Registration information.
 to offset expenses for local and regional groups wanting to organize
 events.
 
-Ruby Central has also teamed up with [SDForum][7] to produce the Silicon
-Valley Ruby Conference, entering its second year in 2007.
+Ruby Central has also teamed up with [SVForum][7] (previously known as SDForum)
+to produce the Silicon Valley Ruby Conference, entering its second year in 2007.
 
 [RubyNation][8] is an annual Ruby conference serving the Virginia, West
 Virginia, Maryland, and Washington, DC areas.
 
-WindyCityRails is an annual gathering for all who are passionate about
+[WindyCityRails][9] is an annual gathering for all who are passionate about
 Ruby on Rails. The Chicago-based conference has served the Ruby
-community since 2008. Visit [http://windycityrails.org][9] for details.
+community since 2008.
 
 [Madison Ruby][15]: Madison, WI
 
@@ -71,6 +71,12 @@ wonderful scenery around Bend Oregon.
 annually in Burlington, VT. The conference is two days long and follows a
 single track. The focus of the conference is on creating an environment to
 learn, have fun and meet fellow Rubyists.
+
+[GoRuCo][19]: New York City's annual Ruby conference. A one-day single-track conference.
+
+[DeccanRubyConf][20]: Pune's (India) annual Ruby conference,
+themed around fun activities filled around the day.
+It is a single-day single-track conference.
 
 ### Ruby At Other Conferences
 
@@ -91,7 +97,7 @@ O’Reilly), and Canada on Rails.
 [4]: http://euruko.org
 [5]: http://www.osdc.com.au/
 [6]: http://rubycentral.org/community/grant
-[7]: http://www.sdforum.org
+[7]: http://www.svforum.org
 [8]: http://rubynation.org/
 [9]: http://windycityrails.org
 [10]: http://conferences.oreillynet.com/os2006/
@@ -103,3 +109,5 @@ O’Reilly), and Canada on Rails.
 [16]: http://steelcityruby.org/
 [17]: http://ruby.onales.com/
 [18]: http://burlingtonrubyconference.com
+[19]: http://goruco.com/
+[20]: http://www.deccanrubyconf.org/

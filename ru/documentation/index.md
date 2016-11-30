@@ -8,6 +8,20 @@ lang: ru
 быть полезны, если вы почувствуете, что хотите программировать на Ruby.
 {: .summary}
 
+### Установка Ruby
+
+Если вы хотите попробовать Ruby не только в браузере (смотрите ссылки ниже),
+но и локально – вам нужно установить Ruby на ваш компьютер.
+Вы можете проверить, установлен ли Ruby на ваш компьютер, набрав в терминале
+
+{% highlight sh %}
+ruby -v
+{% endhighlight %}
+
+Это должно вывести некоторую информацию об установленной версии Ruby.
+Если нет, смотрите страницу [установки](installation/) с различными
+способами получить Ruby.
+
 ### С чего начать
 
 [Try Ruby!][1]
@@ -16,8 +30,8 @@ lang: ru
   начинающих, кто хочет почувствовать возможности языка.
 
 [Ruby Koans][2]
-: Данный ресурс поведет вас по пути просвящения к знаниям о Ruby. Цель
-  ресурса – изучить язык Ruby, его ситнаксис, структуру и несколько
+: Данный ресурс поведет вас по пути просвещения к знаниям о Ruby. Цель
+  ресурса – изучить язык Ruby, его синтаксис, структуру и несколько
   стандартных функций и библиотек. Так же он обучит вас культуре.
 
 [RubyMonk][3]
@@ -25,13 +39,13 @@ lang: ru
   вашем браузере!
 
 [Hackety Hack][4]
-: <q cite="http://hackety-hack.com/">Стартовый набор маленького
+: <q cite="http://www.hackety.com/">Стартовый набор маленького
   программиста</q>. Веселый и легкий путь обучения программированию (при
   помощи Ruby), использует графическую среду разработки Shoes.
 
 [Why’s (Poignant) Guide to Ruby][5]
 : Необычная, но интересная книга, которая научит вас Ruby посредством
-  историй, шуток и комиксов. Созданое программистом *why the lucky stiff*,
+  историй, шуток и комиксов. Созданное программистом *why the lucky stiff*,
   данное руководство является классикой для изучения Ruby.
 
 [Ruby за двадцать минут](/ru/documentation/quickstart/)
@@ -138,7 +152,7 @@ lang: ru
 [1]: http://tryruby.org/
 [2]: http://rubykoans.com/
 [3]: http://rubymonk.com/
-[4]: http://hackety-hack.com/
+[4]: http://www.hackety.com/
 [5]: http://mislav.uniqpath.com/poignant-guide/
 [6]: http://rubylearning.com/
 [7]: http://www.techotopia.com/index.php/Ruby_Essentials
@@ -148,7 +162,7 @@ lang: ru
 [11]: http://www.rubyist.net/~slagell/ruby/
 [12]: http://en.wikibooks.org/wiki/Ruby_programming_language
 [13]: http://www.ruby-doc.org/core
-[14]: http://rdoc.sourceforge.net
+[14]: http://docs.seattlerb.org/rdoc/
 [15]: http://www.ruby-doc.org/stdlib
 [16]: http://www.rubydoc.info/
 [17]: http://rubydocs.org/
@@ -156,7 +170,7 @@ lang: ru
 [19]: http://www.aptana.com/
 [20]: http://www.gnu.org/software/emacs/
 [21]: http://www.emacswiki.org/emacs/RubyMode
-[22]: http://cx4a.org/software/rsense/
+[22]: http://rsense.github.io/
 [23]: http://www.geany.org/
 [24]: http://projects.gnome.org/gedit/screenshots.html
 [25]: http://www.vim.org/

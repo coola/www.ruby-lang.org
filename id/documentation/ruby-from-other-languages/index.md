@@ -20,16 +20,11 @@ Anda lakukan di bahasa lain.
 
 ## Apa yang Diharapkan: *Bahasa X* ke Ruby
 
-* [Dari C dan C++ ke
-  Ruby](/id/documentation/ruby-from-other-languages/to-ruby-from-c-and-cpp/)
-* [Dari Java ke
-  Ruby](/id/documentation/ruby-from-other-languages/to-ruby-from-java/)
-* [Dari Perl ke
-  Ruby](/id/documentation/ruby-from-other-languages/to-ruby-from-perl/)
-* [Dari PHP ke
-  Ruby](/id/documentation/ruby-from-other-languages/to-ruby-from-php/)
-* [Dari Python ke
-  Ruby](/id/documentation/ruby-from-other-languages/to-ruby-from-python/)
+* [Dari C dan C++ ke Ruby](to-ruby-from-c-and-cpp/)
+* [Dari Java ke Ruby](to-ruby-from-java/)
+* [Dari Perl ke Ruby](to-ruby-from-perl/)
+* [Dari PHP ke Ruby](to-ruby-from-php/)
+* [Dari Python ke Ruby](to-ruby-from-python/)
 
 ## Tabel Perbandingan
 
@@ -97,7 +92,7 @@ Symbol dapat dijelaskan sebagai identitas. Symbol merupakan sebuah hal
 tentang **siapa** ini, bukan **apa** ini. Buka `irb` dan perhatikan
 perbedaan berikut ini:
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):001:0> :joko.object_id == :joko.object_id
 => true
 irb(main):002:0> "joko".object_id == "joko".object_id
@@ -169,26 +164,21 @@ end
 
 Sekarang `Konstanta` adalah 10, tetapi `Konstanta()` adalah 11.
 
-### Fake Keyword Parameters
+### Argumen Keyword
 
-Ruby tidak memiliki *keyword parameters* atau parameter bernama, seperti
-Python. Tetapi, ini bisa dimanipulasi (*fake*) dengan cara menggunakan
-*symbol* dan *hash*. Ruby on Rails, satu diantara banyak aplikasi yang
-dibuat dengan Ruby, banyak menggunakan trik ini. Contoh:
+Seperti Python, metode pada Ruby 2.0 dapat didefinisikan
+menggunakan argumen keyword:
 
 {% highlight ruby %}
-def keluarkan( params )
-  params
+def menyampaikan(dari: "A", ke: nil, lewat: "mail")
+  "Mengirimkan dari #{dari} ke #{ke} lewat #{lewat}."
 end
 
-keluarkan( :param_satu => 10, :param_dua => 42 )
-
-# => {:param_satu=>10, :param_dua=>42}
+menyampaikan(ke: "B")
+# => "Mengirimkan dari A ke B lewat mail."
+menyampaikan(lewat: "Pony Express", dari: "B", ke: "A")
+# => "Mengirimkan dari B ke A lewat Pony Express."
 {% endhighlight %}
-
-Ini dikarenakan Ruby otomatis mengubah parameter yang diberikan tersebut
-menjadi bentuk hash. (meskipun pemanggilannya tanpa menggunakan kurung
-kurawal yang merupakan sintaks hash)
 
 ### Nilai True bersifat Universal
 
@@ -200,9 +190,9 @@ seperti list yang kosong, dianggap false. Perhatikan kode Python berikut
 {% highlight python %}
 # di Python
 if 0:
-  print "0 is true"
+  print("0 is true")
 else:
-  print "0 is false"
+  print("0 is false")
 {% endhighlight %}
 
 Ini akan print “0 is false”. Kode yang sama di Ruby:
@@ -262,47 +252,41 @@ metode hanya bisa diakses ketika metode bisa dipanggil tanpa obyek
 penerima yang eksplisit. Hanya **self** yang boleh menjadi receiver
 pemanggilan metode private.
 
-`protected` perlu diperhatikan lebih lanjut. Metode `protected` bisa dipanggil dari kelas ataupun *instance* kelas turunan, tetapi juga dengan *instance* lain sebagai penerima. Contoh, diadaptasi dari [Ruby FAQ][2]\:
+`protected` perlu diperhatikan lebih lanjut. Metode `protected` bisa dipanggil dari kelas ataupun *instance* kelas turunan, tetapi juga dengan *instance* lain sebagai penerima. Contoh, diadaptasi dari [Ruby Language FAQ][faq]:
 
 {% highlight ruby %}
-$ irb
-irb(main):001:0> class Test
-irb(main):002:1>   # metode berikut secara default adalah public
-irb(main):003:1*   def func
-irb(main):004:2>     99
-irb(main):005:2>   end
-irb(main):006:1>
-irb(main):007:1*   def ==(other)
-irb(main):008:2>     func == other.func
-irb(main):009:2>   end
-irb(main):010:1> end
-=> nil
-irb(main):011:0>
-irb(main):012:0* t1 = Test.new
-=> #<Test:0x34ab50>
-irb(main):013:0> t2 = Test.new
-=> #<Test:0x342784>
-irb(main):014:0> t1 == t2
-=> true
-irb(main):015:0> # sekarang atur `func` menjadi protected,
-irb(main):016:0* # masih jalan karena protected bisa reference ke lain
-irb(main):017:0* class Test
-irb(main):018:1>   protected :func
-irb(main):019:1> end
-=> Test
-irb(main):020:0> t1 == t2
-=> true
-irb(main):021:0> # sekarang atur `func` menjadi private
-irb(main):022:0* class Test
-irb(main):023:1>   private :func
-irb(main):024:1> end
-=> Test
-irb(main):025:0> t1 == t2
-NoMethodError: private method `func' called for #<Test:0x342784>
-        from (irb):8:in `=='
-        from (irb):25
-        from :0
-irb(main):026:0>
+class Test
+  # metode berikut secara default adalah public
+  def identifier
+    99
+  end
+
+  def ==(other)
+    identifier == other.identifier
+  end
+end
+
+t1 = Test.new  # => #<Test:0x34ab50>
+t2 = Test.new  # => #<Test:0x342784>
+t1 == t2       # => true
+
+# sekarang atur `identifier' menjadi protected,
+# masih jalan karena protected bisa reference ke lain
+
+class Test
+  protected :identifier
+end
+
+t1 == t2  # => true
+
+# sekarang atur `identifier' menjadi private
+
+class Test
+  private :identifier
+end
+
+t1 == t2
+# NoMethodError: private method `identifier' called for #<Test:0x342784>
 {% endhighlight %}
 
 ### Kelas Bersifat Terbuka
@@ -470,7 +454,7 @@ Operator-operator dibawah ini bukan metode dan tidak dapat didefinisikan
 ulang:
 
 {% highlight ruby %}
-=, .., ..., !, not, &&, and, ||, or, !=, !~, ::
+=, .., ..., not, &&, and, ||, or, ::
 {% endhighlight %}
 
 Tambahan, `+=`, `*=` dan lain sebagainya hanyalah singkatan untuk
@@ -485,4 +469,4 @@ Ketika Anda siap dengan pengetahuan Ruby yang lebih lagi, lihat bagian
 
 
 [1]: http://www.jvoegele.com/software/langcomp.html
-[2]: http://www.rubycentral.com/faq/rubyfaq-7.html
+[faq]: http://ruby-doc.org/docs/ruby-doc-bundle/FAQ/FAQ.html

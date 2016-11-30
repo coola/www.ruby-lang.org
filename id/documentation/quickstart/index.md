@@ -32,11 +32,10 @@ Buka IRB.
   kemudian tekan enter.
 * Jika Anda menggunakan **Linux**, buka shell dan ketik `irb`, kemudian
   tekan enter.
-* Jika Anda menggunakan **Windows**, buka `fxri` dari bagian Ruby di
-  Menu Start Anda.
-^
+* Jika Anda menggunakan **Windows**, buka `Interactive Ruby` dari
+  bagian Ruby di Menu Start Anda.
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):001:0>
 {% endhighlight %}
 
@@ -44,7 +43,7 @@ Ok, sekarang irb sudah dibuka. Sekarang mau apa?
 
 Ketik ini: `"Hello World"`
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):001:0> "Hello World"
 => "Hello World"
 {% endhighlight %}
@@ -57,7 +56,7 @@ kedua hanya sekedar cara IRB memberitahu hasil (result) dari ekspresi
 terakhir yang dievaluasi/dijalankan. Jika kita ingin print “Hello World”
 kita perlu tambahkan sedikit:
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):002:0> puts "Hello World"
 Hello World
 => nil
@@ -72,7 +71,7 @@ ketiadaan di Ruby.
 
 Dengan IRB kita sudah cukup mempunyai kalkulator dasar:
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):003:0> 3+2
 => 5
 {% endhighlight %}
@@ -85,14 +84,14 @@ memunculkan baris `3+2` lagi. Jika Ya, Anda dapat menggunakan panah-kiri
 untuk berpindah ke setelah tanda `+` kemudian gunakan backspace untuk
 menggantinya dengan tanda `*`.
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):004:0> 3*2
 => 6
 {% endhighlight %}
 
 Lanjut, mari kita coba tiga kuadrat:
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):005:0> 3**2
 => 9
 {% endhighlight %}
@@ -101,7 +100,7 @@ Di Ruby, `**` merupakan cara Anda mengatakan “kepada kekuatan dari”.
 Tetapi bagaimana jika Anda ingin melakukannya dengan cara lain dan
 mendapatkan akar dari suatu bilangan?
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):006:0> Math.sqrt(9)
 => 3.0
 {% endhighlight %}
@@ -131,7 +130,7 @@ floating-point.
 Bagaimana jika kita ingin mengingat hasil dari beberapa perhitungan
 matematika ini? Caranya assign hasilnya ke variabel.
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):007:0> a = 3 ** 2
 => 9
 irb(main):008:0> b = 4 ** 2

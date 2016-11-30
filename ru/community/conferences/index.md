@@ -23,7 +23,7 @@ lang: ru
 [RubyKaigi][3]
 : Первая японская Ruby конференция, RubyKaigi 2006, была проведена в
   Odaiba. RubyKaigi предоставляет много новых захватывающих докладов от
-  Matz'а и других рубистов каджый год.
+  Matz'а и других рубистов каждый год.
 
 [EuRuKo <small>(European Ruby Conference)</small>][4]
 : Первая ежегодная европейская Ruby конференция (EuRuKo) была в Karlsruhe,
@@ -43,16 +43,16 @@ lang: ru
 событий.
 
 
-Ruby Central также сотрудничает с [SDForum][7], чтобы организовать Silicon
+Ruby Central также сотрудничает с [SVForum][7], чтобы организовать Silicon
 Valley Ruby Conference, участвуя в этом со второй такой конференции в 2007
 году.
 
 [RubyNation][8] ежегодная Ruby конференция, проводимая в Virginia, West
 Virginia, Maryland, и Washington, округ Колумбия.
 
-WindyCityRails является ежегодной конференцией для всех, кто обожает
+[WindyCityRails][9] является ежегодной конференцией для всех, кто обожает
 Ruby on Rails. Событие проводится в Chicago сообществом Ruby начиная с
-2008 года. Зайдите на [http://windycityrails.org][9] за подробностями.
+2008 года.
 
 ### Ruby на других конференциях
 
@@ -71,7 +71,7 @@ O’Reilly), и Canada on Rails.
 [4]: http://euruko.org
 [5]: http://www.osdc.com.au/
 [6]: http://rubycentral.org/community/grant
-[7]: http://www.sdforum.org
+[7]: http://www.svforum.org
 [8]: http://rubynation.org/
 [9]: http://windycityrails.org
 [10]: http://conferences.oreillynet.com/os2006/

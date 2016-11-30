@@ -6,7 +6,7 @@ translator: "makimoto"
 date: 2013-12-21 2:00:00 +0000
 lang: ja
 ---
-Ruby 2.1.0 以降、[Semantic Versioning](http://semver.org/) ([日本語訳](http://shijimiii.info/technical-memo/semver/))
+Ruby 2.1.0 以降、[Semantic Versioning](http://semver.org/) ([日本語訳](http://semver.org/lang/ja/))
 に沿ったバージョニングに移行することを決定しました。
 
 Ruby に、より明確で適切なバージョニングスキーマを提供するため、われわれは以下のポリシーに段階的に移行します。
@@ -52,7 +52,7 @@ ABI は `{MAJOR}.{MINOR}.0` のスキーマに従うものとします。
 
 この提案についてのより詳しい情報は以下のリンクを参照してください。
 
-* [Introducing a semantic versioning scheme and branching policy](http://bugs.ruby-lang.org/issues/8835)
+* [Introducing a semantic versioning scheme and branching policy](https://bugs.ruby-lang.org/issues/8835)
 * [受理された提案](https://gist.github.com/hsbt/7719305)
 * [受理された提案 (英語訳)](https://gist.github.com/sorah/7803201)
 

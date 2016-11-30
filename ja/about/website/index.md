@@ -33,22 +33,30 @@ Ruby Visual Identity Team による初期のデザインが元になっていま
 
 また、われわれをサポートしてくれる以下の機関にも大きな感謝をいたします:
 
- * [NaCl][nacl] (ホスティング)
+ * [Rubyアソシエーション][rubyassociation] (ホスティング)
  * [Heroku][heroku] (ホスティング)
  * [IIJ][iij] (ホスティング)
  * [GlobalSign][globalsign] (SSL 証明書)
  * [Fastly][fastly] (CDN)
+ * [Hatena][hatena] ([mackerel][mackerel], サーバー監視)
+ * [![CloudCore][cloudcore-logo] CloudCore][cloudcore] (build server)
+ * [Ruby no Kai][rubynokai] (build server)
 
 
 [logo]: /ja/about/logo/
 [webmaster]: mailto:webmaster@ruby-lang.org
 [jekyll]: http://www.jekyllrb.com/
-[jzimdars]: http://twitter.com/jz
+[jzimdars]: https://twitter.com/jasonzimdars
 [github-repo]: https://github.com/ruby/www.ruby-lang.org/
 [github-issues]: https://github.com/ruby/www.ruby-lang.org/issues
 [github-wiki]: https://github.com/ruby/www.ruby-lang.org/wiki
-[nacl]: http://www.netlab.jp
+[rubyassociation]: http://www.ruby.or.jp/ja/sponsors/list/
 [heroku]: https://www.heroku.com/
 [iij]: http://www.iij.ad.jp
 [globalsign]: https://www.globalsign.com
 [fastly]: http://www.fastly.com
+[hatena]: http://hatenacorp.jp/
+[mackerel]: https://mackerel.io/
+[cloudcore]: http://www.cloudcore.jp/?utm_source=ad&utm_medium=ad&utm_content=dev&utm_campaign=vps
+[cloudcore-logo]: http://www.cloudcore.jp/develop/links/images/74x36_white.gif
+[rubynokai]: http://ruby-no-kai.org/

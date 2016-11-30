@@ -36,8 +36,7 @@ konferensi-konferensi beserta pertemuan Ruby terkait.
 
 ![Graph courtesy of
 Gmane.](http://gmane.org/plot-rate.php?group=gmane.comp.lang.ruby.general&amp;width=320&amp;height=160&amp;title=Ruby-Talk+Activity
-"Graph courtesy of Gmane."){: style="padding-left:8px;"}
-{: style="float:right"}
+"Graph courtesy of Gmane."){: style="padding-left:8px; float:right;"}
 
 Ruby-Talk, [milis](/id/community/mailing-lists/) utama untuk diskusi
 Ruby (dalam bahasa Inggris) telah mencapai kisaran 200 email setiap
@@ -195,8 +194,8 @@ Ruby kaya fitur, antara lain sebagai berikut:
   tidak, bahkan pada MS-DOS sekalipun!
 
 * Ruby sangat portable: Ruby kebanyakan dikembangkan di GNU/Linux,
-  tetapi juga berjalan di banyak tipe UNIX, Mac OS X, Windows
-  95/98/Me/NT/2000/XP, DOS, BeOS, OS/2, dan lain-lain.
+  tetapi juga berjalan di banyak tipe UNIX, Mac OS X,
+  Windows, DOS, BeOS, OS/2, dan lain-lain.
 
 ### Referensi
 

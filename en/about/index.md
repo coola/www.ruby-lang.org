@@ -32,8 +32,7 @@ filled to capacity.
 
 ![Graph courtesy of
 Gmane.](http://gmane.org/plot-rate.php?group=gmane.comp.lang.ruby.general&amp;width=320&amp;height=160&amp;title=Ruby-Talk+Activity
-"Graph courtesy of Gmane."){: style="padding-left:8px;"}
-{: style="float:right"}
+"Graph courtesy of Gmane."){: style="padding-left:8px; float:right;"}
 
 Ruby-Talk, the primary [mailing list](/en/community/mailing-lists/) for
 discussion of the Ruby language, climbed to an average of 200 messages
@@ -178,8 +177,7 @@ Ruby has a wealth of other features, among which are the following:
   supports it or not, even on MS-DOS!
 
 * Ruby is highly portable: it is developed mostly on GNU/Linux, but
-  works on many types of UNIX, Mac OS X, Windows 95/98/Me/NT/2000/XP,
-  DOS, BeOS, OS/2, etc.
+  works on many types of UNIX, Mac OS X, Windows, DOS, BeOS, OS/2, etc.
 
 ### Other Implementations of Ruby
 
@@ -204,17 +202,13 @@ Here’s a list:
   with ease.
 * [mruby][mruby] is a lightweight implementation of the Ruby language
   that can be linked and embedded within an application.
-  Its development is lead by Ruby’s creator Yukihiro “Matz” Matsumoto.
+  Its development is led by Ruby’s creator Yukihiro “Matz” Matsumoto.
 * [IronRuby][ironruby] is an implementation “tightly integrated with the .NET
   Framework”.
 * [MagLev][maglev] is “a fast, stable, Ruby implementation with integrated
   object persistence and distributed shared cache”.
 * [Cardinal][cardinal] is a “Ruby compiler for [Parrot][parrot] Virtual Machine”
   (Perl 6).
-
-Some of those implementations, including MRI, follow the guidelines of
-[RubySpec][rubyspec], a “complete executable specification for the Ruby
-programming language”.
 
 ### References
 
@@ -246,4 +240,3 @@ programming language”.
 [maglev]: http://ruby.gemstone.com
 [cardinal]: https://github.com/parrot/cardinal
 [parrot]: http://parrot.org
-[rubyspec]: http://rubyspec.org

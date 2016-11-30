@@ -1,138 +1,73 @@
 ---
 layout: page
-title: "Download Ruby"
+title: "Baixar o Ruby"
 lang: pt
 ---
 
-Aqui pode receber as últimas distribuições de Ruby nos seus sabores
-preferidos. A versão actual e estável é a {{ site.downloads.stable.version }}.
-Por favor certifique-se que leu a [Licença Ruby][license].
+Aqui você poderá obter as distribuições mais recentes de Ruby em seus sabores
+preferidos. A versão estável atual é a {{ site.downloads.stable[0].version }}.
+Por favor certifique-se de ter lido a [Licença do Ruby][license].
 {: .summary}
 
-### Código-Fonte do Ruby
+### Formas de instalar o Ruby
 
-Instalar pelo código fonte é uma boa solução para quando estiver
-suficientemente confortável com a sua plataforma ou por ventura
-necessite de configurações específicas para o seu ambiente. É
-eventualmente também uma boa solução porque pode não haver pacotes
-pré-construídos para a sua plataforma.
+Existem diversas ferramentas para instalar o Ruby em cada grande plataforma:
 
-* [Ruby {{ site.downloads.stable.version }}][stable-gz]
-  (md5:&nbsp;{{ site.downloads.stable.md5.gz }}) Stable (*recommended*)
-* [Snapshot Estável][stable-snapshot-gz] Ficheiros compactados em tar e gzip do último
-  CVS estável. Deverá ser melhor que o última distribuição estável.
-* [Snapshot Nocturno][nightly-gz] Ficheiros compactados em tar e gzip do último
-  CVS. Pode conter problemas por resolver.
+* No Linux/UNIX, você pode usar o sistema de gerenciamento de pacotes da
+  sua distribuição ou ferramentas de terceiros (rbenv e RVM).
+* Em máquinas com OS X, você pode usar ferramentas de terceiros (rbenv e RVM).
+* Em máquinas com Windows, você pode usar o RubyInstaller ou o pik.
 
-Para informações sobre o repositório CVS de Ruby, veja a nossa página
-[Ruby core](/pt/community/ruby-core/) .
+Consulte a página [Instalação][installation] para mais detalhes sobre
+como usar sistemas de gerenciamento de pacotes ou ferramentas de terceiros.
 
-### Ruby Em Windows
+É claro, você também pode instalar Ruby a partir do código fonte em todas
+as principais plataformas.
 
-A plataforma Windows tem inúmeras opções para instalar o Ruby. A
-primeira opção é simplesmente instalar o binário compilado. A segunda é
-utilizar o “instalador rápido” (*one-click installer*). Se não tem a
-certeza sobre como instalar o Ruby, o “instalador rápido” deverá ser a
-melhor opção. ( Adicionalmente ao Ruby, o “instalador rápido” vem também
-com um conjunto adicional de bibliotecas agregadas.)
+### Compilando Ruby — Código Fonte
 
-* [Ruby 1.8.6-p398 RubyInstaller][5]
-  (md5:&nbsp;233d6b3ddc4c61436b075b51254cd138) Versão Estável
-* [Ruby 1.8.7-p334 RubyInstaller][6]
-  (md5:&nbsp;64e30e63e16028282fcfe3ec57b561dc) Versão Estável (*recomendada*)
-* [Ruby 1.9.1-p430 RubyInstaller][7]
-  (md5:&nbsp;86ac589a955898c3163b161d81750a05) Versão Estável
-* [Ruby 1.9.2-p180 RubyInstaller][8]
-  (md5:&nbsp;2c94aef50987416d64c85a4ea0fa428b) Versão Estável (*recomendada*)
-* [Ruby 1.8.7-p249 Binary][9]
-  (md5:&nbsp;4fd37b0b4b21a042cae7f5f0a8daad16) Versão Estável
-* [Ruby 1.9.1-p378 Binary][10]
-  (md5:&nbsp;7d14a918cc8d243d3e2c409aff41f454) Versão Estável
+Instalar a partir do código-fonte é uma grande solução para quando você
+estiver confortável o suficiente com a sua plataforma e talvez precise
+de configurações específicas para o seu ambiente. Também é uma boa solução
+quando não houver outros pacotes pré-criados para a sua plataforma.
 
-Note que ao utilizar os binários acima indicados será necessário
-descarregar e instalar manualmente componentes adicionais detalhados
-nesta [página][11]. Por favor assegure-se que seguiu estes passos antes
-de reportar um *bug*.
+Consulte a página [Instalação][installation] para detalhes sobre
+como compilar Ruby a partir dos fontes. Se você tiver algum problema
+compilando Ruby, considere utilizar uma das ferramentas de terceiros
+mencionadas acima. Elas podem te ajudar.
 
-O [RubyInstaller][12] não precisa destas tarefas adicionais.
+* **Versões estáveis:**{% for release in site.downloads.stable %}
+  * [Ruby {{ release.version }}]({{ release.url.gz }})<br>
+    sha256: {{ release.sha256.gz }}{% endfor %}
 
-Investigue, também, a utilização do [pik][13] já que facilita o processo
-de instalação e manutenção de versões concorrentes de ruby e gemas no
-Windows.
+{% if site.downloads.security_maintenance %}
+* **Com suporte a atualizações de segurança (EOL em breve!):**{% for release in site.downloads.security_maintenance %}
+  * [Ruby {{ release.version }}]({{ release.url.gz }})<br>
+    sha256: {{ release.sha256.gz }}{% endfor %}
+{% endif %}
 
-### Ruby Em Linux
+{% if site.downloads.eol %}
+* **Sem suporte a atualizações (EOL):**{% for release in site.downloads.eol %}
+  * [Ruby {{ release.version }}]({{ release.url.gz }})<br>
+    sha256: {{ release.sha256.gz }}{% endfor %}
+{% endif %}
 
-Dependendo da distribuição que está a utilizar, existem inúmeras
-maneiras para instalar Ruby. A primeira opção é simplesmente fazer o
-download do código fonte (em baixo) e compila-lo manualmente. No
-entanto, em algumas plataformas, há gestores de pacotes que tornam a
-instalação do Ruby extremamente fácil.
+* **Snapshots:**
+  * [Snapshot Estável]({{ site.downloads.stable_snapshot.url.gz }}):
+    Este é um arquivo compactado com o snapshot mais recente do branch estável.
+  * [Nightly Snapshot]({{ site.downloads.nightly_snapshot.url.gz }}):
+    Este é um arquivo compactado do que está no SVN, criado todas as noites.
+    Ele pode conter bugs ou outros problemas, use por sua própria conta e risco!
 
-Por exemplo, o Debian ou Ubunto `apt-get` providenciam uma solução
-simples e elegante:
+Para mais informações sobre os repositórios Subversion e Git do Ruby, consulte
+a nossa página [Núcleo do Ruby](/pt/community/ruby-core/).
 
-{% highlight sh %}
-$ sudo apt-get install ruby irb rdoc
-{% endhighlight %}
-
-Para o irb e rdoc vamos necessitar de activar o repositório universal.
-
-### Ruby em Mac OS X
-
-Existem várias opções na plataforma Macintosh OS X para instalar a
-última versão do Ruby. [Locomotive][14] é uma boa escolha se está à
-procura de algo que o coloque a programar Rails rapidamente. Usar o
-[MacPorts][15] ou [Fink][16] pode ser um pouco melhor para os técnicos
-mais experientes.
-
-No DarwinPorts, pode instalar o Ruby com…
-
-{% highlight sh %}
-$ port install ruby
-{% endhighlight %}
-
-O Fink tem uma interface gráfica (utilizando o “Fink Commander”) para
-instalar o Ruby.
-
-Uma vez que o OS X é baseado em Unix, é possível também fazer download e
-instalar pelo código-fonte, sendo assim uma solução simples e eficaz
-como as outras.
-
-Para uma vista detalhada sobre a instalação de Ruby (e Rails), Dan
-Benjamin escreveu um excelente artigo – [*Building Ruby, Rails,
-LightTPD, and MySQL on Tiger*][17] – e é ideal para começar a trabalhar
-muito rapidamente.
-
-\_Nota: Ruby 1.8.x juntamente com Rails deverá vir pré-instalado com a
-seguinte distribuição do Mac OS X, Leopard (em beta neste momento).
-([Mais informações aqui][18]) Felizmente, no momento em que o Leopard
-arrancar, este irá “simplesmente funcionar” logo depois da instalação.\_
-
-### RVM
-
-Investigue, também, a utilização do [rvm][19], dado que agiliza o
-processo de instalação e manutenção de versões concorrentes de ruby e
-gemas. Este é o método preferido de muitos programadores de Ruby que
-necessitam de testar as suas aplicações em ambientes diversos.
+O código fonte do Ruby está disponível a partir de um conjunto de
+[Sites de _Mirror_][mirrors] pelo mundo afora. Por favor tente
+usar um _mirror_ que está próximo de você.
 
 
 
 [license]: {{ site.license.url }}
-[stable-gz]:   {{ site.downloads.stable.url.gz }}
-[stable-snapshot-gz]: {{ site.downloads.stable_snapshot.url.gz }}
-[nightly-gz]: {{ site.downloads.nightly_snapshot.url.gz }}
-[5]: http://rubyforge.org/frs/download.php/71066/rubyinstaller-1.8.6-p398.exe
-[6]: http://rubyforge.org/frs/download.php/74293/rubyinstaller-1.8.7-p334.exe
-[7]: http://rubyforge.org/frs/download.php/72075/rubyinstaller-1.9.1-p430.exe
-[8]: http://rubyforge.org/frs/download.php/74298/rubyinstaller-1.9.2-p180.exe
-[9]: http://ftp.ruby-lang.org/pub/ruby/binaries/mswin32/ruby-1.8.7-p249-i386-mswin32.zip
-[10]: http://ftp.ruby-lang.org/pub/ruby/binaries/mswin32/ruby-1.9.1-p378-i386-mswin32.zip
-[11]: http://www.garbagecollect.jp/ruby/mswin32/en/documents/install.html
-[12]: http://rubyinstaller.org/
-[13]: http://github.com/vertiginous/pik
-[14]: http://locomotive.raaum.org/
-[15]: http://www.macports.org/
-[16]: http://fink.sourceforge.net/
-[17]: http://hivelogic.com/articles/ruby_rails_lighttpd_mysql_tiger
-[18]: http://weblog.rubyonrails.org/2006/8/7/ruby-on-rails-will-ship-with-os-x-10-5-leopard
-[19]: https://rvm.beginrescueend.com/rvm
+[installation]: /pt/documentation/installation/
+[mirrors]: /en/downloads/mirrors/

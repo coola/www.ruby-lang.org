@@ -1,19 +1,19 @@
 ---
 layout: news_post
-title: "Ruby 1.8.7-p302 릴리즈"
+title: "루비 1.8.7-p302 릴리스"
 author: "Moru"
 date: 2010-08-16 13:45:39 +0000
 lang: ko
 ---
 
-Ruby 1.8.7-p302이 릴리즈되었습니다. 이번 릴리즈에서는 CVE-2010-0541에 의한 보안 취약점이 수정되었습니다.
-자세한 사항은 [WEBrick XSS취약점][1]을 참고하십시오.
+루비 1.8.7-p302가 릴리스되었습니다. 이번 릴리스에서는 CVE-2010-0541에 의한 보안 취약점이 수정되었습니다.
+자세한 사항은 [WEBrick XSS 취약점][1]을 참고하십시오.
 
-이전의 모든 버젼을 빠른 시일내에 1.8.7-p302으로 업그레이드하기를 권장합니다.
+이전의 모든 버전을 빠른 시일 내에 1.8.7-p302로 업그레이드하기를 권장합니다.
 
 ## 다운로드
 
-* [&lt;URL:ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p302.tar.bz2&gt;][2]
+* [&lt;URL:https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p302.tar.bz2&gt;][2]
 
 SIZE(ruby-1.8.7-p302.tar.bz2):
 : 4184764 bytes
@@ -24,7 +24,7 @@ MD5(ruby-1.8.7-p302.tar.bz2):
 SHA256(ruby-1.8.7-p302.tar.bz2):
 : 3537cc81cc2378a2bc319cd16c4237ddee14a2839cfd1515b27dce108d061a68
 
-* [&lt;URL:ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p302.tar.gz&gt;][3]
+* [&lt;URL:https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p302.tar.gz&gt;][3]
 
 SIZE(ruby-1.8.7-p302.tar.gz):
 : 4866763
@@ -35,7 +35,7 @@ MD5(ruby-1.8.7-p302.tar.gz):
 SHA256(ruby-1.8.7-p302.tar.gz):
 : 5883df5204de70762602ce885b18c8bf6c856d33298c35df9151031b2ce044a1
 
-* [&lt;URL:ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p302.zip&gt;][4]
+* [&lt;URL:https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p302.zip&gt;][4]
 
 SIZE(ruby-1.8.7-p302.zip):
 : 5965421
@@ -49,6 +49,6 @@ SHA256(ruby-1.8.7-p302.zip):
 
 
 [1]: {{ site.url }}/ko/news/2010/08/16/webrick-xss-cve-2010-0541/
-[2]: ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p302.tar.bz2
-[3]: ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p302.tar.gz
-[4]: ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p302.zip
+[2]: https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p302.tar.bz2
+[3]: https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p302.tar.gz
+[4]: https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p302.zip

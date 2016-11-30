@@ -71,6 +71,7 @@ As with C++, in Ruby,...
 
 Unlike C, in Ruby,...
 
+* You don’t need to compile your code. You just run it directly.
 * Objects are strongly typed (and variable names themselves have no type
   at all).
 * There’s no macros or preprocessor. No casts. No pointers (nor pointer
@@ -78,12 +79,10 @@ Unlike C, in Ruby,...
 * There are no header files. You just define your functions (usually
   referred to as “methods”) and classes in the main source code files.
 * There’s no `#define`. Just use constants instead.
-* As of Ruby 1.8, code is interpreted at run-time rather than compiled
-  to any sort of machine- or byte-code.
 * All variables live on the heap. Further, you don’t need to free them
   yourself—the garbage collector takes care of that.
-* Arguments to methods (i.e. functions) are passed by reference, not by
-  value.
+* Arguments to methods (i.e. functions) are passed by value, where the
+  values are always object references.
 * It’s `require 'foo'` instead of `#include <foo>` or `#include "foo"`.
 * You cannot drop down to assembly.
 * There’s no semicolons ending lines.
@@ -137,9 +136,9 @@ Unlike C++, in Ruby,...
   object to a given variable, and types get figured out at runtime
   anyway). No casting either.
 * Iteration is done a bit differently. In Ruby, you don’t use a separate
-  iterator object (like `vector<T>::const_iterator iter`) but instead
-  your objects may mixin the `Enumerator` module and just make a method
-  call like `my_obj.each`.
+  iterator object (like `vector<T>::const_iterator iter`).
+  Instead you use an iterator method of the container object (like `each`)
+  that takes a block of code to which it passes successive elements.
 * There’s only two container types: `Array` and `Hash`.
 * There’s no type conversions. With Ruby though, you’ll probably find
   that they aren’t necessary.

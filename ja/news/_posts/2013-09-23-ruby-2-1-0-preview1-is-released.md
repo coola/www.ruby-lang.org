@@ -13,22 +13,22 @@ Ruby 2.1.0-preview1 をリリースしました。
 ## ダウンロード
 
 Fastly による
-[http://cache.ruby-lang.org/pub/ruby/2.1/](http://cache.ruby-lang.org/pub/ruby/2.1/)
+[https://cache.ruby-lang.org/pub/ruby/2.1/](https://cache.ruby-lang.org/pub/ruby/2.1/)
 の利用を推奨します。
 
-* [http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0-preview1.tar.bz2](http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0-preview1.tar.bz2)
+* [https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0-preview1.tar.bz2](https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0-preview1.tar.bz2)
 
       SIZE:   11475553 bytes
       MD5:    d32d1ea23988399afadbd21c5a7a37fc
       SHA256: 860b90d28b214393fd9d77ac2ad65b384d8249cd59b658c668cf0c7bad1db341
 
-* [http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0-preview1.tar.gz](http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0-preview1.tar.gz)
+* [https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0-preview1.tar.gz](https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0-preview1.tar.gz)
 
       SIZE:   14449544 bytes
       MD5:    9df4f546f6b961895ba58a8afdf857da
       SHA256: 747472fb33bcc529f1000e5320605a7e166a095d3805520b989e73b33c05b046
 
-* [http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0-preview1.zip](http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0-preview1.zip)
+* [https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0-preview1.zip](https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0-preview1.zip)
 
       SIZE:   16124069 bytes
       MD5:    f9bc3f9a10174a022381ce2c60a59e64
@@ -62,8 +62,8 @@ Konstantin Haase (@konstantinhaase) さんがブログに良いまとめを書�
 
 既知の問題点:
 
-[http://bugs.ruby-lang.org/projects/ruby-trunk/issues?query_id=102](http://bugs.ruby-lang.org/projects/ruby-trunk/issues?query_id=102)
+[https://bugs.ruby-lang.org/projects/ruby-trunk/issues?query_id=102](https://bugs.ruby-lang.org/projects/ruby-trunk/issues?query_id=102)
 
 リリーススケジュールやその他の情報については以下も参照してください:
 
-[http://bugs.ruby-lang.org/projects/ruby-trunk/wiki/ReleaseEngineering210](http://bugs.ruby-lang.org/projects/ruby-trunk/wiki/ReleaseEngineering210)
+[https://bugs.ruby-lang.org/projects/ruby-trunk/wiki/ReleaseEngineering210](https://bugs.ruby-lang.org/projects/ruby-trunk/wiki/ReleaseEngineering210)

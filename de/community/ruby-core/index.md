@@ -16,7 +16,7 @@ Die hier behandelten Themen zur Entwicklung von Ruby sind Folgende:
 * [Subversion zur Entwicklung von Ruby nutzen](#following-ruby)
 * [Mit Git arbeiten](#git-ruby)
 * [Ruby verbessern, Patch für Patch](#patching-ruby)
-* und [Regeln für Core-Entwickler](#coding-standards)
+* [Regeln für Core-Entwickler](#coding-standards)
 
 ### Subversion zur Entwicklung von Ruby nutzen
 {: #following-ruby}
@@ -92,7 +92,7 @@ werden. Wer mehr über das Zusammenführen (Merge) der Patches wissen will,
 sollte sich die [diffutils-Referenz][11] ansehen.
 
 Diskussionen zum Thema Ruby-Entwicklung werden in der
-[Ruby-Core-Mailingliste](/de/community/mailing-lists/) gebündelt.
+[Ruby-Core-Mailingliste][mailing-lists] gebündelt.
 Wer herausfinden will, ob sein Patch Sinn macht oder nur eine Diskussion
 über die Zukunft von Ruby anfangen will, sollte nicht zögern an Bord zu
 kommen. Es wird an dieser Stelle davor gewarnt, Off-Topic Diskussionen
@@ -114,8 +114,8 @@ nochmal gestellt werden.
 
 Allgemein sollten Entwickler von Ruby mit den Quelltexten und dem
 Entwicklungstil des Teams vertraut sein. Zum besseren Verständnis
-sollten die folgenden Richtlinien beim Einchecken ins CVS beachtet
-werden:
+sollten die folgenden Richtlinien beim Einchecken ins
+Subversion-Repository beachtet werden:
 
 * Alle Änderungen sollten im `ChangeLog` gemäß den
   [GNU-Konventionen][12] erfasst werden. (Viele Core-Entwickler von Ruby
@@ -125,21 +125,21 @@ werden:
 * Die Punkte im ChangeLog sollten als Kommentar beim Einchecken
   verwendet werden. Dieser Kommentar wird automatisch nach einem Commit
   an die Ruby-CVS-Liste gemailt.
-* K&amp;R-Funktionsdeklarationen werden überall im Ruby-Quelltext
-  verwendet.
+* Funktionsprototypen werden überall im Ruby-Quelltext verwendet.
 * Bitte keine C++-Kommentare (`//`) verwenden. Das Ruby-Wartungsteam
   bevorzugt stattdessen die Mehrzeilenkommentare von Standard-C
   (`/* .. */`).
 
 
 
+[mailing-lists]: /de/community/mailing-lists/
 [1]: http://svn.ruby-lang.org/cgi-bin/viewvc.cgi/
 [2]: http://subversion.apache.org/faq.html
 [3]: http://svnbook.org
 [4]: http://git-scm.com/
-[5]: http://github.com/ruby/ruby
-[6]: http://wiki.github.com/shyouhei/ruby/committerhowto
-[7]: http://wiki.github.com/shyouhei/ruby/noncommitterhowto
+[5]: https://github.com/ruby/ruby
+[6]: https://github.com/shyouhei/ruby/wiki/committerhowto
+[7]: https://github.com/shyouhei/ruby/wiki/noncommitterhowto
 [8]: http://rubyforge.org/tracker/?func=browse&amp;group_id=426&amp;atid=1698
 [9]: http://rubyforge.org/tracker/?func=add&amp;group_id=426&amp;atid=1700
 [10]: http://www.gnu.org/software/diffutils/manual/html_node/Unified-Format.html

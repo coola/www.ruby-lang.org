@@ -7,7 +7,7 @@ lang: es
 Cuando te enfrentas por primera vez a código escrito en Ruby,
 probablemente te recuerde otros lenguajes que hayas usado. Esto es a
 propósito. La mayor parte de la sintaxis es familiar para los usuarios
-de Perl, Python, y Java (entre otros lenguajes), así que si has usado
+de Perl, Python y Java (entre otros lenguajes), así que si has usado
 alguno de estos, aprender Ruby será muy fácil.
 {: .summary}
 
@@ -19,28 +19,21 @@ familiarizado.
 
 ## Qué esperar: *Lenguaje X* a Ruby
 
-* [A Ruby desde
-  Java](/es/documentation/ruby-from-other-languages/to-ruby-from-java/)
-* [A Ruby desde
-  PHP](/es/documentation/ruby-from-other-languages/to-ruby-from-php/)
+* [A Ruby desde Java](to-ruby-from-java/)
+* [A Ruby desde PHP](to-ruby-from-php/)
 
 Estamos en proceso de traducir todos estos artículos, pero mientras lo
 hacemos no queremos privarte de que los leas en inglés:
 
-* [To Ruby From C and
-  C++](/en/documentation/ruby-from-other-languages/to-ruby-from-c-and-cpp/)
+* [To Ruby From C and C++](/en/documentation/ruby-from-other-languages/to-ruby-from-c-and-cpp/)
   (en inglés)
-* [To Ruby From
-  Java](/en/documentation/ruby-from-other-languages/to-ruby-from-java/)
+* [To Ruby From Java](/en/documentation/ruby-from-other-languages/to-ruby-from-java/)
   (en inglés)
-* [To Ruby From
-  Perl](/en/documentation/ruby-from-other-languages/to-ruby-from-perl/)
+* [To Ruby From Perl](/en/documentation/ruby-from-other-languages/to-ruby-from-perl/)
   (en inglés)
-* [To Ruby From
-  PHP](/en/documentation/ruby-from-other-languages/to-ruby-from-php/)
+* [To Ruby From PHP](/en/documentation/ruby-from-other-languages/to-ruby-from-php/)
   (en inglés)
-* [To Ruby From
-  Python](/en/documentation/ruby-from-other-languages/to-ruby-from-python/)
+* [To Ruby From Python](/en/documentation/ruby-from-other-languages/to-ruby-from-python/)
   (en inglés)
 
 ## Funcionalidades importantes del lenguaje y algunas advertencias
@@ -93,7 +86,7 @@ Los symbols pueden ser descritos como identidades. Lo importante de un
 Symbol es **quién** es, no **qué** es. Arranca `irb` y experimenta la
 diferencia:
 
-{% highlight ruby %}
+{% highlight irb %}
 irb(main):001:0> :jorge.object_id == :jorge.object_id
 => true
 irb(main):002:0> "jorge".object_id == "jorge".object_id
@@ -186,9 +179,9 @@ código Python (el ejemplo aplica también a otros lenguajes):
 {% highlight python %}
 # en Python
 if 0:
-  print "0 es verdadero"
+  print("0 es verdadero")
 else:
-  print "0 es falso"
+  print("0 es falso")
 {% endhighlight %}
 
 Esto imprimirá “0 es falso”. El equivalente en Ruby:
@@ -252,55 +245,49 @@ Al que debemos estar atentos es a `protected`. Un método protegido puede
 ser llamado desde una instancia de una clase o las instancias de sus
 ancestros, pero también con otra instancia como su receptor.
 
-Ejemplo, adaptado del [Ruby FAQ][1]\:
+Ejemplo, adaptado del [Ruby Language FAQ][faq]:
 
 {% highlight ruby %}
-$ irb
-irb(main):001:0> class Test
-irb(main):002:1>   # public por defecto
-irb(main):003:1*   def func
-irb(main):004:2>     99
-irb(main):005:2>   end
-irb(main):006:1>
-irb(main):007:1*   def ==(otro)
-irb(main):008:2>     func == otro.func
-irb(main):009:2>   end
-irb(main):010:1> end
-=> nil
-irb(main):011:0>
-irb(main):012:0* t1 = Test.new
-=> #<Test:0x34ab50>
-irb(main):013:0> t2 = Test.new
-=> #<Test:0x342784>
-irb(main):014:0> t1 == t2
-=> true
-irb(main):015:0> # ahora haz 'func' protected, todavía funciona
-irb(main):016:0* # porque protected permite la otra referencia
-irb(main):017:0* class Test
-irb(main):018:1>   protected :func
-irb(main):019:1> end
-=> Test
-irb(main):020:0> t1 == t2
-=> true
-irb(main):021:0> # ahora haz 'func' private
-irb(main):022:0* class Test
-irb(main):023:1>   private :func
-irb(main):024:1> end
-=> Test
-irb(main):025:0> t1 == t2
-NoMethodError: private method `func' called for #<Test:0x342784>
-        from (irb):8:in `=='
-        from (irb):25
-        from :0
-irb(main):026:0>
+class Test
+  # public por defecto
+  def identifier
+    99
+  end
+
+  def ==(other)
+    identifier == other.identifier
+  end
+end
+
+t1 = Test.new  # => #<Test:0x34ab50>
+t2 = Test.new  # => #<Test:0x342784>
+t1 == t2       # => true
+
+# ahora haz `identifier' protected, todavía funciona
+# porque protected permite la otra referencia
+
+class Test
+  protected :identifier
+end
+
+t1 == t2  # => true
+
+# ahora haz `identifier' private
+
+class Test
+  private :identifier
+end
+
+t1 == t2
+# NoMethodError: private method `identifier' called for #<Test:0x342784>
 {% endhighlight %}
 
 ### Las clases están abiertas
 
-Las clases de Ruby están abiertas.Puedes abrirlas, agregarles
-funcionalidad, y modificarlas en cualquier momento. Incluso las clases
+Las clases de Ruby están abiertas. Puedes abrirlas, agregarles
+funcionalidad y modificarlas en cualquier momento. Incluso las clases
 principales, como `Fixnum` o incluso `Object`, el padre de todos los
-objetos. Ruby on Rails define un montón de métodos para menejar el
+objetos. Ruby on Rails define un montón de métodos para manejar el
 tiempo y los horarios en `Fixnum`. Mira:
 
 {% highlight ruby %}
@@ -326,7 +313,7 @@ terminan con un signo de interrogación. Métodos potencialmente
 
 De todas formas, no todos los métodos que modifican sus argumentos
 terminan en signos de exclamación. `Array#replace` reemplaza el
-contenido de un array co nel contenido de otro array. No tiene mucho
+contenido de un array con el contenido de otro array. No tiene mucho
 sentido tener un método como ese que **no** modifique **self**.
 
 ### Los métodos Singleton
@@ -357,7 +344,7 @@ otro_auto.inspect # => Auto barato
 ### Métodos faltantes
 
 Ruby no se rinde si no puede encontrar un método que responda a un
-mensaje en particular. Llama al método `method_missing` con el nómbre
+mensaje en particular. Llama al método `method_missing` con el nombre
 del método que no pudo encontrar y sus argumentos. Por defecto,
 `method_missing` lanza una excepción NameError, pero puedes redefinirlo
 para que se ajuste mejor a tu aplicación, y muchas bibliotecas lo hacen.
@@ -381,7 +368,7 @@ de manejar el mensaje como te parezca más apropiado.
 
 ### Pasaje de mensajes, no llamadas a funciones
 
-Una invocación a un método en realidad es un **mensaje** a otro objeto:
+Una invocación a un método, en realidad es un **mensaje** a otro objeto:
 
 {% highlight ruby %}
 # Esto
@@ -395,7 +382,7 @@ Una invocación a un método en realidad es un **mensaje** a otro objeto:
 ### Los bloques son objetos, sólo que todavía no lo saben
 
 Los bloques (cierres en realidad) son muy utilizados por la biblioteca
-estandar. Para llamar a un bloque, puedes usar `yield`, o transformarlo
+estándar. Para llamar a un bloque, puedes usar `yield`, o transformarlo
 en un `Proc` al anexarle un parámetro especial a la lista de argumentos,
 así:
 
@@ -437,14 +424,14 @@ end
 No necesitas el`operator+` de C++, etc.
 
 Incluso puedes tener acceso estilo array si defines los métodos `[]` y
-`[]=`. Para definir los métodos unarios + y – (piensa en +1 y -2), debes
+`[]=`. Para definir los métodos unitarios + y – (piensa en +1 y -2), debes
 definir los métodos `+@` and `-@` respectivamente.
 
 Sin embargo, los siguientes operadores **no** son simplificaciones
 sintácticas. No son métodos, y no pueden ser redefinidos:
 
 {% highlight ruby %}
-=, .., ..., !, not, &&, and, ||, or, !=, !~, ::
+=, .., ..., not, &&, and, ||, or, ::
 {% endhighlight %}
 
 Además, `+=`, `*=` etc. sólo son abreviaciones para `var = var + otra_var`,
@@ -457,4 +444,4 @@ Cuando estés listo para saber más sobre Ruby, visita nuestra sección de
 
 
 
-[1]: http://www.rubycentral.com/faq/rubyfaq-7.html
+[faq]: http://ruby-doc.org/docs/ruby-doc-bundle/FAQ/FAQ.html
